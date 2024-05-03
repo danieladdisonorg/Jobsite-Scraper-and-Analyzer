@@ -94,7 +94,7 @@ def first_integer(value: str) -> int:
 
 class VacancyItem(scrapy.Item):
     # define the fields for your item here like:
-    date = Field(serializer=lambda v: v.split()[1])
+    date_time = Field()
     num_views = Field(serializer=first_integer)
     num_applications = Field(serializer=first_integer)
     tools = Field(serializer=lambda v: VacancyTools(v).get_clean_tools())

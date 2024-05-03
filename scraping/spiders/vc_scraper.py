@@ -42,7 +42,7 @@ class VacancyScraper(scrapy.Spider):
     def parse_vc(self, vc: Response, **kwargs) -> VacancyItem:
         return VacancyItem(
             **{
-                "date": vc.xpath(DATE).get(),
+                "date_time": vc.xpath(DATE).get(),
                 "num_views": vc.xpath(NUM_VIEWS).get(),
                 "num_applications": vc.xpath(NUM_APPLICATIONS).get(),
                 "tools": vc.xpath(TOOLS).get(),
