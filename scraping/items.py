@@ -2,6 +2,7 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
+import asyncio
 import re
 
 import nltk
@@ -9,7 +10,6 @@ from nltk.corpus import stopwords
 
 import scrapy
 from scrapy import Field
-from w3lib.html import remove_tags
 
 from config import POSITION
 
@@ -24,6 +24,19 @@ class VacancyTools:
     Plus going through filters like: removing stopwords/duplicates.
     I am not promising that it will return only toolkits.
     """
+    # compile the pattern for performance optimization
+    pattern = re.compile((
+        r"(?<!^)"  # ignore words at the beginning of a new line
+        r"(?<![^\x00-\x7F])"  # '•Design'
+        r"(?<![-.*+)>:])(?<![-.*+)>:] )"  # - Competitive | .Competitive
+        r"(?<![^\x00-\x7F] )\b"  # '• Design' with space
+        # matching pattern
+        r"(?:[A-Z][a-z]*)+"  # Power
+        r"(?:\W(?:[A-Z][a-z]*)+)*"  # Power BI or Power-BI
+        # ignore words with ":" at the end ex. 'Skills:'
+        r"\b(?!(?: (?:[A-Z][a-z]*)+)*:)"
+    ))
+
     def __init__(self, text: str) -> None:
         self.text = text
 
@@ -38,33 +51,19 @@ class VacancyTools:
             for text in self.text.split("<br><br>")
             if POSITION.lower() in text.lower()
         ]
-        print(texts)
-        return set().union(*(self.filter_text(text) for text in texts))
+        result = set().union(*(self.filter_text(text) for text in texts))
+        return result
 
-    @staticmethod
-    def filter_text(text: str) -> set[str]:
+    def filter_text(self, text: str) -> set[str]:
         """Aims for getting tools from text, by finding capitalize words"""
         # we do not want to match this words
-        ignore_match = (
-            r"(?<!^)"  # ignore words at the beginning of a new line
-            r"(?<![^\x00-\x7F])"  # '•Design'
-            r"(?<![-.*+)>:])(?<![-.*+)>:] )"  # - Competitive | .Competitive
-            r"(?<![^\x00-\x7F] )\b"  # '• Design' with space
-        )
-        # matching pattern
-        match = (
-            r"(?:[A-Z][a-z]*)+"  # Power
-            r"(?:\W(?:[A-Z][a-z]*)+)*"  # Power BI or Power-BI
-            # ignore words with ":" at the end ex. 'Skills:'
-            r"\b(?!(?: (?:[A-Z][a-z]*)+)*:)"
-        )
-        matches = set(re.findall(ignore_match + match, text))
-        return matches
+        return set(self.pattern.findall(text))
 
     @staticmethod
     def removing_stopwords(words: set[str]) -> set[str]:
         """Removing stopwords, using NLTK stopwords"""
-        return {word for word in words if word.lower() not in set(stopwords.words())}
+        result = {word for word in words if word.lower() not in set(stopwords.words())}
+        return result
 
     @staticmethod
     def removing_duplicates(words: set[str]) -> set[str]:
@@ -77,7 +76,8 @@ class VacancyTools:
 
     def get_clean_tools(self) -> set[str]:
         """Applying all filters to get tools for POSITION"""
-        return self.removing_duplicates(self.removing_stopwords(self.get_tools()))
+        tools = self.get_tools()
+        return self.removing_duplicates(self.removing_stopwords(tools))
 
 
 def first_integer(value: str) -> int:
@@ -89,7 +89,7 @@ class VacancyItem(scrapy.Item):
     date = Field(serializer=lambda v: v.split()[1])
     num_views = Field(serializer=first_integer)
     num_applications = Field(serializer=first_integer)
-    tools = Field(serializer=lambda v: VacancyTools(text=v).get_clean_tools())
+    tools = Field(serializer=lambda v: VacancyTools(v).get_clean_tools())
     year_of_exp = Field(serializer=first_integer)
     employment_type = Field(serializer=lambda v: v.split(" or "))
     country = Field(serializer=lambda v: v.strip().replace("\n   ", "").split(", "))
