@@ -101,8 +101,5 @@ class VacancyItem(scrapy.Item):
     year_of_exp = Field(serializer=first_integer)
     employment_type = Field(serializer=lambda v: v.split(" or "))
     country = Field(
-        serializer=lambda v: v.strip()
-        .replace("\n   ", "")
-        .replace("Relocate", "")
-        .split(", ")
+        serializer=lambda v: v.strip().replace("\n   ", "").split(", ")
     )
