@@ -1,6 +1,7 @@
 """
 Vacancy scraper module
 """
+from tqdm import tqdm  # maks loops show a smart progress meter
 from typing import Any
 
 import scrapy
@@ -13,14 +14,13 @@ from scraping.items import VacancyItem
 class VacancyScraper(scrapy.Spider):
     name = "vacancies"
     start_urls = [config.JOBS_URL]
-    page = 1
 
     def parse(self, response: Response, **kwargs: Any) -> VacancyItem:
         # get vacancies
-        for vc in response.xpath("//li[contains(@id, 'job-item-')]"):
+        for vc in tqdm(response.xpath("//li[contains(@id, 'job-item-')]")):
             yield self.parse_vc(vc, **kwargs)
 
-    # next page
+        # next page
         yield from response.follow_all(
             css=".pagination li:nth-last-child(1) a",
             callback=self.parse
