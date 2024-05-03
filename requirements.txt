@@ -3,3 +3,4 @@ nltk==3.8.1
 numpy==1.26.4
 pandas==2.2.2
 jupyterlab==4.1.8
+flake8==7.0.0
