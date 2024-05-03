@@ -82,14 +82,26 @@ class VacancyTools:
                 unq_words.append(word)
         return set(unq_words)
 
-    def get_clean_tools(self) -> set[str]:
+    def get_clean_tools(self) -> list[str]:
         """Applying all filters to get tools for POSITION"""
         tools = self.get_tools()
-        return self.removing_duplicates(self.removing_stopwords(tools))
+        return list(self.removing_duplicates(self.removing_stopwords(tools)))
 
 
 def first_integer(value: str) -> int:
     return int(value.split()[0])
+
+
+def employment_type(value: str) -> list[str]:
+    """
+    Replace 'Full Remote' ot 'Remote' and
+    'Hybrid Remote' to 'Hybrid', 'Office Work' to 'Office'
+    and to be left with three type 'Office' 'Remote' 'Hybrid'
+    """
+    value = value.replace("Full ", "")
+    value = value.replace(" Work", "")
+    value = value.replace("Hybrid Remote", "Hybrid")
+    return value.split(" or ")
 
 
 class VacancyItem(scrapy.Item):
@@ -99,7 +111,7 @@ class VacancyItem(scrapy.Item):
     num_applications = Field(serializer=first_integer)
     tools = Field(serializer=lambda v: VacancyTools(v).get_clean_tools())
     year_of_exp = Field(serializer=first_integer)
-    employment_type = Field(serializer=lambda v: v.split(" or "))
+    employment_type = Field(serializer=employment_type)
     country = Field(
         serializer=lambda v: v.strip().replace("\n   ", "").split(", ")
     )
