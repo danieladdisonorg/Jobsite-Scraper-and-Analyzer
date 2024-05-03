@@ -1,2 +1,5 @@
- scrapy==2.11.1
- nltk==3.8.1
+scrapy==2.11.1
+nltk==3.8.1
+numpy==1.26.4
+pandas==2.2.2
+jupyterlab==4.1.8
