@@ -2,7 +2,6 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
-import asyncio
 import re
 
 import nltk
@@ -24,18 +23,21 @@ class VacancyTools:
     Plus going through filters like: removing stopwords/duplicates.
     I am not promising that it will return only toolkits.
     """
+
     # compile the pattern for performance optimization
-    pattern = re.compile((
-        r"(?<!^)"  # ignore words at the beginning of a new line
-        r"(?<![^\x00-\x7F])"  # '•Design'
-        r"(?<![-.*+)>:])(?<![-.*+)>:] )"  # - Competitive | .Competitive
-        r"(?<![^\x00-\x7F] )\b"  # '• Design' with space
-        # matching pattern
-        r"(?:[A-Z][a-z]*)+"  # Power
-        r"(?:\W(?:[A-Z][a-z]*)+)*"  # Power BI or Power-BI
-        # ignore words with ":" at the end ex. 'Skills:'
-        r"\b(?!(?: (?:[A-Z][a-z]*)+)*:)"
-    ))
+    pattern = re.compile(
+        (
+            r"(?<!^)"  # ignore words at the beginning of a new line
+            r"(?<![^\x00-\x7F])"  # '•Design'
+            r"(?<![-.*+)>:])(?<![-.*+)>:] )"  # - Competitive | .Competitive
+            r"(?<![^\x00-\x7F] )\b"  # '• Design' with space
+            # matching pattern
+            r"(?:[A-Z][a-z]*)+"  # Power
+            r"(?:\W(?:[A-Z][a-z]*)+)*"  # Power BI or Power-BI
+            # ignore words with ":" at the end ex. 'Skills:'
+            r"\b(?!(?: (?:[A-Z][a-z]*)+)*:)"
+        )
+    )
 
     def __init__(self, text: str) -> None:
         self.text = text
@@ -62,12 +64,18 @@ class VacancyTools:
     @staticmethod
     def removing_stopwords(words: set[str]) -> set[str]:
         """Removing stopwords, using NLTK stopwords"""
-        result = {word for word in words if word.lower() not in set(stopwords.words())}
+        result = {
+            word for word in words
+            if word.lower() not in set(stopwords.words())
+        }
         return result
 
     @staticmethod
     def removing_duplicates(words: set[str]) -> set[str]:
-        """Removing duplicates, exp 'AI', 'AI services' - is same, 'AI' should stay"""
+        """
+        Removing duplicates, exp 'AI', 'AI services' - is same,
+         'AI' should stay
+        """
         unq_words = list()
         for word in sorted(list(words)):
             if not (unq_words and word.startswith(unq_words[-1])):
@@ -92,4 +100,9 @@ class VacancyItem(scrapy.Item):
     tools = Field(serializer=lambda v: VacancyTools(v).get_clean_tools())
     year_of_exp = Field(serializer=first_integer)
     employment_type = Field(serializer=lambda v: v.split(" or "))
-    country = Field(serializer=lambda v: v.strip().replace("\n   ", "").split(", "))
+    country = Field(
+        serializer=lambda v: v.strip()
+        .replace("\n   ", "")
+        .replace("Relocate", "")
+        .split(", ")
+    )
