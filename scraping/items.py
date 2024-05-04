@@ -33,7 +33,7 @@ class VacancyTools:
             r"(?<![^\x00-\x7F] )\b"  # '• Design' with space
             # matching pattern
             r"(?:[A-Z][a-z]*)+"  # Power
-            r"(?:\W(?:[A-Z][a-z]*)+)*"  # Power BI or Power-BI
+            r"(?:[^\w\\\/](?:[A-Z][a-z]*)+)*"  # Power BI or Power-BI
             # ignore words with ":" at the end ex. 'Skills:'
             r"\b(?!(?: (?:[A-Z][a-z]*)+)*:)"
         )
