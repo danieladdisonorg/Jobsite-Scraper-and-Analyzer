@@ -10,6 +10,9 @@ from nltk.corpus import stopwords
 import scrapy
 from scrapy import Field
 
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+
 from config import POSITION
 
 
@@ -71,16 +74,38 @@ class VacancyTools:
         return result
 
     @staticmethod
-    def removing_duplicates(words: set[str]) -> set[str]:
+    def removing_duplicates(tools: set[str]) -> set[str]:
         """
-        Removing duplicates, exp 'AI', 'AI services' - is same,
+        Removing duplicates, exp 'AI', 'AI Services' - is same,
          'AI' should stay
         """
-        unq_words = list()
-        for word in sorted(list(words)):
-            if not (unq_words and word.startswith(unq_words[-1])):
-                unq_words.append(word)
-        return set(unq_words)
+        unq_words = set()
+        duplicates = set()
+        for tool in tools:
+            # filter out words like "Senior Python", "Lead Python"
+            if "python" in tool.lower():
+                unq_words.add("Python")
+                continue
+            elif tool not in duplicates:
+                matches = process.extractBests(
+                    tool, tools, scorer=fuzz.ratio, score_cutoff=70
+                )
+                # filter out the tool out of matches and
+                # find tools similar to the tool
+                filtered_matches = {
+                    match for match, score in matches
+                    if match != tool and (
+                        match.lower().startswith(tool.lower())
+                        or score >= 90
+                    )
+                }
+                unq_words.add(tool)
+                # remove elements that are present in filtered_matches
+                unq_words -= filtered_matches
+                # update the duplicates
+                duplicates |= filtered_matches
+
+        return unq_words
 
     def get_clean_tools(self) -> list[str]:
         """Applying all filters to get tools for POSITION"""
