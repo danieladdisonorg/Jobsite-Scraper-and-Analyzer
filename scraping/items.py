@@ -35,8 +35,11 @@ class VacancyTools:
             r"(?<![-.*+)>:])(?<![-.*+)>:] )"  # - Competitive | .Competitive
             r"(?<![^\x00-\x7F] )\b"  # '• Design' with space
             # matching pattern
-            r"(?:[A-Z][a-z]*)+"  # Power
-            r"(?:[^\w\\\/](?:[A-Z][a-z]*)+)*"  # Power BI or Power-BI
+            # capturing capitalize word
+            r"(?:[A-Z][a-z]*)+"
+            # consecutive capitalize words with
+            # special characters between them, except (/,\)
+            r"(?:[^\w\\\/](?:[A-Z][a-z]*)+)*"
             # ignore words with ":" at the end ex. 'Skills:'
             r"\b(?!(?: (?:[A-Z][a-z]*)+)*:)"
         )
@@ -76,13 +79,14 @@ class VacancyTools:
     @staticmethod
     def removing_duplicates(tools: set[str]) -> set[str]:
         """
-        Removing duplicates, exp 'AI', 'AI Services' - is same,
+        Removing duplicates, exp 'AI', 'AI services' - is same,
          'AI' should stay
         """
         unq_words = set()
         duplicates = set()
+
         for tool in tools:
-            # filter out words like "Senior Python", "Lead Python"
+            # Normalize "Python" tools
             if "python" in tool.lower():
                 unq_words.add("Python")
                 continue
@@ -90,8 +94,9 @@ class VacancyTools:
                 matches = process.extractBests(
                     tool, tools, scorer=fuzz.ratio, score_cutoff=70
                 )
-                # filter out the tool out of matches and
-                # find tools similar to the tool
+
+                # Filter out matches that are similar to the current tool
+                # REST and RESTful is same, REST should stay
                 filtered_matches = {
                     match for match, score in matches
                     if match != tool and (
@@ -99,10 +104,12 @@ class VacancyTools:
                         or score >= 90
                     )
                 }
+
+                # Add the current tool and its filtered matches to unique words
                 unq_words.add(tool)
-                # remove elements that are present in filtered_matches
                 unq_words -= filtered_matches
-                # update the duplicates
+
+                # Update the set of duplicates
                 duplicates |= filtered_matches
 
         return unq_words
