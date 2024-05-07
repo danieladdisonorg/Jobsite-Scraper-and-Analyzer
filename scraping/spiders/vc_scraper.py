@@ -35,9 +35,9 @@ class VacancyScraper(scrapy.Spider):
             yield self.parse_vc(vc, **kwargs)
 
         # next page
-        yield from response.follow_all(
-            css=".pagination li:nth-last-child(1) a", callback=self.parse
-        )
+        # yield from response.follow_all(
+        #     css=".pagination li:nth-last-child(1) a", callback=self.parse
+        # )
 
     def parse_vc(self, vc: Response, **kwargs) -> VacancyItem:
         return VacancyItem(
