@@ -85,11 +85,11 @@ class VacancyTools:
         unq_words = set()
         duplicates = set()
 
-        for tool in tools:
+        for tool in sorted(list(tools), key=len):
             # Normalize "Python" tools
             if "python" in tool.lower():
                 unq_words.add("Python")
-                continue
+
             elif tool not in duplicates:
                 matches = process.extractBests(
                     tool, tools, scorer=fuzz.ratio, score_cutoff=70
