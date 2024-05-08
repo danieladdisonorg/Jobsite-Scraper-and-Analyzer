@@ -1,0 +1,882 @@
+tools,count
+Python,287
+English,102
+Sql,93
+AWS,85
+Docker,76
+Django,68
+Postgres,68
+CD,59
+API,57
+Javascript,55
+Computer Science,54
+Kubernetes,46
+GIT,44
+FAST API,42
+NoSQL,41
+Fast,39
+Flask,39
+RESTful,38
+React,33
+CSS,32
+Mongo,32
+Engineer,31
+Redis,30
+Kafka,30
+GC,29
+Linux,29
+Typescript,27
+Celery,26
+MySql,26
+Node,25
+HTML,25
+Java,25
+Elastic,23
+Azure,22
+DevOps,22
+ETL,21
+Agile,21
+RestAPI,18
+Gitlab,18
+OOP,18
+Upper-Intermediate,18
+Data Engineer,17
+RabbitMQ,17
+Panda,17
+Software Engineer,16
+TensorFlow,16
+ML,15
+Bash,15
+GoLang,15
+Mathematics,15
+GraphQL,15
+Angular,15
+Terraform,15
+Experience,15
+Spark,15
+Intermediate,15
+PyTorch,14
+Jenkins,14
+BigQuery,14
+DRF,14
+QA,14
+Vue,14
+DB,13
+Data,13
+Lambda,13
+UI,13
+PHP,13
+Web,13
+DynamoDB,13
+Airflow,13
+API Gateway,12
+Tableau,12
+Develop,12
+Team Lead,11
+Cloud,11
+SQLAlchemy,11
+NLP,10
+Google Cloud,10
+PowerBI,10
+IAC,10
+Cloudformation,10
+Selenium,10
+NUMPY,10
+ORM,9
+Unix,9
+UX,9
+Pytest,9
+ClickHouse,9
+LLM,9
+Learning,8
+ANSI,8
+REST,8
+C Developer,8
+Jira,8
+HTTP,8
+Databricks,8
+R,8
+CV,8
+IP,8
+SCRUM,7
+JS,7
+Grafana,7
+AWS Lambda,7
+Dataforest,7
+TCP,7
+Laravel,7
+MS,7
+RDS,7
+Snowflake,7
+Firebase,7
+SDLC,7
+Hadoop,7
+Design,7
+Bachelor,6
+Unit,6
+WebSocket,6
+Prometheus,6
+Scala,6
+Computer,6
+SaaS,6
+Amazon Web Services,6
+GitHub Actions,6
+ELT,6
+Cloudwatch,6
+Machine Learning,6
+Statistics,6
+Bootstrap,6
+Apache Kafka,6
+PySpark,6
+SS,6
+Back-End Software Engineer,6
+Description,6
+Apache Spark,6
+Skills,6
+Full-Stack,5
+Data Analyst,5
+Analyst,5
+BDD,5
+Software,5
+JSON,5
+Optional,5
+B,5
+Hive,5
+TDD,5
+JQuery,5
+Code,5
+Data Science,5
+Atlassian,5
+GoogleAppEngine,5
+Firestore,5
+AsyncIO,5
+Customer,5
+Athena,5
+Django Rest Framework,5
+Docker Compose,5
+Houston,5
+REST Framework,5
+Server,5
+Powershell,5
+Fullstack Developer,5
+Pub,5
+Infrastructure,5
+Talend,4
+Yarn,4
+QA Automation Engineer,4
+Github,4
+EKS,4
+SOLID,4
+Familiar,4
+Swagger,4
+Impala,4
+Selenium WebDriver,4
+Bitbucket,4
+IAM,4
+CNNs,4
+CUDA,4
+Querying,4
+DevOps Engineer,4
+SQS,4
+Master,4
+Web UI,4
+Artificial Intelligence,4
+ELK,4
+Cypress,4
+Azure DevOps,4
+Proficient,4
+Knowledge,4
+Databases,4
+Cassandra,4
+Visualization,4
+Playwright,4
+Automation,4
+RTP,4
+Cloud Composer,4
+UNIX Shell,4
+Apache Hadoop,4
+Data Reporting,4
+Confluence,4
+Oracle,3
+Jupyter,3
+SQL DB,3
+Senior Full-Stack Engineer,3
+Front,3
+Express,3
+Quality Assurance,3
+Kinesis,3
+Crypto,3
+Pune,3
+Excel,3
+Physics,3
+Agile Scrum,3
+Digital,3
+DeFi,3
+Scalors,3
+UI Testing Automation,3
+Information Technology,3
+Client,3
+Redux,3
+DNS,3
+Keras,3
+Scipy,3
+T-SQL,3
+RDBMS,3
+Symfony,3
+ADLS,3
+GUI,3
+BigData,3
+Liqudity Risk,3
+Full,3
+Project Management,3
+CentOS,3
+Gerrit,3
+WhatsApp,3
+Cognito,3
+Scientist,3
+USA,3
+OpenAI,3
+OpenShift,3
+SonarQube,3
+XML,3
+Jest,3
+Web Services,3
+SOA,3
+Scraping,3
+Data Management,3
+Helm,3
+Team Members,3
+Telemedicine,3
+GTM,3
+Integration,3
+BackEnd,3
+Spacy,3
+Strong,3
+Denodo,3
+WordPress,3
+Party APIs,3
+Microservices,3
+JMeter,2
+BeautifulSoup,2
+Scrapy,2
+JetPack SDK,2
+Object,2
+Architecture Patterns,2
+Convolutional Neural Networks,2
+Azure Synapse,2
+Mobile,2
+Named Entity Recognition,2
+OpenCV,2
+WebRTC,2
+Deep Learning,2
+Technologies,2
+Poland,2
+Electrical Engineering,2
+Time Series Forecasting,2
+State Management Pattern,2
+Middle,2
+GenSim,2
+Object Relational Mapper,2
+Object Oriented Programming,2
+Hugging Face,2
+Proven,2
+Jetson,2
+AWS MSK,2
+AIOHTTP,2
+NVIDIA Jetson,2
+Flask-RESTful,2
+Google Sheets,2
+AGX Xavier,2
+Authorization,2
+SQL Server,2
+Advanced,2
+Microsoft Azure,2
+Google BigQuery,2
+Azure Functions,2
+NVIDIA TensorRT,2
+Robot Framework,2
+Microsoft Excel,2
+Embedded,2
+Senior Engineer,2
+Pydantic,2
+Chat GTP,2
+Unittest,2
+Memcache,2
+Ukrainian,2
+CircleCI,2
+NestJS,2
+Category,2
+Xavier NX,2
+International E,2
+DeepSpeed,2
+WebSphere,2
+SQL Query,2
+Preferred,2
+NO-SQL DB,2
+Langchain,2
+Ethereum,2
+Fast R-CNN,2
+Frameworks,2
+GTM DatalLayer,2
+OpenSearch,2
+Best Practices,2
+FinTech,2
+Domain-Driven Design,2
+Authentication,2
+Apache Airflow,2
+Conversion,2
+Amplitude,2
+User Interface,2
+Protractor,2
+Gateway,2
+Russian,2
+Development Team,2
+Windows,2
+Alembic,2
+Testing,2
+Azure Service Bus,2
+Tealium,2
+ChatGPT,2
+Jazmine,2
+Project,2
+Stock Option Plan,2
+Telegram,2
+Azure App Service,2
+Zabbix,2
+Ukraine,2
+Point,2
+YOLO,2
+YAGNI,2
+Mocha,2
+AQA,2
+WAV,2
+RNNs,2
+DApp,2
+RPC,2
+JVM,2
+Argo,2
+Pinia,2
+ZERO,2
+ECS,2
+OCR,2
+Perks,2
+Remote,2
+GitOps,2
+Enzyme,2
+Amazon,2
+TS,2
+NAT,2
+Aurora,2
+Perl,2
+RHEL,2
+FIX,2
+EMR,2
+ONNX,2
+MSSQL,2
+Senior,2
+Test,2
+Native,2
+Locust,2
+Role,2
+ResNet,2
+CAD,2
+R&D,2
+DRY,2
+Pulumi,2
+Kyiv,2
+MLOps,2
+Rust,2
+CMake,2
+Spring,2
+PhD,2
+DDD,2
+OCP,2
+NSQ,2
+VGG,2
+CTO,2
+SQL Databases,1
+Async-GraphQL,1
+XDR,1
+Mentor Certus,1
+United States,1
+Kafka Connect,1
+Unreal Engine,1
+SQLStore Proc,1
+RTL,1
+NAC,1
+TCL,1
+Primarily REST,1
+Documentation,1
+Cloud Platform,1
+Auction Pricing,1
+Cloud Computing,1
+Kinesis Streams,1
+Azure Sentinel,1
+Technical Lead,1
+AQA Specialist,1
+Big Data Stack,1
+Data Architect,1
+Data Warehouse,1
+React Engineer,1
+Your Expertise,1
+Azure Storage,1
+UPS,1
+CRM,1
+OOD,1
+AWS SageMaker,1
+IoC,1
+Apache Pulsar,1
+WAF,1
+THE CANDIDATE,1
+PWA,1
+Tracking Data,1
+DAX,1
+NFT,1
+Cloud Storage,1
+ALB,1
+AppDynamics,1
+NLB,1
+Electronics,1
+Power Query,1
+Mysqlclient,1
+Cloud Tasks,1
+Materialise,1
+ESC Cluster,1
+Document DB,1
+RestAssured,1
+UAE,1
+GT Protocol,1
+US Timezone,1
+Refactoring,1
+Performance,1
+Forecasting,1
+Quintagroup,1
+CloudSearch,1
+Operational,1
+Collaborate,1
+UML,1
+Participate,1
+VPC,1
+University,1
+GKE,1
+AWS DevOps,1
+VQL,1
+Terragrunt,1
+CEO,1
+Data Studio,1
+ECR,1
+Django+JQuery,1
+Atto Trading,1
+GCP Functions,1
+SNS,1
+Open Metadata,1
+RAN,1
+System Center,1
+LTE,1
+Configuration,1
+Global Sites,1
+VictoriaMetrics,1
+Join Tailbox,1
+P&L,1
+Azure OpenAI,1
+SLQ,1
+Facebook Ads,1
+Bid Flooring,1
+REQUIREMENTS,1
+Tailwind CSS,1
+SSE,1
+SIP,1
+Unit Testing,1
+LTS,1
+Scikit-Learn,1
+UDP,1
+RAG,1
+AI Pipelines,1
+SCD,1
+Middle Front,1
+Data Quality,1
+AWS GlueJobs,1
+Sigma Computing,1
+Vue.Js,1
+Product Analyst,1
+OkD,1
+Version Control Systems,1
+Microsoft Bot Framework,1
+UK,1
+VR,1
+Automation Development,1
+DS,1
+Development Experience,1
+Functional Programming,1
+Continuous Improvement,1
+PB,1
+Axway Secure Transport,1
+Azure Machine Learning,1
+Databricks Delta Lake,1
+Large Language Models,1
+Looking For In People,1
+Azure Security Center,1
+Business Intelligence,1
+ML Models Development,1
+BE Tech Lead Engineer,1
+PDT,1
+PST,1
+WTX,1
+Azure Cloud Platform,1
+Better Sense Of What,1
+Middle Data Engineer,1
+Cloud Data Warehouse,1
+Full Stack Engineer,1
+Be Doing Day To Day,1
+Valley Commerce LLC,1
+Django Backend Engineer,1
+Amazon Kinesis Firehose,1
+MQ,1
+PM,1
+Azure Cloud SAAS Multitenant Applications,1
+Automation Quality Assurance Specialist,1
+Worked On Recently That Might Give You,1
+Relational Database Management Systems,1
+Siemens Gamesa Renewable Energy SCADA,1
+Application Programming Interfaces,1
+Object-Oriented Design Patterns,1
+OT,1
+Open Systems Interconnection,1
+Switch Abstraction Interface,1
+Linux Systems Administration,1
+FB,1
+Eastern Standard Time Zone,1
+RL Models OR Causal Models,1
+Smart Building Platform,1
+FP,1
+Quick Service Restaurants,1
+Cloud Management Platform,1
+Communication Engineering,1
+PL,1
+WS,1
+Network Protocol Testing,1
+SW,1
+Senior Software Engineer,1
+Enterprise Data Platform,1
+Amazon Managed Streaming,1
+Chief Technology Officer,1
+Amazon Kinesis Analytics,1
+Lambda Architecture,1
+HTTP Live Streaming,1
+Smart Contracts,1
+SVN,1
+Vector Databases,1
+NLG,1
+General Catalyst,1
+Spring Framework,1
+Manage Resources,1
+Django Developer,1
+UTC,1
+Spark Deployment,1
+SEO,1
+Smooth Streaming,1
+Capital Markets,1
+HPE,1
+EFK,1
+Tableau Desktop,1
+JMS,1
+Schema Registry,1
+OpenAPI Swagger,1
+EAI,1
+ESB,1
+Adobe Analytics,1
+AKS,1
+POS,1
+Data Structures,1
+Open Networking,1
+OSI,1
+Azure Data Lake,1
+Cloud Firestore,1
+Golang Core API,1
+Django Helpdesk,1
+Security Testing,1
+Active Directory,1
+Jupyter Notebook,1
+Assurance Strategy,1
+Azure Queue Storage,1
+Program Engineering,1
+EDI,1
+Advanced Analytics,1
+Kappa Architecture,1
+Big,1
+Graph Optimization,1
+Availability Zones,1
+ERC,1
+AI Product Company,1
+Azure SQL Database,1
+Are Some Things We,1
+Applied Statistics,1
+IoT,1
+Flask+SQLAlchemy,1
+TFS,1
+Backend Developer,1
+Junior C Engineer,1
+Apollo Federation,1
+SDK,1
+SRT,1
+NLU,1
+Docker Containers,1
+Responsibilities,1
+Monte Carlo Data,1
+PageDuty Rundeck,1
+Google Analytics,1
+IBM Applications,1
+Electrical,1
+ELB,1
+Strawberry,1
+Minimum,1
+Ideally,1
+Telecom,1
+ClickUp,1
+Kedro,1
+Streams,1
+Nginx,1
+Bayes,1
+Fargate,1
+AppSync,1
+Degree,1
+Provide,1
+Exadata,1
+IBM MQ,1
+Seaborn,1
+PgSql,1
+Tailbox,1
+Digger,1
+NY Time,1
+Preset,1
+Prefect,1
+IBM ITX,1
+EDIFACT,1
+AdTech,1
+Anomaly,1
+Ubuntu,1
+TCPDUMP,1
+Company,1
+Proxmox,1
+Image,1
+Maths,1
+Salesforce,1
+IoT Core,1
+Focusing,1
+Trino,1
+TXSeries,1
+WebLogic,1
+PLVision,1
+Analysis,1
+GCP SDKs,1
+Upper,1
+Shell,1
+Security,1
+Yocto,1
+Big Plus,1
+Stack,1
+Viber,1
+Facts,1
+Nexus,1
+Asterisk,1
+State,1
+Video,1
+DoDAF,1
+Layer,1
+SONiC,1
+Vault,1
+Eaton,1
+Cyber,1
+PK FK,1
+Bedrock,1
+Italy,1
+MPEG-TS,1
+Science,1
+Docusig,1
+Jooble,1
+Xilinx,1
+Uvicorn,1
+Health,1
+DuckMa,1
+Pyramid,1
+SCORCH,1
+Ability,1
+OpenRTB,1
+PromQL,1
+Junior,1
+Kotlin,1
+APIgee,1
+Core C,1
+Twilio,1
+Logging,1
+Nagios,1
+Chains,1
+Pacing,1
+Events,1
+Queues,1
+Pipenv,1
+Desire,1
+Gevent,1
+Thread,1
+Adjust,1
+Opalis,1
+Kanban,1
+Appium,1
+Verilog,1
+Release,1
+Trading,1
+Postman,1
+Compose,1
+Scikit,1
+Chalice,1
+THE JOB,1
+Habits,1
+Croatia,1
+Romania,1
+Feature,1
+Airbyte,1
+PyCharm,1
+Flutter,1
+XAgency,1
+Behave,1
+VMware,1
+Tornado,1
+Sentry,1
+Founder,1
+Israeli,1
+Machine,1
+Matlab,1
+Manager,1
+Mariadb,1
+Website,1
+ARM CPU,1
+Finance,1
+AWS CLI,1
+YOU ARE,1
+Great,1
+Redshift,1
+AWS SDKs,1
+GCP Cloud,1
+Flux,1
+QGIS,1
+VHDL,1
+OLAP,1
+SCOM,1
+NGWW,1
+TikTok Ads,1
+QSRs,1
+FPGA,1
+DriverSmax,1
+LlamaIndex,1
+Travis CI,1
+Soup,1
+Qlik,1
+Appsflyer,1
+Profiling,1
+Pika,1
+Messaging,1
+MQTT,1
+Warehouse,1
+Scripting,1
+JSON APIs,1
+Team,1
+We Expect,1
+Buildroot,1
+ELK Stack,1
+Dynatrace,1
+Streamlit,1
+App Engine,1
+Star,1
+Loki,1
+Governance,1
+Leadership,1
+Contribute,1
+Networking,1
+Backtrader,1
+LAN,1
+Blockchain,1
+BI Analyst,1
+Zero-Trust,1
+WAN,1
+CLI,1
+Buy,1
+Equivalent,1
+Cloud SaaS,1
+Trello,1
+Matplotlib,1
+CloudFront,1
+VCS,1
+Resolution,1
+HLS,1
+Softswitch,1
+SRE,1
+U.S,1
+SLA,1
+Cloudflare,1
+Technology,1
+SSR,1
+CST,1
+DASH,1
+Implement,1
+TOGAF,1
+Previous,1
+Lead,1
+MPEG-DASH,1
+Chef,1
+Kauri One,1
+AWS CLOUD,1
+Architect,1
+CAPTCHAs,1
+VertexAI,1
+SFTP,1
+EEST,1
+Core API,1
+Nuxt,1
+YAML,1
+High,1
+KPIs,1
+WEB APIs,1
+Peak,1
+Ethernet,1
+Glue,1
+RxJs,1
+Tron,1
+InfluxDB,1
+Slovakia,1
+Lake,1
+QlikView,1
+CosmosDB,1
+CICS,1
+Auto,1
+ITIL,1
+Socket.IO,1
+AI Agents,1
+Data Mesh,1
+Integrate,1
+US-Israel,1
+Mercurial,1
+GitKraken,1
+MMPs,1
+Analytics,1
+CeFi,1
+Alexa Top,1
+KISS,1
+QuestaSim,1
+Deception,1
+Data Lake,1
+Cambridge,1
+Pyppeteer,1
+SonarLint,1
+API Query,1
+Stay,1
+New Relic,1
+Milvus DB,1
+Extensive,1
+SaltStack,1
+ChipScope,1
+LI-Remote,1
+Ruby,1
+Container,1
+TICK,1
+Multicast,1
+Bayesian Models(Probabilistic Programming,1
