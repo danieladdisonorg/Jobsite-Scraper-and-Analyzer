@@ -7,6 +7,7 @@ from typing import Any
 
 import scrapy
 from scrapy.http import Response
+from scrapy.crawler import CrawlerProcess
 
 import config
 from scraping.items import VacancyItem
@@ -16,7 +17,7 @@ from scraping.items import VacancyItem
 DATE = ".//span[@class='mr-2 nobr']/@title"
 NUM_VIEWS = ".//span[@class='nobr']/span[1]/@title"
 NUM_APPLICATIONS = ".//span[@class='nobr']/span[2]/@title"
-TOOLS = ".//span/@data-original-text"
+SKILLS = ".//div[contains(@class, 'original-text')]"
 YEAR_OF_EXP = ".//span[contains(text(), ' of experience')]/text()"
 EMPLOYMENT_TYPE = (
     ".//span[contains(text(), 'Remote') "
@@ -28,7 +29,20 @@ COUNTRY = ".//span[@class='location-text']/text()"
 class VacancyScraper(scrapy.Spider):
     name = "vacancies"
     start_urls = [config.JOBS_URL]
+    # user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"
     last_vc_file = "last_vc_id.txt"
+    page = 1
+
+    def start_requests(self):
+        # Custom headers
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'Accept-Language': 'en-US,en;q=0.9',
+        }
+
+        for url in self.start_urls:
+            yield scrapy.Request(url, headers=headers, callback=self.parse)
 
     def parse(self, response: Response, **kwargs: Any) -> VacancyItem:
         # get last vacancy we started
@@ -40,6 +54,7 @@ class VacancyScraper(scrapy.Spider):
 
             # stop scraping when encounter last vacancy
             if last_vc_id == vc_id:
+                self.logger.info(f"Encounter same vacancy")
                 return
             # save vacancy id for next run
             if not last_vc_id:
@@ -49,9 +64,18 @@ class VacancyScraper(scrapy.Spider):
             yield self.parse_vc(vc, **kwargs)
 
         # next page
-        yield from response.follow_all(
-            css=".pagination li:nth-last-child(1) a", callback=self.parse
-        )
+        print(response.headers)
+        last_page = response.xpath("//ul[contains(@class, 'pagination')]/li/a/text()").getall()[-3].strip()
+        print(last_page)
+        self.page += 1
+        if not self.page > int(last_page):
+            query = f"?keyword={config.POSITION}&page={self.page}"
+            print(response.urljoin(query))
+            yield response.follow(query, callback=self.parse)
+
+        # yield from response.follow_all(
+        #     css=".pagination li:nth-last-child(1) a", callback=self.parse
+        # )
 
     def parse_vc(self, vc: Response, **kwargs) -> VacancyItem:
         return VacancyItem(
@@ -59,7 +83,7 @@ class VacancyScraper(scrapy.Spider):
                 "date_time": vc.xpath(DATE).get(),
                 "num_views": vc.xpath(NUM_VIEWS).get(),
                 "num_applications": vc.xpath(NUM_APPLICATIONS).get(),
-                "tools": vc.xpath(TOOLS).get(),
+                "skills": vc.xpath(SKILLS).get(),
                 "year_of_exp": vc.xpath(YEAR_OF_EXP).get(default=0),
                 "employment_type": vc.xpath(EMPLOYMENT_TYPE).get(),
                 "country": vc.xpath(COUNTRY).get(),
@@ -78,3 +102,8 @@ class VacancyScraper(scrapy.Spider):
         with open("last_vc_id.txt", "w") as f:
             f.write(vc_id)
             self.logger.info(f"The vacancy ID:{vc_id} we will stop next time")
+
+#
+# pr = CrawlerProcess()
+# pr.crawl(VacancyScraper)
+# pr.start()

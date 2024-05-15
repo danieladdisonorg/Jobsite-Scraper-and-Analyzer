@@ -9,6 +9,7 @@ from nltk.corpus import stopwords
 
 import scrapy
 from scrapy import Field
+from w3lib.html import remove_tags
 
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
@@ -19,12 +20,12 @@ from config import POSITION
 nltk.download("stopwords")
 
 
-class VacancyTools:
+class VacancySkills:
     """
-    Class for getting toolkits from text, it's just looking
+    Class for getting skills from text, it's just looking
     for capitalizing words in the text, which is a common way.
     Plus going through filters like: removing stopwords/duplicates.
-    I am not promising that it will return only toolkits.
+    I am not promising that it will return only skills.
     """
 
     # compile the pattern for performance optimization
@@ -48,22 +49,22 @@ class VacancyTools:
     def __init__(self, text: str) -> None:
         self.text = text
 
-    def get_tools(self) -> set:
+    def get_skills(self) -> set:
         """
         There are a lot of redundant info in description like
         information about the project/company etc. We need to aim where
         skills/requirements are specified.
         """
         texts = [
-            text.replace("<br>", ". ")
-            for text in self.text.split("<br><br>")
-            if POSITION.lower() in text.lower()
+            remove_tags(text)
+            for text in self.text.split("\xa0")
+            if text and POSITION.lower() in text.lower()
         ]
         result = set().union(*(self.filter_text(text) for text in texts))
         return result
 
     def filter_text(self, text: str) -> set[str]:
-        """Aims for getting tools from text, by finding capitalize words"""
+        """Aims for getting skills from text, by finding capitalize words"""
         # we do not want to match this words
         return set(self.pattern.findall(text))
 
@@ -77,7 +78,7 @@ class VacancyTools:
         return result
 
     @staticmethod
-    def removing_duplicates(tools: set[str]) -> set[str]:
+    def removing_duplicates(skills: set[str]) -> set[str]:
         """
         Removing duplicates, exp 'AI', 'AI services' - is same,
          'AI' should stay
@@ -85,28 +86,28 @@ class VacancyTools:
         unq_words = set()
         duplicates = set()
 
-        for tool in sorted(list(tools), key=len):
-            # Normalize "Python" tools
-            if "python" in tool.lower():
+        for skill in sorted(list(skills), key=len):
+            # Normalize "Python"
+            if "python" in skill.lower():
                 unq_words.add("Python")
 
-            elif tool not in duplicates:
+            elif skill not in duplicates:
                 matches = process.extractBests(
-                    tool, tools, scorer=fuzz.ratio, score_cutoff=70
+                    skill, skills, scorer=fuzz.ratio, score_cutoff=70
                 )
 
-                # Filter out matches that are similar to the current tool
+                # Filter out matches that are similar to the current skill
                 # REST and RESTful is same, REST should stay
                 filtered_matches = {
                     match for match, score in matches
-                    if match != tool and (
-                        match.lower().startswith(tool.lower())
+                    if match != skill and (
+                        match.lower().startswith(skill.lower())
                         or score >= 90
                     )
                 }
 
-                # Add the current tool and its filtered matches to unique words
-                unq_words.add(tool)
+                # Add the current skill and its filtered matches to unique words
+                unq_words.add(skill)
                 unq_words -= filtered_matches
 
                 # Update the set of duplicates
@@ -114,10 +115,10 @@ class VacancyTools:
 
         return unq_words
 
-    def get_clean_tools(self) -> list[str]:
-        """Applying all filters to get tools for POSITION"""
-        tools = self.get_tools()
-        return list(self.removing_duplicates(self.removing_stopwords(tools)))
+    def get_clean_skills(self) -> list[str]:
+        """Applying all filters to get skills for POSITION"""
+        skills = self.get_skills()
+        return list(self.removing_duplicates(self.removing_stopwords(skills)))
 
 
 def first_integer(value: str) -> int:
@@ -141,7 +142,7 @@ class VacancyItem(scrapy.Item):
     date_time = Field()
     num_views = Field(serializer=first_integer)
     num_applications = Field(serializer=first_integer)
-    tools = Field(serializer=lambda v: VacancyTools(v).get_clean_tools())
+    skills = Field(serializer=lambda v: VacancySkills(v).get_clean_skills())
     year_of_exp = Field(serializer=first_integer)
     employment_type = Field(serializer=employment_type)
     country = Field(
