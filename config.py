@@ -3,6 +3,6 @@ Project common setting configurations
 """
 
 # looking vacancies for position ex. Python/Java ...
-POSITION = "Python"
+POSITION = "python"
 
-JOBS_URL = f"https://djinni.co/jobs/?keywords={POSITION}"
+JOBS_URL = f"https://theprotocol.it/filtry/{POSITION};t"
