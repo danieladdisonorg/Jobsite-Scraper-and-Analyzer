@@ -1,109 +1,129 @@
 """
 Vacancy scraper module
 """
-
-from tqdm import tqdm  # maks loops show a smart progress meter
+from scrapy import Request
+from tqdm import tqdm
 from typing import Any
 
 import scrapy
-from scrapy.http import Response
+from scrapy.http.response.html import HtmlResponse
+from scrapy.selector import Selector
 from scrapy.crawler import CrawlerProcess
+from scrapy.utils.project import get_project_settings
 
 import config
-from scraping.items import VacancyItem
+from scraping.items import VacancyItem, VacancySkills
 
 
-# XPATH path to element(s)
-DATE = ".//span[@class='mr-2 nobr']/@title"
-NUM_VIEWS = ".//span[@class='nobr']/span[1]/@title"
-NUM_APPLICATIONS = ".//span[@class='nobr']/span[2]/@title"
-SKILLS = ".//div[contains(@class, 'original-text')]"
-YEAR_OF_EXP = ".//span[contains(text(), ' of experience')]/text()"
-EMPLOYMENT_TYPE = (
-    ".//span[contains(text(), 'Remote') "
-    "or contains(text(), 'Office')]/text()"
-)
-COUNTRY = ".//span[@class='location-text']/text()"
+# CSS selector path to element(s)
+SKILLS = ".l1sjc53z::text"
+CONTRACTS_SALARY = "p[data-test='text-contractName']::text"
+
+# vacancy info like employment type, location, ua support
+VC_INFO = ".c21kfgf div::text"
+
+SVG_PATH = ".c21kfgf div svg"
+ANCESTOR_TEXT = "ancestor::div[2]//text()"
+LEVEL_OF_EXP = f"{SVG_PATH} path[d*='M21.8607']"
+EMPLOYMENT_TYPE = f"{SVG_PATH} path[d*='M9.00003']"
+LOCATION = f"{SVG_PATH} path[d*='M13 15L12']"
+UA_SUPPORT = f"{SVG_PATH} path[d*='M27.5 12C27.5']"
+
+REQUIREMENTS = "div[data-test='section-requirements']"
+# requirements text first expected and optional
+REQ_EXPECTED = "ul[data-test='section-requirements-expected'] li div::text"
+REQ_OPTIONAL = "ul[data-test='section-requirements-optional'] li div::text"
 
 
 class VacancyScraper(scrapy.Spider):
     name = "vacancies"
     start_urls = [config.JOBS_URL]
-    # user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"
-    last_vc_file = "last_vc_id.txt"
-    page = 1
 
-    def start_requests(self):
-        # Custom headers
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'Accept-Language': 'en-US,en;q=0.9',
-        }
-
-        for url in self.start_urls:
-            yield scrapy.Request(url, headers=headers, callback=self.parse)
-
-    def parse(self, response: Response, **kwargs: Any) -> VacancyItem:
-        # get last vacancy we started
-        last_vc_id = self.last_vc_id
-
+    def parse(self, response: HtmlResponse, **kwargs: Any) -> VacancyItem:
         # get vacancies
-        for vc in tqdm(response.xpath("//li[contains(@id, 'job-item-')]")):
-            vc_id = vc.attrib["id"].split("job-item-")[1]
-
-            # stop scraping when encounter last vacancy
-            if last_vc_id == vc_id:
-                self.logger.info(f"Encounter same vacancy")
-                return
-            # save vacancy id for next run
-            if not last_vc_id:
-                last_vc_id = vc_id
-                self.save_last_vc_id(last_vc_id)
-
-            yield self.parse_vc(vc, **kwargs)
+        # yield from response.follow_all(
+        #     css=".o1onjy6t .a4pzt2q", callback=self.parse_vc
+        # )
+        for vc in tqdm(response.css(".o1onjy6t .a4pzt2q")):
+            # if not last_vc:
+                # self.last_vc_url = last_vc = vc.attrib["href"]
+            yield response.follow(vc, callback=self.parse_vc)
 
         # next page
-        print(response.headers)
-        last_page = response.xpath("//ul[contains(@class, 'pagination')]/li/a/text()").getall()[-3].strip()
-        print(last_page)
-        self.page += 1
-        if not self.page > int(last_page):
-            query = f"?keyword={config.POSITION}&page={self.page}"
-            print(response.urljoin(query))
-            yield response.follow(query, callback=self.parse)
-
         # yield from response.follow_all(
-        #     css=".pagination li:nth-last-child(1) a", callback=self.parse
+        #     css=".anchor-nextPage", callback=self.parse
         # )
 
-    def parse_vc(self, vc: Response, **kwargs) -> VacancyItem:
+    def parse_vc(self, vc: HtmlResponse, **kwargs) -> VacancyItem:
+
+        # get all containers with skill labels
+        skills = vc.css(".c1fj2x2p")
+        # Ensure the list has exactly 3 elements, filling with '[]' if fewer
+        skills = (skills + [[]] * 3)[:3]
+        required_skills, optional_skills, os = [tools.css(SKILLS).getall() if tools else [] for tools in skills]
+
+        # get vacancy description
+        requirements = vc.css(REQUIREMENTS)
+        req_required = self.get_required_requirements(requirements)
+        req_optional = self.get_optional_requirements(requirements)
+
+        # Fallback to using 'requirements' if no 'REQ_EXPECTED' found in html tags
+        # then we take whole text from vacancy description if 'requirements' are not
+        # divided as 'req_required' and 'req_optional'
+        req_required = req_required if req_required else requirements.getall()
+
+        # vacancy information
         return VacancyItem(
             **{
-                "date_time": vc.xpath(DATE).get(),
-                "num_views": vc.xpath(NUM_VIEWS).get(),
-                "num_applications": vc.xpath(NUM_APPLICATIONS).get(),
-                "skills": vc.xpath(SKILLS).get(),
-                "year_of_exp": vc.xpath(YEAR_OF_EXP).get(default=0),
-                "employment_type": vc.xpath(EMPLOYMENT_TYPE).get(),
-                "country": vc.xpath(COUNTRY).get(),
+                "required_skills": self.description_skills(
+                    req_required
+                ).union(set(required_skills)),
+                "optional_skills": self.description_skills(
+                    req_optional
+                ).union(set(optional_skills)),
+                "os": os,
+                "level_of_exp": vc.css(LEVEL_OF_EXP).xpath(ANCESTOR_TEXT).get(),
+                "employment_type": vc.css(EMPLOYMENT_TYPE).xpath(ANCESTOR_TEXT).get(),
+                "contracts": vc.css(CONTRACTS_SALARY).get(),
+                "location": vc.css(LOCATION).xpath(ANCESTOR_TEXT).get(),
+                "ua_support": vc.css(UA_SUPPORT).xpath(ANCESTOR_TEXT).get(),
             }
         )
 
+    @staticmethod
+    def description_skills(desc: list[str]) -> set[str]:
+        """
+        Getting additional skills out of description that may not be
+        in 'REQ_EXPECTED', 'REQ_OPTIONAL' tags.
+        """
+        return VacancySkills(texts=desc).get_clean_skills()
+
+    @staticmethod
+    def get_required_requirements(requirements: Selector) -> list[str]:
+        """Get description about required skills."""
+        # TODO: look at the result of this function
+        return requirements.css(REQ_EXPECTED).getall()
+
+    @staticmethod
+    def get_optional_requirements(requirements: Selector) -> list[str]:
+        """Get description about optional skills."""
+        return requirements.css(REQ_OPTIONAL).getall()
+
     @property
-    def last_vc_id(self) -> str:
+    def last_vc_url(self) -> str:
         try:
-            with open("last_vc_id.txt", "r") as f:
+            with open("last_vc_url.txt", "r") as f:
                 return f.read().strip()
         except FileNotFoundError:
             return ""
 
-    def save_last_vc_id(self, vc_id: str) -> None:
+    @last_vc_url.setter
+    def last_vc_url(self, vc_url: str) -> None:
         with open("last_vc_id.txt", "w") as f:
-            f.write(vc_id)
-            self.logger.info(f"The vacancy ID:{vc_id} we will stop next time")
-
+            f.write(vc_url)
+            self.logger.info(f"The vacancy url:{vc_url} we will stop next time")
 #
-# pr = CrawlerProcess()
+#
+# pr = CrawlerProcess(settings=get_project_settings())
 # pr.crawl(VacancyScraper)
 # pr.start()
