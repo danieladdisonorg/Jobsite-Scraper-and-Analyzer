@@ -1,364 +1,51 @@
-,Unnamed: 0,country,date_time,num_applications,num_views,tools,year_of_exp,hybrid,office,remote
-0,0,"['Ukraine', 'Portugal', 'Spain', 'Argentina', 'Chile']",2024-05-06 18:30:00,10,37,"['Code', 'Native', 'IaC', 'Infrastructure', 'CD', 'Cloud']",5,0,0,1
-1,1,['Ukraine'],2024-05-06 18:16:00,24,67,"['Pika', 'SQLAlchemy', 'Celery Beat', 'AWS', 'Docker', 'Python', 'WebSocket', 'Uvicorn', 'Firebase', 'FastAPI', 'PostgreSQL']",3,0,0,1
-2,2,"['Ukraine', 'Cyprus']",2024-05-06 15:30:00,2,19,"['CAPTCHAs', 'Selenium', 'Redis', 'DDD', 'GCS', 'SSL', 'Python', 'Software Engineer', 'Apache Kafka', 'ClickHouse', 'Domain-Driven Design', 'FastAPI', 'Kafka', 'BigQuery', 'Scrapy', 'Pyppeteer', 'Playwright', 'PostgreSQL']",5,0,0,1
-3,3,['Ukraine'],2024-05-06 15:08:00,25,76,"['CD', 'Linux', 'Git', 'Docker']",3,0,1,1
-4,4,['Israel'],2024-05-06 14:10:00,22,219,"['Async IO', 'Great', 'AWS', 'GCP', 'Auto', 'Azure', 'Quick Service Restaurants', 'WebRTC', 'Looking For In People', 'Docker', 'Kubernetes', 'Strong', 'Fast', 'Architect', 'Microservices', 'Team', 'Ansible', 'Python', 'QSRs', 'Clouds', 'UI', 'Computer Science', 'Golang', 'SW', 'CD']",5,0,0,1
-5,5,['Ukraine'],2024-05-06 13:50:00,6,19,"['Google Cloud', 'LLM', 'AWS', 'English', 'Docker', 'Python', 'RabbitMQ', 'CD', 'Linux', 'Celery', 'FastAPI', 'Docker-Compose', 'DevOps', 'Django+DRF', 'Postgres', 'Flask+SQLAlchemy', 'SQL']",5,0,1,1
-6,6,['Ukraine'],2024-05-06 13:44:00,76,233,"['Django', 'Python']",3,0,0,1
-7,7,['Ukraine'],2024-05-06 12:40:00,9,47,"['Computer Science', 'Back-End Software Engineer', 'GraphQL', 'AWS', 'AWS Lambda', 'DynamoDB', 'Python', 'ETL', 'Engineering', 'APIs', 'CloudFormation', 'DevOps', 'API Gateway', 'Lambda', 'RESTful API']",3,0,1,1
-8,8,['Ukraine'],2024-05-06 12:33:00,6,165,['SQL'],1,0,0,1
-9,9,"['Romania', 'Ukraine']",2024-05-06 12:17:00,107,390,"['Habits', 'REST API', 'Cassandra', 'Tornado', 'Design', 'OOP', 'Python', 'RabbitMQ', 'MongoDB', 'FastAPI', 'Kafka', 'Experience', 'PostgreSQL']",3,0,0,1
-10,10,['Ukraine'],2024-05-06 10:26:00,5,40,['Analyst'],1,1,0,0
-11,11,['Ukraine'],2024-05-06 10:00:00,6,122,"['ITIL', 'AWS DMS', 'ELT', 'Lambda Architecture', 'CDC', 'Cloud', 'Data Mesh', 'Data Quality', 'Apache Spark', 'Lake', 'DoDAF', 'Node', 'Glue', 'Warehouse', 'Governance', 'Python', 'Athena', 'UML', 'Data Warehouse', 'TOGAF', 'Kappa Architecture', 'Data']",5,0,0,1
-12,12,['Slovenia'],2024-05-05 22:24:00,23,94,"['Vue', 'TypeScript', 'Google Cloud', 'English', 'Full Stack Developer', 'Python', 'DevOps']",2,0,0,1
-13,13,"['Poland', 'Hungary', 'Slovakia', 'Cyprus', 'Turkey']",2024-05-03 17:52:00,3,24,"['AWS SageMaker', 'RESTful APIs', 'SpaCy', 'Azure Cloud Platform', 'API', 'ChatGPT', 'NLP', 'LLM', 'AWS', 'Python', 'AWS GlueJobs', 'Azure Functions', 'ETL', 'Git', 'FastAPI', 'Pandas']",3,0,1,1
-14,15,"['Relocate', 'Ukraine']",2024-05-03 17:02:00,21,61,"['SQLAlchemy', 'Redis', 'Technology', 'Docker', 'RabbitMQ', 'Python', 'React', 'CD', 'Engineer', 'Django', 'Typescript', 'Jenkins', 'Middle Front']",3,0,0,1
-15,16,['Ukraine'],2024-05-03 17:02:00,130,539,"['YAGNI', 'SOLID', 'TypeScript', 'Redux', 'CSS', 'Python', 'SSR', 'React', 'Jest', 'CD', 'React Developer', 'JavaScript', 'DRY']",2,0,1,0
-16,17,"['Australia', 'United States']",2024-05-03 17:02:00,43,161,"['CST', 'English', 'Python', 'Git', 'US Timezone']",3,0,0,1
-17,18,['Ukraine'],2024-05-03 16:55:00,0,13,"['Airflow', 'API', 'Google Cloud', 'Google AppEngine', 'Cloud Composer', 'English', 'Python', 'NoSQL', 'Firebase', 'React', 'BigQuery', 'Data Engineering', 'DevOps', 'Pub', 'Firestore']",5,0,1,1
-18,19,['Ukraine'],2024-05-03 16:45:00,2,40,"['IaC', 'Kubernetes']",5,0,1,1
-19,20,['Ukraine'],2024-05-03 16:34:00,34,114,"['Full-Stack', 'GitHub CI', 'Vue', 'Node', 'Elasticsearch', 'DigitalOcean', 'TypeScript', 'GraphQL', 'Web Services', 'GitLab CI', 'Python', 'Kubernetes', 'Docker', 'MongoDB', 'JavaScript', 'Django']",5,0,0,1
-20,21,['Ukraine'],2024-05-03 15:40:00,39,235,"['Excel', 'Python', 'Data Analysis', 'ETL', 'Power BI', 'SQL', 'Visualization']",2,0,0,1
-21,22,"['Poland', 'Ukraine', 'Lithuania', 'Germany', 'Spain']",2024-05-03 15:39:00,71,373,"['Enterprise Data Platform', 'SLA', 'Tealium', 'JavaScript', 'Vue', 'THE CANDIDATE', 'NodeJS', 'THE JOB', 'Engineer', 'GTM', 'State Management Pattern', 'Tracking Data', 'CSS', 'Python', 'Data Engineer', 'Git', 'HTML', 'Pinia', 'Gitlab', 'English', 'GTM DatalLayer', 'CD', 'Data']",5,0,0,1
-22,23,['Ukraine'],2024-05-03 14:22:00,17,194,"['Redis', 'Data Management', 'Python', 'NoSQL', 'ETL', 'ElasticSearch', 'SQL', 'Project', 'International E', 'PostgreSQL']",2,0,1,1
-23,24,['Ukraine'],2024-05-03 13:55:00,17,77,"['SCRUM', 'Ethereum', 'AWS', 'GCP', 'Azure', 'Software Design', 'Docker', 'NoSQL', 'SQL', 'Intermediate', 'Design', 'Python', 'Git', 'FP', 'Solidity', 'Software Engineering', 'Agile', 'English', 'Golang', 'Nodejs', 'CD']",5,0,1,1
-24,25,['Ukraine'],2024-05-03 13:39:00,93,555,"['Vue', 'JSON', 'REST API', 'Nginx', 'JavaScript', 'CSS', 'English', 'Docker', 'Linux', 'SQL', 'Git', 'Celery', 'Django REST Framework', 'HTML', 'Angular', 'Django', 'Intermediate', 'PostgreSQL']",1,0,0,1
-25,26,['Ukraine'],2024-05-03 13:36:00,11,55,"['HTML', 'CSS', 'PostgreSQL']",5,0,0,1
-26,27,['Ukraine'],2024-05-03 13:32:00,0,15,"['Airflow', 'Server', 'Gitlab CI', 'CD', 'Dbt', 'Clickhouse', 'Scientist']",5,0,1,0
-27,28,"['Bulgaria', 'Hungary', 'Poland', 'Portugal', 'Ukraine']",2024-05-03 13:27:00,10,43,"['PB', 'SQL', 'Python', 'English']",3,0,1,1
-28,29,['Ukraine'],2024-05-03 13:22:00,2,14,"['Airflow', 'Server', 'Gitlab CI', 'CD', 'Dbt', 'Clickhouse', 'Scientist']",5,0,1,0
-29,30,['Ukraine'],2024-05-03 13:22:00,1,19,"['Snowflake', 'Jest', 'JavaScript', 'Jazmine', 'Mocha', 'Protractor', 'Angular', 'Postgres', 'Senior Full-Stack Engineer', 'USA', 'CSS', 'Python', 'Git', 'Cypress', 'Telemedicine', 'MySQL', 'Flask', 'Enzyme', 'Django', 'Typescript']",5,0,1,1
-30,31,['Ukraine'],2024-05-03 13:11:00,18,196,"['PyTorch', 'GitLab', 'NoSQL', 'ClickHouse', 'Sql', 'Jupyter']",3,0,1,0
-31,32,['Ukraine'],2024-05-03 11:21:00,42,130,"['Vue', 'Flask', 'AWS', 'English', 'Python', 'React', 'FastAPI', 'Angular', 'Django']",2,0,1,1
-32,33,['Ukraine'],2024-05-03 10:33:00,6,51,"['Scala', 'Elasticsearch', 'Hadoop', 'Computer Science', 'Java', 'AWS', 'JVM', 'Big Data', 'Python', 'GC', 'Thread', 'Azure', 'Kafka', 'Bachelor', 'Apache Spark', 'SQL']",5,0,0,1
-33,34,['Ukraine'],2024-05-03 07:39:00,104,775,"['Program Engineering', 'Computer Science', 'AWS', 'English', 'Python', 'Advanced', 'Lambda', 'SLQ']",2,0,0,1
-34,36,['Ukraine'],2024-05-02 17:56:00,20,110,"['BE Tech Lead Engineer', 'Gevent', 'Mysql', 'Docker', 'Kubernetes', 'RabbitMQ', 'Python', 'Terraform']",5,0,1,1
-35,37,['Ukraine'],2024-05-02 16:55:00,13,89,"['RESTful APIs', 'API', 'DRF', 'Develop', 'Laravel', 'Optional', 'Django Rest Framework', 'Python', 'PHP', 'Docker', 'Kubernetes', 'CD', 'Celery', 'Kafka', 'Django']",2,0,1,1
-36,38,"['Bulgaria', 'Poland', 'Portugal', 'Romania', 'Ukraine']",2024-05-02 16:35:00,3,66,"['Code', 'PowerShell', 'MQ', 'Information Technology', 'OCP', 'Ansible', 'TXSeries', 'Docker', 'IBM Applications', 'Python', 'WebSphere', 'Linux', 'DevOps Engineer', 'Infrastructure', 'CICS', 'Bash']",5,0,0,1
-37,39,"['Germany', 'Spain', 'Poland', 'Slovakia']",2024-05-02 16:14:00,6,25,"['Redis', 'Memcached', 'SQL Alchemy', 'AWS', 'Docker', 'Python', 'RabbitMQ', 'NoSQL', 'React', 'Django Backend Engineer', 'Django', 'MySQL', 'SQL', 'ELK']",3,0,0,1
-38,40,['Ukraine'],2024-05-02 13:39:00,15,51,"['SSE', 'REST API', 'Feature', 'OOP', 'Python', 'ML', 'MongoDB', 'React', 'Amplitude', 'GTM', 'FB']",2,0,0,1
-39,41,['Ukraine'],2024-05-02 12:56:00,27,152,"['API', 'Swagger', 'AWS', 'Terraform', 'ECS', 'NLB', 'DB', 'Docker', 'Upper-Intermediate', 'IAM', 'ALB', 'RDS', 'ECR', 'SQL', 'Python', 'YAML', 'FastAPI', 'API Gateway', 'Lambda', 'English', 'CD', 'VPC']",3,0,1,1
-40,42,"['Albania', 'Azerbaijan', 'Georgia', 'North Macedonia']",2024-05-02 12:50:00,108,225,"['RESTful APIs', 'Computer Science', 'Redis', 'Knowledge', 'JavaScript', 'CSS', 'Python', 'Engineering', 'Git', 'Celery', 'Django Developer', 'HTML', 'Django', 'Experience', 'PostgreSQL']",2,0,0,1
-41,43,['Ukraine'],2024-05-02 12:36:00,2,80,['Python'],5,0,0,1
-42,44,['Ukraine'],2024-05-02 12:28:00,5,49,"['Microservices', 'DDD', 'Kubernetes', 'Python', 'LLMs', 'RAG', 'Kafka', 'Domain-Driven Design']",5,0,0,1
-43,45,['Poland'],2024-05-02 12:25:00,13,24,"['Playwright', 'Computer Science', 'SQLAlchemy', 'TypeScript', 'REST API', 'Flask', 'Cassandra', 'Senior Full', 'GraphQL', 'Python', 'React', 'GCP Cloud', 'JavaScript', 'General Catalyst', 'MySQL', 'Pandas', 'PostgreSQL']",5,0,0,1
-44,46,['Poland'],2024-05-02 12:22:00,9,40,"['Terraform', 'PowerBI', 'Docker', 'GitHub Actions', 'Python', 'Unit Testing', 'FastAPI', 'Bachelor', 'BigQuery', 'DBT', 'PostgreSQL', 'Software Engineering', 'Computer Science', 'Flask', 'Redis', 'Google Cloud', 'GraphQL', 'English', 'Pandas', 'Experience']",3,0,0,1
-45,47,['Israel'],2024-05-02 12:19:00,29,125,"['Azure Service Bus', 'GCP SDKs', 'AWS Lambda', 'Python', 'SQS', 'GCP Functions', 'Azure', 'AWS SDKs']",3,0,1,1
-46,48,['Ukraine'],2024-05-02 12:19:00,2,25,"['Computer Science', 'PyTorch', 'Bayesian Models(Probabilistic Programming', 'RL Models OR Causal Models', 'TensorFlow', 'Python', 'Time Series Forecasting', 'NumPy', 'B', 'SQL', 'Keras']",5,0,0,1
-47,49,['Ukraine'],2024-05-02 12:19:00,5,25,['Analytics'],2,1,0,0
-48,50,['Ukraine'],2024-05-02 12:17:00,4,41,"['Ruby', 'EEST', 'Flask', 'AWS', 'Docker', 'Python', 'NoSQL', 'U.S', 'SRE', 'DevOps', 'JavaScript', 'SQL']",5,0,1,1
-49,51,['Ukraine'],2024-05-02 12:05:00,17,55,"['Grafana', 'Prometheus', 'Docker', 'MySql']",1,0,0,1
-50,52,"['Relocate', 'United Arab Emirates']",2024-05-02 10:03:00,36,297,"['UAE', 'AWS', 'Python', 'CD', 'Intermediate']",3,0,1,0
-51,53,['Ukraine'],2024-05-02 01:42:00,30,177,"['WebSockets', 'Flask', 'WAV', 'AI Product Company', 'English', 'Python', 'Linux', 'TCP']",3,0,0,1
-52,54,['Ukraine'],2024-05-02 00:32:00,34,143,"['Selenium', 'Security Testing', 'PyTest', 'Travis CI', 'QA', 'Quintagroup', 'Resolution', 'Automation Development', 'GitLab CI', 'Python', 'Automation Quality Assurance Specialist', 'Jenkins', 'Robot Framework', 'Assurance Strategy', 'English', 'Testing', 'CD', 'AQA Specialist', 'Integration']",3,0,1,1
-53,55,['Canada'],2024-05-01 21:58:00,44,153,"['PgSql', 'Bootstrap', 'Javascript', 'JQuery', 'AWS', 'CSS', 'OOP', 'Python', 'CD', 'SQL Server', 'Azure', 'Azure DevOps', 'Angular', 'T-SQL', 'ORM']",5,0,0,1
-54,56,['Ukraine'],2024-05-01 16:40:00,23,177,"['Engineering', 'Computer Science', 'Agile', 'Python']",5,0,0,1
-55,57,['Ukraine'],2024-05-01 15:46:00,17,75,"['Lambda', 'MongoDB', 'Soup', 'SDK', 'PostgreSQL']",3,0,1,1
-56,58,['Ukraine'],2024-05-01 15:22:00,17,189,"['Airflow', 'PL', 'Grafana', 'Oracle', 'TFS', 'Jira', 'Kafka', 'Postgres', 'T-SQL', 'Elastic']",5,0,1,1
-57,59,['Ukraine'],2024-05-01 15:08:00,61,224,"['RTMP', 'Mysqlclient', 'MSK', 'AWS', 'REST', 'WebRTC', 'MQTT', 'WebSockets', 'Cloud Formation(CDK', 'DynamoDB', 'MPEG-DASH', 'IAM', 'IoT', 'Kafka', 'RDS', 'Amazon', 'TCP', 'HTTP', 'Kinesis Streams', 'CloudWatch', 'IoT Core', 'Amazon Managed Streaming', 'Chalice', 'Python', 'IP', 'RabbitMQ', 'Aurora RDS', 'Amazon Kinesis Analytics', 'FastAPI', 'Apache Pulsar', 'Amazon Kinesis Firehose', 'HTTP Live Streaming', 'Cognito', 'SRT', 'Flask', 'Apache Kafka', 'RTSP', 'Django']",2,0,0,1
-58,60,"['United Kingdom', 'Portugal', 'Ukraine']",2024-05-01 14:11:00,104,424,"['RestAPI', 'Python']",2,0,1,1
-59,61,['Ukraine'],2024-05-01 13:15:00,26,53,"['Node', 'AWS', 'Full Stack Developer', 'Python', 'NoSQL', 'Kubernetes', 'ML', 'FastAPI', 'JavaScript', 'SQL', 'ORM']",3,0,0,1
-60,62,['Ukraine'],2024-05-01 12:29:00,0,17,"['Airflow', 'API', 'Google Cloud', 'Google AppEngine', 'Cloud Composer', 'English', 'Python', 'NoSQL', 'Firebase', 'React', 'BigQuery', 'Data Engineering', 'DevOps', 'Pub', 'Firestore']",5,0,1,1
-61,63,['Israel'],2024-05-01 12:02:00,110,322,"['AWS DevOps', 'SaaS', 'Python', 'Linux Systems Administration', 'Django']",3,0,0,1
-62,64,['Israel'],2024-05-01 12:02:00,139,402,"['Front', 'Vue', 'Israeli', 'Remote', 'Whatsapp', 'JavaScript', 'CSS', 'SaaS', 'Python', 'HTML', 'Angular', 'Django', 'ORM']",2,0,0,1
-63,65,['Ukraine'],2024-05-01 11:00:00,1,31,"['API', 'AWS', 'Pub', 'Apache Airflow', 'Cloud Composer', 'NoSQL', 'Firestore', 'SQL', 'Python', 'Firebase', 'DevOps', 'Google BigQuery', 'BigQuery', 'Data Engineering', 'Google Cloud', 'Google AppEngine', 'English', 'Golang', 'React', 'CD']",5,0,1,1
-64,66,['Ukraine'],2024-05-01 10:41:00,5,28,"['API', 'TypeScript', 'AWS', 'GCP', 'LI-Remote', 'QA', 'JavaScript', 'Cloud', 'Software', 'SQL', 'Agile Scrum', 'Python', 'GoLang', 'Cypress', 'User Interface', 'SaaS', 'CD', 'Perks', 'Stock Option Plan']",5,0,1,1
-65,67,['Ukraine'],2024-05-01 10:24:00,9,37,"['RESTful APIs', 'Node', 'TypeScript', 'Developer', 'Flask', 'Express', 'Python', 'NoSQL', 'MongoDB', 'JavaScript', 'PostgreSQL']",5,0,0,1
-66,68,['Ukraine'],2024-05-01 09:50:00,0,10,"['IaC', 'Kubernetes']",5,0,1,1
-67,69,['Poland'],2024-04-30 21:57:00,76,713,"['Founder', 'English', 'Technologies', 'Python']",5,0,0,1
-68,70,['Ukraine'],2024-04-30 18:12:00,27,224,"['PyTorch', 'GitLab', 'NoSQL', 'ClickHouse', 'Sql', 'Jupyter']",3,1,0,0
-69,71,['Ukraine'],2024-04-30 17:39:00,24,275,"['Node', 'API', 'Agile', 'Java', 'AWS', 'GCP', 'Docker', 'Python', 'NoSQL', 'English', 'Azure', 'DevOps', 'Cloud Computing', 'SQL', 'Jenkins']",5,0,1,1
-70,72,"['Armenia', 'Canada', 'Ukraine', 'United States']",2024-04-30 17:38:00,7,63,"['NestJS', 'XAgency', 'DRF', 'Symfony', 'Laravel', 'LangChain', 'English', 'Golang', 'Python', 'Django REST', 'Flutter', 'React', 'FastAPI', 'Design']",5,0,0,1
-71,73,['Ukraine'],2024-04-30 17:07:00,10,65,"['Computer Science', 'Airflow', 'AWS', 'Spark', 'English', 'Python', 'Athena', 'APIs', 'Git', 'SQL', 'BigData', 'EMR']",3,0,0,1
-72,74,['Ukraine'],2024-04-30 17:07:00,5,77,"['Amazon AWS', 'Computer Science', 'Airflow', 'AWS', 'Python', 'Athena', 'APIs', 'Git', 'Big', 'SQL', 'EMR']",5,0,0,1
-73,75,['Ukraine'],2024-04-30 16:55:00,6,54,"['GCP', 'Docker', 'Kubernetes', 'Python', 'IaC']",5,0,1,1
-74,76,['Ukraine'],2024-04-30 16:51:00,34,151,"['Equivalent', 'MSK', 'AWS', 'OOP', 'Argo', 'Cloud SaaS', 'Pytest', 'JavaScript', 'Docker', 'Kubernetes', 'GitHub Actions', 'Kafka', 'SQL', 'Java', 'Github', 'Locust', 'Spring Framework', 'Python', 'CircleCI', 'API Gateway', 'Jenkins', 'Computer Science', 'Gitlab', 'Agile', 'GitOps', 'EKS', 'CD', 'APIs', 'JUnit', 'MySQL', 'RestAssured']",5,0,1,1
-75,77,['Ukraine'],2024-04-30 16:09:00,25,215,"['Pre-Intermediate', 'English']",1,1,0,0
-76,78,['Ukraine'],2024-04-30 15:43:00,3,57,"['RDBMS', 'Advanced Analytics', 'ELT', 'GCP', 'Data Lake', 'Python', 'ML', 'NoSQL', 'ETL', 'Microsoft Azure', 'Cloud Data Warehouse', 'Azure Synapse', 'Data Science', 'SQL', 'Databricks Delta Lake', 'Databricks']",3,0,1,0
-77,79,"['Poland', 'Romania']",2024-04-30 15:42:00,10,47,['Category'],5,0,1,1
-78,80,['Poland'],2024-04-30 15:30:00,4,38,"['PowerShell', 'Automation Testing', 'Locust', 'English', 'Python', 'CD', 'Azure DevOps', 'AQA', 'JMeter']",3,1,0,0
-79,81,['Ukraine'],2024-04-30 15:15:00,3,79,"['REST API', 'Proven', 'Proficient', 'AWS', 'English', 'GCP', 'Python', 'Strong', 'High', 'PyCharm', 'SQL', 'Experience']",5,0,1,1
-80,82,['Ukraine'],2024-04-30 15:08:00,16,120,"['GitlabCI', 'OOP', 'Azure OpenAI', 'Functional Programming', 'Cloud', 'NoSQL', 'CosmosDB', 'Kafka', 'SQL', 'Milvus DB', 'Python', 'RabbitMQ', 'Git', 'Primarily REST', 'Jenkins', 'React', 'CD', 'APIs', 'FastApi']",5,0,0,1
-81,83,"['Czechia', 'Spain', 'Poland', 'Romania', 'Ukraine']",2024-04-30 14:37:00,16,93,"['DeFi', 'Ethereum', 'English', 'Golang', 'Python', 'Nodejs', 'ERC']",5,0,0,1
-82,84,['Ukraine'],2024-04-30 13:26:00,26,202,"['R', 'Point', 'Upper-Intermediate', 'Python', 'Power BI', 'Data']",1,0,1,1
-83,85,"['Ukraine', 'Armenia', 'Azerbaijan', 'Cyprus', 'Moldova']",2024-04-30 13:18:00,26,101,"['Hadoop', 'ELT', 'Spark', 'Python', 'ETL', 'Kafka', 'Data Engineering', 'SQL']",2,0,1,1
-84,86,['Ukraine'],2024-04-30 13:07:00,28,169,"['Rest Framework', 'DRF', 'Python', 'Unittest', 'Git', 'Pytest', 'Django', 'ORM', 'PostgreSQL']",3,0,1,0
-85,87,['Ukraine'],2024-04-30 12:54:00,22,207,"['Behave', 'Romania', 'API', 'Selenium', 'AWS', 'Poland', 'Python', 'Ukraine', 'Croatia', 'CD', 'UI', 'QA', 'BDD', 'Slovakia', 'AQA']",5,0,0,1
-86,88,['Ukraine'],2024-04-30 12:13:00,25,308,"['Communication Engineering', 'API', 'Open Systems Interconnection', 'Network Protocol Testing', 'QA', 'Computer', 'Open Networking', 'Cloud', 'Software', 'Layer', 'Engineer', 'Intermediate', 'SONiC', 'Quality Assurance', 'US-Israel', 'Python', 'Linux', 'TCPDUMP', 'Jenkins', 'Computer Science', 'Switch Abstraction Interface', 'OSI', 'Continuous Improvement', 'English', 'Gerrit', 'Bash', 'Ethernet']",5,0,1,1
-87,89,['Ukraine'],2024-04-30 12:02:00,4,24,"['Selenium WebDriver', 'CAD', 'Computer Science', 'REST API', 'Quality Assurance', 'Web', 'English', 'Atlassian', 'MS', 'Engineering', 'QA Automation Engineer', 'Mathematics', 'QA', 'SDLC', 'BDD', 'Web UI']",5,0,1,1
-88,90,['Ukraine'],2024-04-30 11:35:00,52,291,"['CD', 'Selenium']",5,0,0,1
-89,91,"['Ukraine', 'United States']",2024-04-30 11:35:00,115,249,"['API', 'Flask', 'Python', 'Git', 'JavaScript', 'Django', 'MySQL', 'TDD', 'PostgreSQL']",2,0,0,1
-90,92,['Ukraine'],2024-04-30 11:26:00,2,23,"['AWS', 'AWS Lambda', 'Back-End Software Engineer', 'DynamoDB', 'CloudFormation', 'Houston', 'Python', 'Git', 'Customer', 'DevOps', 'API Gateway', 'Lambda', 'Computer Science', 'Agile', 'GraphQL', 'ETL', 'Engineering', 'APIs', 'CD', 'RESTful API']",5,0,1,1
-91,93,['Ukraine'],2024-04-30 11:20:00,30,565,"['Dataforest', 'Web', 'CV', 'Python', 'Cleaning', 'Scraping', 'Data', 'SQL', 'Visualization']",1,0,1,1
-92,94,['Ukraine'],2024-04-30 11:20:00,43,259,['Website'],1,1,0,0
-93,95,['Ukraine'],2024-04-30 10:46:00,32,175,"['ML', 'NLP', 'DS']",3,0,0,1
-94,96,['Ukraine'],2024-04-30 10:21:00,8,67,"['PyTorch', 'Fast R-CNN', 'SSD', 'ResNet', 'TensorFlow', 'YOLO', 'Python', 'Computer Vision', 'Convolutional Neural Networks', 'CNNs', 'Intermediate', 'VGG', 'OpenCV']",5,0,1,1
-95,97,['Ukraine'],2024-04-30 10:08:00,0,1,"['Hive', 'Databases', 'Data Reporting', 'Impala', 'Spark', 'Liqudity Risk', 'Querying', 'UNIX Shell', 'Pune', 'Apache Hadoop', 'Talend', 'Yarn', 'Experience']",5,0,1,1
-96,98,['Ukraine'],2024-04-30 09:12:00,5,110,"['Skills', 'Experience', 'Docker', 'Azure Security Center', 'Kubernetes', 'Terraform', 'Pulumi IaC', 'Azure App Service', 'R&D', 'Azure Functions', 'Azure Storage', 'Python', 'Azure Sentinel', 'Azure', 'DevOps', 'IAM', 'Bash', 'Azure SQL Database']",5,0,0,1
-97,99,"['Slovakia', 'Ukraine']",2024-04-29 21:25:00,2,12,"['Python', 'LAN', 'Linux', 'UNIX', 'WAN', 'C Developer']",3,0,0,1
-98,100,['Ukraine'],2024-04-29 20:42:00,1,14,"['Hive', 'Databases', 'Data Reporting', 'Impala', 'Spark', 'Querying', 'UNIX Shell', 'Apache Hadoop', 'Talend', 'Yarn', 'Experience']",5,0,1,1
-99,101,"['Poland', 'Romania']",2024-04-29 20:11:00,2,14,"['Computer Science', 'Python', 'Engineering', 'Description', 'QA']",5,0,0,1
-100,102,"['Lithuania', 'Latvia', 'Poland', 'Ukraine']",2024-04-29 17:48:00,2,35,"['Vue', 'Gitlab', 'Tealium', 'NodeJS', 'CSS', 'English', 'Python', 'GTM DatalLayer', 'CD', 'HTML', 'Git', 'REQUIREMENTS', 'GTM', 'State Management Pattern', 'JavaScript', 'Pinia']",5,0,0,1
-101,103,['Ukraine'],2024-04-29 17:15:00,61,244,"['Prometheus', 'Terraform', 'Python', 'Zabbix', 'CloudFormation', 'Bash', 'ELK']",2,0,1,1
-102,104,['Ukraine'],2024-04-29 17:08:00,250,1077,"['RESTful APIs', 'Ukrainian', 'HTTP', 'Unit', 'Docker', 'Python', 'NoSQL', 'Testing', 'Integration Testing', 'Linux', 'SQL', 'UNIX', 'Fast API', 'Django', 'Intermediate']",2,0,0,1
-103,105,"['Hungary', 'Moldova', 'Poland', 'Romania', 'Ukraine']",2024-04-29 16:49:00,7,132,"['Computer Science', 'Agile', 'English', 'Python', 'Finance', 'UX', 'Scrum']",3,0,0,1
-104,106,['Ukraine'],2024-04-29 16:49:00,18,101,"['Data Engineer', 'SQL', 'Python']",1,0,0,1
-105,107,['Ukraine'],2024-04-29 16:48:00,7,56,"['Python', 'NoSQL', 'Data Engineer', 'Amazon Web Services', 'Pandas', 'SQL']",2,0,0,1
-106,109,['Ukraine'],2024-04-29 15:52:00,21,158,"['Docker', 'Python', 'Vue.Js', 'Django REST Framework,Vue.Js', 'Celery', 'Full', 'Django', 'SQL', 'PostgreSQL']",3,0,0,1
-107,110,"['Romania', 'Ukraine']",2024-04-29 14:42:00,26,164,"['Information Technology', 'AWS', 'GCP', 'Terraform', 'Description', 'Azure', 'DataDog', 'Kubernetes', 'CloudFormation', 'Senior Engineer', 'Rest Framework', 'CLI', 'Python', 'ElasticSearch', 'Computer Science', 'Flask', 'CD', 'AWS CLI', 'Fast API', 'Django']",5,0,0,1
-108,111,['Ukraine'],2024-04-29 14:28:00,27,182,"['ZeroMQ', 'RDBMS', 'Prometheus', 'Version Control Systems', 'Grafana', 'English', 'Python', 'Apache Kafka', 'Linux', 'Git', 'Relational Database Management Systems', 'Bash', 'MySQL']",3,0,0,1
-109,112,['Ukraine'],2024-04-29 14:18:00,1,17,"['AWS', 'AWS Lambda', 'Back-End Software Engineer', 'DynamoDB', 'CloudFormation', 'Houston', 'Upper Intermediate', 'Python', 'Git', 'Customer', 'DevOps', 'API Gateway', 'Lambda', 'Computer Science', 'Agile', 'GraphQL', 'ETL', 'Engineering', 'APIs', 'CD', 'RESTful API']",5,0,1,1
-110,113,['Ukraine'],2024-04-29 14:12:00,1,18,"['Hive', 'Databases', 'Data Reporting', 'Impala', 'Spark', 'Liqudity Risk', 'Querying', 'UNIX Shell', 'Pune', 'Apache Hadoop', 'Talend', 'Yarn', 'Experience']",5,0,1,1
-111,114,['Poland'],2024-04-29 14:06:00,10,162,"['Scala', 'Airflow', 'Snowflake', 'Java', 'ELT', 'Spark', 'Trino', 'Python', 'NoSQL', 'ETL', 'Kafka', 'Databricks', 'Cloud Storage', 'SQL']",5,0,0,1
-112,115,['Ukraine'],2024-04-29 14:02:00,0,11,"['AWS', 'AWS Lambda', 'Back-End Software Engineer', 'DynamoDB', 'CloudFormation', 'Houston', 'Python', 'Git', 'Customer', 'DevOps', 'API Gateway', 'Lambda', 'Computer Science', 'Agile', 'GraphQL', 'ETL', 'Engineering', 'APIs', 'CD', 'RESTful API']",5,0,1,1
-113,116,['Ukraine'],2024-04-29 13:50:00,8,84,"['Vue', 'AWS', 'CSS', 'Full Stack Engineer', 'Python', 'YOU ARE', 'APIs', 'HTML', 'JavaScript', 'Django', 'Typescript', 'UI']",5,0,1,1
-114,117,['Ukraine'],2024-04-29 13:35:00,23,242,"['RESTful APIs', 'TypeScript', 'Java', 'NodeJS', 'Python', 'React']",5,0,1,1
-115,118,['Ukraine'],2024-04-29 13:30:00,489,2086,"['Crypto', 'Selenium', 'AWS', 'Microsoft Azure', 'UX', 'TS', 'Java', 'CSS', 'Postman', 'Python', 'JS', 'Linux', 'HTML', 'Playwright', 'UI', 'Appium', 'Computer Science', 'Agile', 'English', 'FinTech']",3,0,1,1
-116,119,['Ukraine'],2024-04-29 13:12:00,2,15,"['Hive', 'Databases', 'Data Reporting', 'Impala', 'Spark', 'Liqudity Risk', 'Querying', 'UNIX Shell', 'Pune', 'Apache Hadoop', 'Talend', 'Yarn', 'Experience']",5,0,1,1
-117,120,['Ukraine'],2024-04-29 13:00:00,10,64,"['Confluence', 'Kanban', 'AWS', 'Jira', 'Python', 'NoSQL', 'RESTful', 'Scrum', 'SQL']",3,0,0,1
-118,121,['Ukraine'],2024-04-29 12:49:00,9,40,"['Computer Science', 'PyTorch', 'TensorFlow', 'Python', 'Time Series Forecasting', 'B', 'SQL', 'Keras']",3,0,0,1
-119,122,['Ukraine'],2024-04-29 12:48:00,2,11,"['Scala', 'Spark', 'SQL', 'Python']",3,0,0,1
-120,123,['Ukraine'],2024-04-29 12:44:00,13,76,"['Flask', 'AWS', 'English', 'Python', 'React', 'Django', 'Typescript']",2,0,1,1
-121,124,['Ukraine'],2024-04-29 12:24:00,18,175,"['API', 'English', 'Golang', 'Python']",3,0,1,1
-122,125,['Ukraine'],2024-04-29 12:19:00,157,1237,"['Dataforest', 'Web', 'CV', 'Python', 'SQL']",1,0,1,1
-123,126,['Ukraine'],2024-04-29 12:18:00,11,338,"['Python', 'NoSQL', 'Data Engineer', 'Amazon Web Services', 'Pandas', 'SQL']",2,0,1,1
-124,127,['Ukraine'],2024-04-29 12:18:00,102,971,"['Redis', 'Data Management', 'Python', 'NoSQL', 'ETL', 'ElasticSearch', 'SQL', 'Project', 'International E', 'PostgreSQL']",1,0,1,1
-125,128,['Ukraine'],2024-04-29 12:18:00,83,901,"['Data Engineer', 'SQL', 'Python']",1,0,1,1
-126,129,['Ukraine'],2024-04-29 12:16:00,6,133,"['Hadoop', 'Elasticsearch', 'Redis', 'Mongo', 'Python', 'NoSQL', 'Data Engineer', 'Apache Kafka', 'SQL DB', 'Amazon Web Services', 'BigQuery', 'Apache Spark', 'Pandas']",5,0,0,1
-127,130,['Ukraine'],2024-04-29 11:44:00,24,141,"['SQLAlchemy', 'Flask', 'Dataforest', 'Web', 'AWS', 'GCP', 'CV', 'Python', 'Flask-RESTful', 'ETL', 'Linux', 'Celery', 'PostgreSQL']",3,0,1,1
-128,131,"['Bulgaria', 'Poland', 'Slovakia', 'Slovenia', 'Ukraine']",2024-04-29 11:40:00,5,52,"['Scala', 'Airflow', 'PySpark', 'ELT', 'AWS', 'Spark', 'Python', 'Azure', 'Kafka', 'Data Engineering', 'SQL']",5,0,1,1
-129,132,['Ukraine'],2024-04-29 11:28:00,5,33,"['IaC', 'Kubernetes']",5,0,1,1
-130,133,['Ukraine'],2024-04-29 11:23:00,120,534,"['Data Science', 'PySpark', 'Developer']",1,1,0,0
-131,134,['Ukraine'],2024-04-29 10:50:00,1,15,"['API', 'Senior Software Engineer', 'AWS', 'Pub', 'Apache Airflow', 'Cloud Composer', 'NoSQL', 'Role', 'Firestore', 'SQL', 'Python', 'Firebase', 'DevOps', 'Google BigQuery', 'BigQuery', 'Data Engineering', 'Google Cloud', 'Google AppEngine', 'English', 'Golang', 'React', 'CD', 'Cloud Management Platform']",5,0,1,1
-132,135,['Ukraine'],2024-04-29 10:44:00,2,21,"['API', 'TypeScript', 'AWS', 'GCP', 'GoogleAppEngine', 'QA', 'Are Some Things We', 'JavaScript', 'Pub', 'Worked On Recently That Might Give You', 'Cloud', 'Software', 'VertexAI', 'Be Doing Day To Day', 'SQL', 'Firestore', 'Agile Scrum', 'Python', 'Firebase', 'GoLang', 'BigQuery', 'Cypress', 'Better Sense Of What', 'User Interface', 'SaaS', 'React', 'Perks', 'CD', 'Stock Option Plan']",5,0,1,1
-133,136,['Ukraine'],2024-04-29 10:42:00,198,798,['Backend'],2,0,0,1
-134,137,"['Cyprus', 'Estonia', 'Ukraine']",2024-04-29 10:42:00,201,752,"['Unix', 'Kauri One', 'REST API', 'Unit', 'Python', 'NoSQL', 'Pre-Intermediate', 'GIT', 'Integration']",1,0,0,1
-135,138,['Ukraine'],2024-04-29 10:42:00,1,18,"['Vue', 'CSS', 'Python', 'JS', 'HTML', 'Django', 'Typescript']",5,0,1,1
-136,139,['Ukraine'],2024-04-29 07:44:00,27,100,"['DRF', 'English', 'Docker', 'Python', 'RabbitMQ', 'PyTest', 'FastAPI', 'Django', 'UI']",5,0,1,1
-137,140,['Ukraine'],2024-04-28 17:09:00,4,88,"['Computer Science', 'Java', 'English', 'Python', 'Engineering', 'JavaScript']",5,0,0,1
-138,141,['Ukraine'],2024-04-27 11:43:00,18,204,"['Statistics', 'Computer Science', 'CTO', 'English', 'Python', 'CEO', 'Mathematics', 'NumPy', 'Scikit-Learn', 'Data Science', 'SQL']",5,0,0,1
-139,142,['Ukraine'],2024-04-26 19:48:00,40,215,"['Tensorflow', 'GenSim', 'Flask', 'Learning', 'Rest API', 'OOP', 'Docker', 'Named Entity Recognition', 'ML', 'Celery', 'Spacy']",2,0,0,1
-140,143,['Ukraine'],2024-04-26 19:33:00,22,68,"['Responsibilities', 'Python']",5,0,1,1
-141,144,['Poland'],2024-04-26 18:56:00,0,12,"['SQL Query', 'ADLS', 'Denodo', 'TensorFlow', 'Spark', 'Python', 'Scipy', 'Kafka', 'Databricks', 'Chat GTP', 'Numpy']",5,1,0,0
-142,145,['Ukraine'],2024-04-26 16:53:00,4,22,"['Analyst', 'Amplitude']",3,0,1,1
-143,146,['Ukraine'],2024-04-26 16:38:00,27,206,"['GCP', 'Docker', 'Kubernetes', 'Python', 'IaC']",5,0,1,1
-144,147,['Ukraine'],2024-04-26 16:23:00,191,940,"['NUMPY', 'Python']",2,0,0,1
-145,148,['Ukraine'],2024-04-26 15:29:00,9,60,"['RESTful APIs', 'Node', 'TypeScript', 'Flask', 'Express', 'Python', 'NoSQL', 'MongoDB', 'JavaScript', 'PostgreSQL']",3,0,0,1
-146,149,['Ukraine'],2024-04-26 14:28:00,103,389,"['API', 'GraphQL', 'English', 'REST', 'Python', 'RPC', 'SQL']",2,0,1,1
-147,150,['Ukraine'],2024-04-26 13:04:00,11,130,"['JMeter', 'Agile Scrum', 'English', 'Python', 'Azure DevOps', 'XML', 'Robot Framework', 'Azure Cloud SAAS Multitenant Applications', 'SQL', 'Experience']",5,0,1,1
-148,151,['Ukraine'],2024-04-26 12:06:00,53,149,"['Jquery', 'MySQL', 'Node', 'Team Lead', 'Bootstrap', 'JavaScript', 'CSS', 'Python', 'PHP', 'Description', 'DApp', 'Smart Contracts']",3,0,0,1
-149,152,['Ukraine'],2024-04-26 11:49:00,31,268,"['Intermediate', 'English']",1,1,0,0
-150,153,['Ukraine'],2024-04-26 11:41:00,11,48,['JavaScript'],5,0,0,1
-151,154,['Ukraine'],2024-04-26 10:55:00,14,196,['Python'],1,0,0,1
-152,155,['Ukraine'],2024-04-26 10:08:00,16,88,"['SQLAlchemy', 'AWS', 'GCP', 'Cloud', 'JS Developer', 'Docker', 'Celery', 'AioHttp', 'SQL', 'Asyncio', 'Digital', 'LLM', 'Pytests', 'OCR', 'CSS', 'Python', 'JS', 'HTML', 'Django', 'Computer Vision']",2,0,0,1
-153,156,['Israel'],2024-04-26 10:08:00,14,113,"['Scrum', 'Agile', 'AWS', 'English', 'Kubernetes', 'Python', 'APIs', 'Django', 'MySQL', 'PostgreSQL']",5,0,0,1
-154,157,['Ukraine'],2024-04-26 01:18:00,12,89,"['English', 'OOP', 'Python', 'VR', 'DriverSmax', 'Git', 'Unity', 'Proven', 'Unreal Engine']",3,0,0,1
-155,158,['Ukraine'],2024-04-25 19:01:00,5,70,"['PySpark', 'Data', 'ELT', 'Azure Data Lake', 'Python', 'APIs', 'Azure', 'T-SQL', 'SQL', 'Azure Synapse Analytics']",2,0,0,1
-156,159,"['Ukraine', 'Georgia', 'Poland', 'Slovakia', 'Czechia']",2024-04-25 18:44:00,29,513,"['SonarLint', 'GitLab', 'AWS', 'Terraform', 'PHP', 'KSQL', 'JavaScript', 'Prometheus', 'Kubernetes', 'Kafka', 'Angular', 'Node', 'Java', 'Grafana', 'New Relic', 'SonarQube', 'Python', 'DevOps', 'PostgreSQL', 'Jenkins', 'Symfony', 'Redis', 'ELK']",5,0,1,1
-157,160,['Ukraine'],2024-04-25 17:54:00,4,46,"['RESTful APIs', 'Team Lead', 'DRF', 'Laravel', 'Optional', 'Docker', 'Python', 'PHP', 'Kubernetes', 'CD', 'Celery', 'Kafka', 'Django']",5,0,1,1
-158,161,"['United Arab Emirates', 'Estonia']",2024-04-25 17:54:00,38,261,"['RESTful APIs', 'API', 'TypeScript', 'PHP', 'AI Pipelines', 'Langchain', 'Availability Zones', 'JavaScript', 'Core API', 'TensorFlow', 'Golang Core API', 'LLMs', 'Core C', 'PyTorch', 'Node', 'NLP', 'Rust', 'Vector Databases', 'Python', 'Chains', 'FastAPI', 'Artificial Intelligence', 'Computer Science', 'AI Agents', 'Flask', 'Laravel', 'GraphQL', 'Golang', 'LlamaIndex']",3,0,0,1
-159,162,['Ukraine'],2024-04-25 17:54:00,18,76,"['RESTful APIs', 'Team Lead', 'API', 'DRF', 'Develop', 'Laravel', 'Optional', 'Django Rest Framework', 'Python', 'PHP', 'Docker', 'Kubernetes', 'CD', 'Celery', 'Kafka', 'Django']",3,0,1,1
-160,163,['Ukraine'],2024-04-25 17:49:00,6,53,"['Snowflake', 'Data Studio', 'AWS', 'English', 'Tableau', 'Power BI', 'SQL', 'DBT']",5,0,0,1
-161,164,['Ukraine'],2024-04-25 17:25:00,24,101,"['Materialise', 'Software Test Engineer', 'Python']",2,1,0,0
-162,165,['United States'],2024-04-25 14:52:00,31,120,"['Previous', 'Capital Markets', 'Knowledge', 'Proficiency', 'Proficient', 'Familiarity', 'OOP', 'Python', 'Strong', 'Linux', 'Git', 'Pytest', 'Bash', 'Object-Oriented Programming', 'SQL', 'Experience']",3,0,0,1
-163,166,['Ukraine'],2024-04-25 13:24:00,2,90,"['Java', 'Upper-Intermediate English', 'Python']",3,0,1,0
-164,167,['Ukraine'],2024-04-25 13:16:00,24,72,"['API', 'Preferred', 'PHP', 'ML', 'JavaScript', 'Vue', 'Full Stack Web Developer', 'UX', 'Angular', 'Node', 'CSS', 'Python', 'Git', 'HTML', 'UI', 'Software Engineering', 'Computer Science', 'MongoDB', 'React', 'MySQL']",5,0,0,1
-165,168,"['Relocate', 'Portugal']",2024-04-25 13:12:00,5,47,"['PM', 'Unix', 'English', 'Python', 'Atto Trading', 'Linux', 'Jupyter', 'Bash', 'SQL', 'NY Time']",3,0,1,0
-166,169,['Ukraine'],2024-04-25 12:44:00,14,231,"['Hadoop', 'Elasticsearch', 'DB', 'Oracle', 'MongoDB', 'Exadata']",2,1,0,0
-167,170,"['Relocate', 'Ukraine']",2024-04-25 11:08:00,5,62,['Python'],5,1,0,0
-168,171,['Ukraine'],2024-04-25 11:07:00,4,14,"['AWS', 'AWS Lambda', 'Back-End Software Engineer', 'DynamoDB', 'CloudFormation', 'Houston', 'Upper Intermediate', 'Python', 'Git', 'Customer', 'DevOps', 'API Gateway', 'Lambda', 'Skills', 'Computer Science', 'Agile', 'GraphQL', 'ETL', 'Engineering', 'APIs', 'CD', 'RESTful API']",5,0,0,1
-169,172,['Ukraine'],2024-04-25 11:06:00,6,55,"['Houston', 'Computer Science', 'Agile', 'Back-End Software Engineer', 'GraphQL', 'AWS', 'AWS Lambda', 'DynamoDB', 'Python', 'ETL', 'Engineering', 'APIs', 'Customer', 'CloudFormation', 'API Gateway', 'RESTful API']",5,0,0,1
-170,173,['Ukraine'],2024-04-25 11:06:00,11,91,"['RDBMS', 'English', 'Star', 'Docker', 'ETL', 'Pandas', 'Facts', 'SCD', 'Data', 'SQL']",3,0,0,1
-171,174,"['Poland', 'Ukraine']",2024-04-25 10:38:00,28,84,"['Node', 'TypeScript', 'GraphQL', 'AWS', 'GCP', 'Kubernetes', 'Python', 'SaaS', 'MongoDB', 'R&D', 'Big Plus', 'PostgreSQL']",5,0,0,1
-172,175,['Ukraine'],2024-04-25 10:38:00,5,42,"['IaC', 'Kubernetes']",5,0,1,1
-173,176,['Ukraine'],2024-04-25 10:35:00,10,114,"['GCP', 'Docker', 'Kubernetes', 'Python', 'IaC']",5,0,1,1
-174,177,['Ukraine'],2024-04-24 20:45:00,67,158,"['RESTful APIs', 'Team Lead', 'API', 'DRF', 'Develop', 'Laravel', 'Optional', 'Django Rest Framework', 'Python', 'PHP', 'Docker', 'Kubernetes', 'CD', 'Celery', 'Kafka', 'Django']",3,0,0,1
-175,178,['Ukraine'],2024-04-24 20:23:00,18,65,"['RESTful APIs', 'Team Lead', 'DRF', 'Laravel', 'Optional', 'Docker', 'Python', 'PHP', 'Kubernetes', 'CD', 'Celery', 'Kafka', 'Django']",3,0,0,1
-176,179,['Ukraine'],2024-04-24 19:53:00,0,27,"['Grafana', 'Google Cloud Platform', 'DataDog', 'GCP', 'Kubernetes', 'Python', 'CloudSQL', 'Data Engineer', 'SQL', 'SQL Server', 'GKE', 'BigQuery', 'Postgres', 'Windows']",5,0,1,1
-177,180,['Poland'],2024-04-24 17:27:00,0,2,"['TensorFlow', 'Denodo', 'ADLS', 'Spark', 'VQL', 'Python', 'Kafka', 'SDLC', 'Databricks', 'SQL']",5,1,0,0
-178,181,['Poland'],2024-04-24 17:04:00,0,5,"['Tensorflow', 'SQL Query', 'Agile', 'ADLS', 'Denodo', 'Spark', 'English', 'Python', 'Data Bricks', 'Scipy', 'Kafka', 'Chat GTP', 'Numpy']",5,1,0,0
-179,184,"['Bulgaria', 'Hungary', 'Poland', 'Portugal', 'Ukraine']",2024-04-24 16:00:00,13,46,"['NLP', 'LLM', 'Matplotlib', 'ML', 'Python', 'Tableau', 'Power BI', 'Seaborn', 'Intermediate']",3,0,1,1
-180,185,['Ukraine'],2024-04-24 14:33:00,15,118,"['DNS', 'Gerrit', 'Asterisk', 'SIP', 'CMake', 'UDP', 'Softswitch', 'TCP', 'NAT', 'Jenkins']",3,0,0,1
-181,186,['Ukraine'],2024-04-24 14:31:00,37,85,"['Artificial Intelligence', 'PostgreSQL', 'TypeScript', 'Peak', 'English', 'Python', 'React', 'Full', 'Machine Learning']",3,0,0,1
-182,187,['Ukraine'],2024-04-24 14:30:00,53,241,"['Spring Boot', 'Node', 'Angular', 'TypeScript', 'Java', 'CSS', 'RxJs', 'Python', 'Docker', 'Software Engineer', 'HTML', 'JavaScript']",5,0,0,1
-183,188,['Ukraine'],2024-04-24 13:33:00,18,86,['Analyst'],1,1,0,0
-184,189,['Ukraine'],2024-04-24 13:11:00,5,34,"['Smart Building Platform', 'English', 'Python', 'Engineering', 'Description']",5,0,1,1
-185,190,"['Relocate', 'Ukraine']",2024-04-24 12:56:00,15,96,"['Preferred', 'R', 'Tableau', 'Python']",3,0,0,1
-186,191,"['Poland', 'Ukraine', 'Slovakia', 'Slovenia']",2024-04-24 12:51:00,98,430,['LTS'],2,0,0,1
-187,192,"['Bulgaria', 'Cyprus', 'Poland', 'Portugal', 'Ukraine']",2024-04-24 12:49:00,153,569,"['English', 'Python', 'Role', 'GIT', 'SQL']",5,0,0,1
-188,193,['Ukraine'],2024-04-24 12:44:00,34,256,"['NestJS', 'Graph Optimization', 'Swagger', 'Redis', 'Rust', 'AWS', 'Apollo Federation', 'GraphQL', 'Docker', 'Python', 'ETL', 'React', 'ExpressJS', 'Async-GraphQL', 'FastAPI', 'Typescript']",5,0,0,1
-189,194,"['Hungary', 'Poland', 'Romania', 'Ukraine']",2024-04-24 12:42:00,69,226,"['API', 'Object Oriented Programming', 'REST', 'Docker', 'Python', 'NoSQL', 'ML', 'Object-Oriented Design Patterns', 'FastAPI', 'SQL']",5,0,0,1
-190,195,['Ukraine'],2024-04-24 12:33:00,34,365,"['Elasticsearch', 'Helm', 'Agile', 'Redis', 'Mongo', 'Kubernetes', 'Python', 'Development Experience']",5,0,0,1
-191,196,"['Relocate', 'Ukraine']",2024-04-24 12:17:00,2,98,"['Scala', 'JVM', 'Python']",3,0,1,1
-192,197,['Ukraine'],2024-04-24 12:04:00,18,104,"['GitLab', 'Compose', 'REST Framework', 'JavaScript', 'Docker', 'Celery', 'DRY', 'Trello', 'Git', 'GitKraken', 'Docker Compose', 'TDD', 'PostgreSQL', 'ORM', 'DRF', 'Redis', 'React', 'SOLID', 'Django', 'KISS']",3,0,0,1
-193,198,['Ukraine'],2024-04-24 11:47:00,137,497,"['Intermediate', 'Redis', 'REST API', 'English', 'Python', 'RabbitMQ', 'Celery', 'WS', 'Django', 'HTTP', 'PostgreSQL']",2,0,0,1
-194,199,['Ukraine'],2024-04-24 10:38:00,18,87,"['Powershell', 'RHEL', 'CentOS', 'Active Directory', 'Linux', 'Bash']",2,0,1,1
-195,201,['Ukraine'],2024-04-23 22:05:00,166,1241,"['Developer', 'Dataforest', 'Web', 'Python', 'Cleaning', 'Scraping', 'Data', 'SQL', 'Visualization']",1,0,1,1
-196,202,['Ukraine'],2024-04-23 19:55:00,26,363,"['RESTful APIs', 'Elasticsearch', 'Team Lead', 'DRF', 'GCP', 'Docker', 'Python', 'Kubernetes', 'NoSQL', 'MongoDB', 'CD', 'Azure', 'Django', 'PostgreSQL']",3,0,1,1
-197,203,['Ukraine'],2024-04-23 19:53:00,80,668,"['Machine', 'Python', 'SQL', 'Forecasting', 'Anomaly', 'Pandas']",1,0,1,1
-198,204,"['Ukraine', 'Germany', 'Poland']",2024-04-23 19:53:00,18,79,"['Azure Queue Storage', 'Azure Service Bus', 'Experience', 'Desire', 'Develop', 'Participate', 'Flask', 'Integrate', 'Test', 'Knowledge', 'Python', 'Azure App Service', 'Azure', 'FastAPI', 'Ability', 'Django', 'Familiarity', 'Implement']",2,0,0,1
-199,205,['Ukraine'],2024-04-23 19:44:00,6,32,"['YAGNI', 'Web Services', 'AWS', 'OOP', 'ELB', 'Kubernetes', 'Docker', 'Celery', 'Kafka', 'RDS', 'SQL', 'Unix', 'Python', 'Software Engineer', 'FastAPI', 'Buy', 'Lambda', 'CloudFront', 'Flask', 'EKS', 'SOLID', 'Django']",5,0,0,1
-200,206,"['Poland', 'Ukraine']",2024-04-23 19:19:00,52,154,"['API', 'Postgresql', 'Redis', 'Application Programming Interfaces', 'Cloudflare', 'AWS', 'Docker', 'Golang', 'Python', 'Git', 'Kafka', 'Django', 'SQL']",5,0,0,1
-201,207,['Israel'],2024-04-23 19:04:00,18,145,"['DevOps', 'AWS', 'Kubernetes', 'Python']",5,0,0,1
-202,208,['Ukraine'],2024-04-23 18:08:00,11,48,"['PyTorch', 'Fast R-CNN', 'SSD', 'ResNet', 'TensorFlow', 'YOLO', 'Upper-Intermediate', 'Python', 'English', 'Computer Vision', 'Convolutional Neural Networks', 'CNNs', 'VGG', 'OpenCV']",5,0,1,1
-203,209,"['Poland', 'Ukraine']",2024-04-23 17:36:00,52,212,"['Memcache', 'Elasticsearch', 'Cloud Tasks', 'Cloud Firestore', 'Redux', 'Python', 'Firebase', 'React', 'BigQuery', 'App Engine', 'Django', 'Typescript']",3,0,0,1
-204,210,['Ukraine'],2024-04-23 17:24:00,8,104,"['Computer Science', 'Ansible', 'English', 'Kubernetes', 'Terraform', 'Python', 'Engineering', 'CD', 'DevOps Engineer', 'Git', 'Bash']",2,0,1,0
-205,211,"['Spain', 'Poland', 'Portugal']",2024-04-23 14:42:00,9,33,"['Computer Science', 'Facebook Ads', 'Statistics', 'Airflow', 'Data\xa0Analyst', 'TikTok Ads', 'Python', 'Tableau', 'Mathematics', 'MMPs', 'Adjust', 'SQL', 'Appsflyer', 'PostgreSQL']",3,0,1,1
-206,213,['Ukraine'],2024-04-23 14:34:00,10,76,"['MPEG-TS', 'DASH', 'SS', 'HLS', 'English', 'Python', 'IP', 'RTSP', 'RTP', 'Smooth Streaming', 'Multicast', 'JavaScript', 'TCP', 'HTTP']",3,0,1,1
-207,214,['Ukraine'],2024-04-23 14:21:00,4,37,"['JSON APIs', 'Unit', 'Java', 'REST', 'Golang', 'Python', 'Refactoring', 'Development', 'NoSQL', 'Profiling', 'Logging', 'MySQL', 'Performance', 'Design']",5,0,0,1
-208,215,['Ukraine'],2024-04-23 13:31:00,62,112,"['AWS', 'OOP', 'DynamoDB', 'VCS', 'Celery', 'React Engineer', 'Kafka', 'REST APIs', 'UK', 'Python', 'RabbitMQ', 'JS', 'Atlassian JIRA', 'SDLC', 'GitHub', 'PostgreSQL', 'DRF', 'MongoDB', 'Django', 'MySQL']",5,0,0,1
-209,216,['Ukraine'],2024-04-23 13:17:00,1,49,"['PyTorch', 'ONNX', 'NVIDIA TensorRT', 'CUDA', 'TensorFlow', 'Learning', 'Conversion', 'AGX Xavier', 'RNNs', 'Docker', 'Python', 'ML', 'Jetson', 'Xavier NX', 'JetPack SDK', 'Git', 'NVIDIA Jetson', 'CNNs']",5,0,0,1
-210,217,['Ukraine'],2024-04-23 12:53:00,6,55,"['Vue', 'Computer Science', 'NSQ', 'AWS', 'REST', 'GCP', 'Python', 'Docker', 'Engineering', 'Kubernetes', 'APIs', 'Postgres', 'JavaScript', 'Django', 'SQL']",3,0,0,1
-211,218,"['Poland', 'Spain', 'Portugal', 'Germany']",2024-04-23 12:44:00,5,27,"['Airbyte', 'Terraform', 'Sigma Computing', 'JavaScript', 'Cloud', 'GCS', 'Docker', 'LLMs', 'GitHub Actions', 'SQL', 'Open Metadata', 'Python', 'FastAPI', 'Bachelor', 'BigQuery', 'DBT', 'PostgreSQL', 'Software Engineering', 'Computer Science', 'Flask', 'Redis', 'Google Cloud', 'GraphQL', 'Monte Carlo Data', 'English', 'OpenAI', 'React', 'Pandas', 'Experience']",5,0,1,1
-212,219,['Ukraine'],2024-04-23 12:01:00,5,57,"['Airflow', 'Spark', 'ClickHouse', 'MSc', 'Physics', 'Docker', 'Kafka', 'Maths', 'ElasticSearch', 'Python', 'Bachelor', 'PhD', 'Skills', 'Computer Science', 'University', 'Applied Statistics', 'R', 'Google Cloud', 'Engineering']",5,0,1,1
-213,220,['Ukraine'],2024-04-22 23:32:00,210,589,"['Flask', 'Python', 'Upper', 'APIs', 'Azure', 'FastAPI', 'Machine Learning Concepts', 'Data Science', 'MySQL', 'Frameworks', 'PostgreSQL']",3,0,0,1
-214,221,"['Poland', 'Portugal', 'Ukraine']",2024-04-22 21:50:00,104,419,['Python'],2,0,0,1
-215,222,"['Ukraine', 'Poland', 'Germany', 'United Kingdom', 'Spain']",2024-04-22 21:12:00,19,87,"['Bedrock', 'DynamoDB', 'AWS', 'English', 'React', 'IAM', 'RDS', 'Lambda', 'AppSync']",3,0,0,1
-216,223,['Ukraine'],2024-04-22 19:10:00,11,43,"['Node', 'AWS', 'Docker', 'Python', 'ML', 'Kubernetes', 'APIs', 'Azure']",3,0,0,1
-217,224,['Ukraine'],2024-04-22 17:17:00,44,433,"['OpenAPI Swagger', 'API', 'Web Services', 'OCR', 'OpenShift']",2,0,1,0
-218,225,['Ukraine'],2024-04-22 15:43:00,6,41,"['Selenium WebDriver', 'Computer Science', 'English', 'MS', 'Atlassian', 'Engineering', 'QA Automation Engineer', 'Mathematics', 'QA', 'SDLC', 'BDD', 'Web UI']",5,0,1,1
-219,226,['Ukraine'],2024-04-22 15:29:00,16,49,"['Full-Stack', 'TypeScript', 'Full Stack Developer', 'Docker', 'Python', 'React', 'Health', 'Global Sites', 'Alexa Top', 'JavaScript', 'MySQL']",3,0,0,1
-220,227,['Ukraine'],2024-04-22 14:30:00,6,61,"['DAX', 'Power Query', 'Pandas', 'Numpy', 'QGIS']",3,0,1,0
-221,228,['Poland'],2024-04-22 14:30:00,1,13,"['SQL', 'SQLStore Proc', 'Python']",5,1,0,0
-222,229,['United States'],2024-04-22 13:52:00,47,106,"['Russian', 'Computer Science', 'SQLAlchemy', 'Flask', 'English', 'OOP', 'Python', 'Docker', 'Engineering', 'Alembic', 'Django', 'PostgreSQL']",5,0,0,1
-223,230,"['Germany', 'Ukraine']",2024-04-22 13:40:00,56,188,"['Client', 'Java', 'English', 'Python', 'Scalors']",3,0,0,1
-224,231,"['Cyprus', 'Poland', 'Ukraine']",2024-04-22 13:37:00,10,78,"['Junior', 'Manager', 'English', 'Data Engineer', 'Data Analyst', 'PK FK', 'SQL']",2,0,0,1
-225,232,['Ukraine'],2024-04-22 12:51:00,10,87,"['Java', 'Kotlin', 'Python', 'PHP', 'Nats', 'Kafka']",5,0,1,1
-226,233,['Ukraine'],2024-04-22 12:27:00,58,344,"['OpenAPI', 'Swagger', 'DRF', 'PWA', 'Loki', 'Sentry', 'Docker', 'SonarQube', 'Celery', 'GitHub Actions', 'Angular', 'Django', 'Playwright', 'PostgreSQL']",2,0,0,1
-227,234,"['Relocate', 'Ukraine']",2024-04-22 11:52:00,2,21,"['RTL', 'Xilinx', 'QuestaSim', 'FPGA', 'Electronics', 'English', 'Python', 'Verilog', 'ChipScope', 'IP', 'TCL', 'ARM CPU', 'Computer', 'VHDL', 'Mentor Certus']",5,1,0,0
-228,235,['Ukraine'],2024-04-22 10:35:00,6,59,"['Architecture Patterns', 'OOP', 'NoSQL', 'Kafka', 'TCP', 'HTTP', 'SQL', 'Machine Learning', 'Web', 'Python', 'IP', 'CMSs', 'SSL', 'RabbitMQ', 'RESTful', 'Best Practices', 'Artificial Intelligence', 'English', 'DNS', 'CD', 'APIs']",5,0,0,1
-229,236,"['Czechia', 'Ukraine']",2024-04-22 09:57:00,61,323,"['Unix', 'Django+JQuery', 'Data', 'Image', 'Python', 'ML', 'ETL', 'Linux', 'Data Management System', 'Django', 'SQL']",3,0,1,1
-230,237,['Ukraine'],2024-04-22 09:57:00,9,108,"['Architecture Patterns', 'OOP', 'NoSQL', 'Kafka', 'TCP', 'HTTP', 'SQL', 'Machine Learning', 'Web', 'Python', 'IP', 'CMSs', 'SSL', 'RabbitMQ', 'RESTful', 'Best Practices', 'Artificial Intelligence', 'English', 'DNS', 'CD', 'APIs']",5,0,0,1
-231,238,['Italy'],2024-04-20 10:50:00,72,493,"['Italy', 'DuckMa', 'Panda', 'Python', 'Trading', 'FastAPI', 'Backtrader']",5,0,1,1
-232,239,['Ukraine'],2024-04-19 16:00:00,62,331,"['FastAPI', 'Docker Compose', 'Redis', 'DRF']",3,1,0,0
-233,240,['Ukraine'],2024-04-19 15:54:00,59,430,"['Big Query', 'Excel', 'Cloud Platform', 'Python']",1,1,0,0
-234,241,['Ukraine'],2024-04-19 15:52:00,32,312,"['MongoDB', 'BeautifulSoup', 'Selenium', 'Redis']",1,0,0,1
-235,242,['Ukraine'],2024-04-19 15:39:00,12,66,"['Selenium WebDriver', 'Computer Science', 'English', 'MS', 'Atlassian', 'Engineering', 'QA Automation Engineer', 'Mathematics', 'QA', 'SDLC', 'BDD', 'Web UI']",5,0,1,1
-236,243,"['Ukraine', 'Armenia', 'Greece', 'Georgia']",2024-04-19 15:35:00,38,192,"['Snowflake', 'Statistics', 'Matlab', 'Scala', 'Qlik', 'R', 'Java', 'NLP', 'Server', 'English', 'Mathematics', 'Tableau', 'Power BI', 'Data Science', 'Tableau Desktop', 'SQL', 'Big Data Stack', 'Business Intelligence']",1,0,0,1
-237,244,['Ukraine'],2024-04-19 15:25:00,24,293,"['Scientist', 'Intermediate']",1,0,1,1
-238,245,"['Relocate', 'Ukraine']",2024-04-19 14:55:00,25,113,"['API', 'English', 'OOP', 'Terraform', 'Python', 'React', 'CD', 'Middle', 'Django', 'Intermediate']",3,0,1,1
-239,246,"['Ukraine', 'Poland']",2024-04-19 14:55:00,12,105,"['Snowflake', 'Computer Science', 'PySpark', 'Python', 'Middle Data Engineer', 'MongoDB', 'Apache Spark']",2,0,0,1
-240,247,['Ukraine'],2024-04-19 12:58:00,45,166,"['API', 'Python']",5,0,0,1
-241,248,"['Poland', 'Ukraine']",2024-04-19 11:49:00,84,744,"['SQLAlchemy', 'Flask', 'Dataforest', 'Web', 'AWS', 'GCP', 'CV', 'Python', 'Flask-RESTful', 'ETL', 'Linux', 'Celery', 'PostgreSQL']",2,0,1,1
-242,249,"['Relocate', 'Ukraine']",2024-04-19 11:47:00,27,175,"['Hadoop', 'Elasticsearch', 'Team Lead', 'Redis', 'Mongo', 'Python', 'NoSQL', 'Data Engineer', 'Apache Kafka', 'SQL DB', 'Amazon Web Services', 'BigQuery', 'Apache Spark', 'Pandas']",5,0,0,1
-243,250,"['Ukraine', 'Poland', 'Romania']",2024-04-19 11:18:00,4,70,"['PyTorch', 'ONNX', 'NVIDIA TensorRT', 'CUDA', 'TensorFlow', 'Learning', 'Conversion', 'AGX Xavier', 'RNNs', 'Docker', 'Python', 'ML', 'Jetson', 'Xavier NX', 'JetPack SDK', 'Git', 'NVIDIA Jetson', 'CNNs']",5,0,1,1
-244,251,"['Relocate', 'Armenia']",2024-04-19 11:05:00,157,575,"['Master', 'Gitlab', 'Flask', 'Kubernetes', 'Docker', 'Python', 'CD', 'Linux', 'Openshift', 'Container', 'FastAPI', 'ZERO', 'ORM', 'Jenkins']",5,0,1,1
-245,252,['Ukraine'],2024-04-19 10:32:00,48,161,"['DeFi', 'Crypto', 'AWS', 'WebSockets', 'NodeJS', 'Celery', 'Postgres', 'SOA', 'Team Lead', 'GT Protocol', 'Python', 'RabbitMQ', 'Development Team', 'FastAPI', 'NFT', 'Flask', 'Redis', 'CeFi', 'CV', 'AsyncIO']",5,0,0,1
-246,253,['Ukraine'],2024-04-18 20:12:00,14,90,"['Messaging', 'AWS', 'ECS', 'DB', 'APIgee', 'Docker', 'Fargate', 'NoSQL', 'Gateway', 'OpenSearch', 'SNS', 'SQL', 'Code', 'CloudSearch', 'Kinesis', 'Streams', 'Python', 'SQS', 'Athena', 'DevOps', 'Queues', 'Elasticsearch', 'Events', 'Agile', 'Rest APIs']",3,0,0,1
-247,254,['Poland'],2024-04-18 19:32:00,6,47,"['Perl', 'Networking', 'Embedded', 'Java', 'Category', 'RAN', 'English', 'Python', 'Gerrit', 'CD', 'Linux', 'Description', 'Git', 'Telecom', 'LTE', 'Jenkins']",5,0,1,1
-248,255,['Ukraine'],2024-04-18 17:23:00,26,135,"['Analyst', 'Product Analyst', 'BI Analyst', 'Tableau', 'Power BI', 'B']",3,0,1,1
-249,256,['Ukraine'],2024-04-18 17:07:00,223,1002,"['Learning', 'Digital', 'Python']",1,0,0,1
-250,257,['Ukraine'],2024-04-18 16:27:00,108,320,"['Flask', 'Redis', 'Restful', 'Python', 'WEB APIs', 'PostgreSQL']",3,0,0,1
-251,258,['Spain'],2024-04-18 15:38:00,23,120,"['JavaScript', 'Linux', 'Django', 'Python']",3,0,0,1
-252,259,['Ukraine'],2024-04-18 14:58:00,38,115,"['PostgreSQL', 'Web', 'Java', 'Mobile', 'Python', 'NoSQL', 'MongoDB', 'UX', 'QA', 'Git', 'JavaScript', 'SQL', 'UI']",5,0,0,1
-253,260,"['Ukraine', 'Germany']",2024-04-18 14:05:00,17,47,"['Client', 'Java', 'English', 'Python', 'Scalors']",5,0,0,1
-254,262,['Ukraine'],2024-04-18 12:49:00,11,69,"['Lambda', 'CloudWatch', 'AWS', 'DynamoDB', 'English', 'Kubernetes', 'Python', 'Docker', 'SQS', 'Gateway', 'JavaScript', 'ESC Cluster', 'Postgres', 'MySQL', 'RESTful API']",3,1,0,0
-255,263,"['Estonia', 'Poland', 'Ukraine']",2024-04-18 12:44:00,18,155,"['Bootstrap', 'CSS', 'RPC', 'CD', 'HTML']",2,0,1,1
-256,264,['Ukraine'],2024-04-18 12:05:00,7,242,"['Knowledge', 'English', 'Upper-Intermediate', 'Python', 'Azure Machine Learning', 'Azure', 'Databricks']",2,0,1,1
-257,265,['Ukraine'],2024-04-18 11:32:00,33,259,"['Code', 'Pulumi', 'Java', 'AWS', 'Terraform', 'Python', 'CircleCI', 'IoC', 'EKS', 'CD', 'GitHub Actions', 'DevOps', 'Cloudformation', 'RDS', 'Jenkins']",3,0,1,1
-258,266,"['Germany', 'United Kingdom', 'Ukraine']",2024-04-18 10:52:00,131,368,"['Socket.IO', 'Wave', 'Develop', 'Object-Relational Mapping', 'MySQL', 'WebSocket API', 'PostgreSQL']",1,0,0,1
-259,267,['Ukraine'],2024-04-18 09:59:00,75,827,"['Computer Science', 'English', 'Python', 'PyTest', 'QA Automation', 'Linux', 'QA', 'Kyiv', 'Automation']",1,0,1,0
-260,268,"['Poland', 'Portugal', 'Ukraine']",2024-04-18 09:55:00,53,201,"['Confluence', 'Agile', 'AWS', 'Jira', 'Technologies', 'OOP', 'Python', 'English', 'RESTful', 'Git', 'FastAPI', 'Azure', 'UI']",5,0,1,1
-261,270,['Ukraine'],2024-04-18 01:29:00,13,49,"['Full-Stack', 'RESTful APIs', 'AWS', 'English', 'FinTech', 'Python', 'NoSQL', 'React', 'APIs', 'CD', 'Git', 'SQL', 'Jenkins']",3,0,1,1
-262,271,['United States'],2024-04-17 19:21:00,2,31,['React'],5,0,0,1
-263,272,['Ukraine'],2024-04-17 19:06:00,1,19,"['IP', 'Confluence', 'Salesforce', 'Jira']",3,0,1,1
-264,273,['Ukraine'],2024-04-17 17:27:00,3,13,"['USA', 'Flask', 'Python', 'Angular', 'Django', 'Senior Full-Stack Engineer', 'Telemedicine']",5,0,1,1
-265,274,['Ukraine'],2024-04-17 17:16:00,10,58,"['Ubuntu', 'AWS', 'SaltStack', 'GCP', 'Terraform', 'Zabbix', 'Clickhouse', 'Chef', 'Prometheus', 'TICK', 'DB', 'Docker', 'Intermediate', 'VMware', 'Grafana', 'Ansible', 'Python', 'Linux', 'Docker Compose', 'PostgreSQL', 'CentOS', 'Proxmox', 'Bash']",3,0,0,1
-266,275,['Ukraine'],2024-04-17 17:01:00,3,7,"['Snowflake', 'Jest', 'JavaScript', 'Jazmine', 'Mocha', 'Protractor', 'Angular', 'Postgres', 'Senior Full-Stack Engineer', 'USA', 'CSS', 'Python', 'Git', 'Cypress', 'Telemedicine', 'MySQL', 'Flask', 'Enzyme', 'Django', 'Typescript']",5,0,1,1
-267,276,['Ukraine'],2024-04-17 16:09:00,27,226,"['Python', 'ML Models Development']",1,0,1,0
-268,277,"['Poland', 'Serbia']",2024-04-17 15:42:00,6,30,"['NSQ', 'REST', 'English', 'Python', 'Full', 'JavaScript', 'SQL']",5,0,0,1
-269,278,"['Ukraine', 'Armenia', 'Georgia', 'Kazakhstan', 'Azerbaijan']",2024-04-17 15:42:00,19,66,"['SQLAlchemy', 'Terraform', 'IaaC', 'QA', 'Azure', 'Digger', 'Terragrunt', 'Docker', 'AKS', 'Celery', 'GitHub Actions', 'Company', 'ArgoCD', 'Python', 'RESTful', 'Azure DevOps', 'PostgreSQL', 'SaaS', 'English', 'EKS', 'CD', 'APIs', 'Django']",5,0,0,1
-270,279,['Ukraine'],2024-04-17 13:18:00,11,37,"['AWS', 'GCP', 'Golang', 'Kubernetes', 'Python', 'English', 'JS', 'TS']",5,0,0,1
-271,280,"['Relocate', 'Ukraine', 'Poland']",2024-04-17 13:10:00,2,47,"['PySpark', 'Java', 'Object', 'Spark', 'English', 'Upper-Intermediate', 'Python', 'Manage Resources', 'Data Engineer', 'NoSQL', 'SQL', 'Data', 'Spark Deployment', 'OLAP', 'Design']",5,0,1,1
-272,281,['Ukraine'],2024-04-17 12:57:00,16,227,"['Server', 'Gitlab CI', 'Docker', 'CD', 'Dbt', 'Postgres']",3,0,1,1
-273,282,['Ukraine'],2024-04-17 12:16:00,3,37,"['Airflow', 'Redshift', 'SQL', 'Python']",3,0,0,1
-274,283,['Ukraine'],2024-04-17 11:35:00,11,123,"['WhatsApp', 'OpenAI', 'Microsoft Bot Framework', 'JavaScript', 'Viber']",2,0,0,1
-275,284,['Ukraine'],2024-04-17 10:54:00,86,418,"['Flask', 'Redis', 'REST', 'CSS', 'ElasticSearch', 'Python', 'English', 'MongoDB', 'JS', 'CD', 'DevOps', 'HTML', 'Django', 'MySQL', 'REST APIs']",3,0,0,1
-276,285,['Poland'],2024-04-17 09:57:00,7,102,"['AWS', 'ML', 'NLG', 'ClickHouse', 'Master', 'ChatGPT', 'TensorFlow', 'Kubernates', 'PyTorch', 'NLP', 'Python', 'Mathematics', 'FastAPI', 'Scikit', 'NLU', 'PostgreSQL', 'Large Language Models', 'Computer Science', 'MongoDB', 'Engineering', 'Pandas']",5,0,1,1
-277,287,['Ukraine'],2024-04-16 22:25:00,8,25,"['AWS', 'Poland', 'English', 'Python', 'Angular']",3,0,0,1
-278,288,"['Lithuania', 'Poland', 'United States']",2024-04-16 20:51:00,237,744,"['Elasticsearch', 'Node', 'Typescript', 'Python']",5,0,0,1
-279,289,['Ukraine'],2024-04-16 20:10:00,2,41,"['Hadoop', 'Elasticsearch', 'Team Lead', 'Redis', 'Mongo', 'Python', 'NoSQL', 'Data Engineer', 'Apache Kafka', 'SQL DB', 'Amazon Web Services', 'BigQuery', 'Apache Spark', 'Pandas']",3,0,0,1
-280,291,['Poland'],2024-04-16 17:05:00,36,110,"['Node', 'Angular', 'CSS', 'Python', 'React', 'HTML', 'JavaScript']",5,0,0,1
-281,292,['Ukraine'],2024-04-16 17:00:00,14,61,"['Selenium WebDriver', 'CAD', 'Computer Science', 'REST API', 'Quality Assurance', 'Web', 'Upper Intermediate', 'English', 'Atlassian', 'MS', 'Engineering', 'QA Automation Engineer', 'Mathematics', 'QA', 'SDLC', 'BDD', 'Description:We', 'Web UI']",5,0,1,1
-282,293,['Ukraine'],2024-04-16 15:47:00,53,217,"['API', 'JavaScript', 'CSS', 'Upper-Intermediate', 'Python', 'HTML', 'Django', 'RESTful API']",3,0,1,1
-283,294,['Ukraine'],2024-04-16 14:57:00,4,68,"['RESTful APIs', 'Elasticsearch', 'Team Lead', 'DRF', 'GCP', 'Docker', 'Python', 'Kubernetes', 'NoSQL', 'MongoDB', 'CD', 'Azure', 'Django', 'PostgreSQL']",5,0,1,1
-284,295,"['Poland', 'Ukraine']",2024-04-16 14:52:00,8,90,"['Code', 'PowerShell', 'Oracle', 'Information Technology', 'OCP', 'Ansible', 'English', 'Docker', 'Python', 'WebSphere', 'Linux', 'DevOps Engineer', 'Infrastructure', 'Bash', 'WebLogic', 'Jenkins']",5,0,0,1
-285,296,"['Spain', 'Poland']",2024-04-16 14:27:00,65,200,"['EFK', 'VictoriaMetrics', 'AWS', 'Terraform', 'DB', 'Kubernetes', 'Docker', 'Kafka', 'IAC', 'Kafka Connect', 'Schema Registry', 'MS SQL', 'Ansible', 'Python', 'RabbitMQ', 'Linux', 'AWS MSK', 'PostgreSQL', 'Elasticsearch', 'Helm', 'Vault', 'Redis', 'Cassandra', 'GCloud', 'English', 'CD', 'Bash']",3,0,0,1
-286,298,['Ukraine'],2024-04-16 12:30:00,12,155,"['MySQL', 'CRM', 'API', 'Flask', 'Microservices', 'AWS', 'Docker', 'Python', 'Kubernetes', 'Upper-Intermediate', 'POS', 'Django', 'RESTful', 'Git', 'RDS', 'Point', 'Lambda', 'PostgreSQL']",5,0,0,1
-287,299,['Ukraine'],2024-04-16 12:30:00,53,199,"['Flask', 'Agile', 'Cassandra', 'English', 'OOP', 'Python', 'Kubernetes', 'NoSQL', 'MongoDB', 'Linux', 'Django', 'FastAPI', 'AIOHTTP', 'Postgres', 'ORMs', 'RESTful API']",3,0,1,1
-288,300,"['Poland', 'Ukraine']",2024-04-16 12:00:00,5,42,"['ETL', 'DataBricks', 'Python']",5,0,0,1
-289,301,['Ukraine'],2024-04-16 11:50:00,39,271,"['Dataforest', 'Web', 'CV', 'Python', 'Cleaning', 'Scraping', 'Data', 'SQL', 'Visualization']",1,0,1,1
-290,302,['Ukraine'],2024-04-16 11:01:00,17,138,"['Vue', 'Rest Framework', 'Unittest', 'Git', 'Pytest', 'JavaScript', 'Django', 'ORM', 'PostgreSQL']",2,0,0,1
-291,303,['Slovakia'],2024-04-15 22:11:00,39,150,"['Mariadb', 'Postgresql', 'Strawberry', 'Asyncio', 'Pipenv', 'AWS', 'Mysql', 'English', 'Docker', 'Python', 'Kubernetes', 'Sqlalchemy', 'Alembic', 'Celery', 'Fastapi', 'Pydantic']",3,0,0,1
-292,304,['United Kingdom'],2024-04-15 17:49:00,25,61,"['Computer Science', 'PostgreSQL', 'DB', 'Unit', 'AWS', 'FAST API', 'Docker', 'Python', 'Engineering', 'DevOps', 'Mongo DB', 'SqlAlchemy', 'RESTful API']",5,0,0,1
-293,305,['Ukraine'],2024-04-15 17:46:00,13,53,"['PostgreSQL', 'Web', 'Java', 'Mobile', 'Python', 'NoSQL', 'MongoDB', 'UX', 'QA', 'Git', 'JavaScript', 'SQL', 'UI']",5,0,0,1
-294,306,['Ukraine'],2024-04-15 16:45:00,28,109,"['DeFi', 'Master', 'Computer Science', 'Software Engineering', 'PostgreSQL', 'Flask', 'Docker', 'Python', 'MongoDB', 'APIs', 'Git', 'FastAPI', 'Tron', 'DApp', 'Django', 'RESTful API']",5,0,1,1
-295,307,['Ukraine'],2024-04-15 15:52:00,70,247,"['Flask', 'Streamlit', 'Docker', 'ElasticSearch', 'Python', 'GITOPS', 'FastAPI', 'Django', 'Frameworks', 'PostgreSQL']",5,0,0,1
-296,308,"['Ukraine', 'Poland']",2024-04-15 15:18:00,3,32,"['MLOps', 'GCP', 'TensorFlow', 'Physics', 'Docker', 'Kubernetes', 'LLMs', 'Deep Learning', 'PyTorch', 'NLP', 'Hugging Face', 'Python', 'Linux', 'Mathematics', 'Electrical Engineering', 'Software Engineering', 'Computer Science', 'CUDA', 'English', 'DeepSpeed']",5,0,0,1
-297,309,['Ukraine'],2024-04-15 14:47:00,74,259,"['SVN', 'Flask', 'REST API', 'AWS', 'Python', 'Object Relational Mapper', 'Amazon Web Services', 'FastAPI', 'Mercurial', 'Django', 'SQL', 'ORM']",5,0,0,1
-298,310,['Ukraine'],2024-04-15 14:44:00,176,469,"['Twilio', 'SQL Databases', 'English', 'Docker', 'Django REST', 'Python', 'Celery', 'FastAPI', 'Docusig', 'PostgreSQL']",2,0,1,1
-299,311,['Ukraine'],2024-04-15 14:36:00,11,77,"['Unix', 'Computer Science', 'Flask', 'Cloudwatch', 'AWS', 'Docker', 'Python', 'B', 'Engineering', 'FIX', 'APIs', 'Mathematics', 'NumPy', 'Django']",5,0,0,1
-300,312,['Ukraine'],2024-04-15 14:03:00,19,208,"['Power BI', 'Tableau', 'Analyst']",3,0,1,1
-301,313,['Ukraine'],2024-04-15 13:56:00,7,32,"['Unix', 'Computer Science', 'Flask', 'Cloudwatch', 'AWS', 'Analysis', 'Docker', 'Python', 'B', 'Engineering', 'FIX', 'APIs', 'Mathematics', 'NumPy', 'Science', 'Django']",5,0,1,1
-302,314,['Ukraine'],2024-04-15 13:28:00,16,159,"['Tensorflow', 'GenSim', 'Flask', 'Learning', 'Rest API', 'OOP', 'Docker', 'Named Entity Recognition', 'ML', 'Celery', 'Spacy']",2,0,0,1
-303,315,"['Relocate', 'Ukraine']",2024-04-15 10:52:00,27,205,"['R', 'Tableau', 'PowerBI', 'Python']",2,1,0,0
-304,316,"['Germany', 'Spain', 'Croatia', 'Poland', 'Portugal']",2024-04-14 14:59:00,13,52,"['Skills', 'API', 'Redis', 'Stack', 'AWS', 'Docker', 'Python', 'Kubernetes', 'NoSQL', 'MongoDB', 'FastAPI', 'Kafka']",5,0,0,1
-305,317,['Ukraine'],2024-04-14 08:47:00,85,238,"['Backend', 'Python', 'Development', 'GUI', 'SQL', 'Backend Developer']",2,1,0,0
-306,318,['Ukraine'],2024-04-12 17:45:00,13,102,"['Confluence', 'Agile', 'R', 'AWS', 'Jira', 'English', 'Python', 'Tableau', 'Git', 'RESTful', 'Azure']",3,0,1,1
-307,319,"['Relocate', 'Ukraine']",2024-04-12 14:59:00,55,408,['Python'],1,0,1,0
-308,320,['Ukraine'],2024-04-12 14:49:00,33,138,"['Flask', 'Redis', 'REST', 'CSS', 'ElasticSearch', 'Python', 'English', 'MongoDB', 'JS', 'CD', 'DevOps', 'HTML', 'Django', 'MySQL', 'REST APIs']",3,0,0,1
-309,321,"['Germany', 'Ukraine']",2024-04-12 14:13:00,44,121,"['Client', 'Java', 'English', 'Python', 'Scalors']",5,0,0,1
-310,323,"['Malta', 'Poland', 'Ukraine']",2024-04-12 09:45:00,29,258,"['Skills', 'PyTorch', 'Statistics', 'Computer Science', 'R', 'TensorFlow', 'Python', 'Mathematics', 'Pandas', 'SQL', 'PhD']",5,0,0,1
-311,324,['Ukraine'],2024-04-11 17:06:00,167,467,"['Blockchain', 'Native']",3,0,0,1
-312,325,"['Poland', 'Ukraine']",2024-04-11 15:29:00,4,39,['SQL'],5,0,0,1
-313,326,['Ukraine'],2024-04-11 14:02:00,48,363,"['Video', 'Object', 'Numpy', 'Embedded']",3,0,1,0
-314,327,['Ukraine'],2024-04-11 13:32:00,3,27,"['PyTorch', 'PostgreSQL', 'AWS', 'Python', 'Jupyter Notebook', 'NumPy', 'State', 'Pandas', 'Keras', 'Machine Learning']",5,0,0,1
-315,328,['Germany'],2024-04-11 12:22:00,58,199,"['Django Helpdesk', 'Pyramid', 'Docker', 'Python']",5,0,1,1
-316,329,['Ukraine'],2024-04-11 11:16:00,16,88,['JavaScript'],3,0,0,1
-317,330,['Estonia'],2024-04-11 10:10:00,8,49,"['Prometheus', 'Helm', 'GitLab', 'Grafana', 'AWS', 'SonarQube', 'Terraform', 'Python', 'English', 'Docker', 'CD', 'Nexus', 'SDLC', 'Bash', 'ELK', 'Jenkins']",5,0,0,1
-318,331,['Ukraine'],2024-04-11 09:34:00,30,194,"['Vue', 'BackEnd', 'Fullstack Developer', 'Upper-Intermediate', 'Tailwind CSS', 'Python', 'Nuxt', 'FrontEnd', 'JavaScript', 'Django', 'SQL']",3,0,0,1
-319,332,['Ukraine'],2024-04-10 20:24:00,21,52,['JavaScript'],5,0,0,1
-320,333,['United States'],2024-04-10 20:10:00,7,81,"['TCP', 'OkD', 'AWS', 'GCP', 'Docker', 'Kubernetes', 'IP', 'Python', 'Nagios', 'Linux', 'Azure', 'ELK Stack', 'Bash', 'OpenShift', 'HTTP']",3,0,0,1
-321,334,['Ukraine'],2024-04-10 18:56:00,10,39,"['NLP', 'Python', 'Dockers', 'ML Infrastructure', 'Dynatrace', 'SQL']",5,0,1,1
-322,335,['Ukraine'],2024-04-10 18:44:00,21,133,"['Electrical', 'Software Engineering', 'English', 'Python', 'Junior C Engineer', 'PLVision', 'Bachelor', 'CMake', 'Computer']",2,0,1,1
-323,336,['Ukraine'],2024-04-10 18:32:00,80,248,"['RESTful APIs', 'JavaScript', 'Vue', 'NoSQL', 'Engineer', 'Kafka', 'XML', 'Angular', 'Jooble', 'Python', 'RabbitMQ', 'Software Engineer', 'FastAPI', 'HTML', 'ReactJS', 'PostgreSQL', 'Flask', 'Redis', 'MongoDB', 'Django']",3,0,1,1
-324,337,['Ukraine'],2024-04-10 18:26:00,6,92,"['Yocto', 'English', 'Python', 'Linux', 'Buildroot', 'Intermediate']",5,0,1,1
-325,338,['Ukraine'],2024-04-10 15:18:00,12,183,"['Data IT', 'Server', 'Release', 'HPE', 'PowerShell', 'Security', 'Documentation', 'Familiar', 'Design', 'Configuration', 'Eaton', 'Ansible', 'Python', 'Operational', 'Cyber', 'OT', 'Automation', 'Scripting', 'Gitlab', 'Test', 'Infrastructure', 'UPS', 'Bash', 'Experience', 'Siemens Gamesa Renewable Energy SCADA']",3,0,1,1
-326,339,['Ukraine'],2024-04-10 13:40:00,102,241,"['Frontend', 'API', 'CSS', 'OOP', 'Python', 'English', 'OOD', 'HTML', 'Django', 'SQL', 'PostgreSQL']",2,0,1,1
-327,340,['Ukraine'],2024-04-10 12:20:00,13,120,"['Bid Flooring', 'Node', 'OpenRTB', 'Pacing', 'Java', 'NLP', 'English', 'Upper-Intermediate', 'Python', 'Auction Pricing', 'JavaScript', 'Machine Learning']",5,0,1,1
-328,341,['Ukraine'],2024-04-09 18:40:00,63,484,"['Dataforest', 'Web', 'CV', 'Python', 'SQL']",1,0,1,1
-329,342,['United States'],2024-04-09 17:52:00,197,913,"['Remote', 'Developer', 'United States', 'UTC', 'Advanced', 'JavaScript', 'Valley Commerce LLC', 'SEO', 'UX', 'Angular', 'Google Sheets', 'CSS', 'Python', 'Git', 'HTML', 'Eastern Standard Time Zone', 'UI', 'English', 'Microsoft Excel', 'Django', 'MySQL']",3,0,0,1
-330,343,['United States'],2024-04-09 17:22:00,70,209,"['API', 'Selenium', 'Tailbox', 'Lead Software Engineer', 'AWS', 'JavaScript', 'Cambridge', 'BeautifulSoup', 'Master', 'Telegram', 'SQL', 'Join Tailbox', 'Java', 'CSS', 'Python', 'Software Engineer', 'FastAPI', 'HTML', 'PostgreSQL', 'Computer Science', 'Flask', 'WhatsApp', 'Engineering', 'CD', 'React', 'Scrapy']",5,0,0,1
-331,344,['Ukraine'],2024-04-09 16:59:00,302,1690,"['GitLab', 'Bitbucket', 'Python', 'MongoDB', 'GitHub', 'PostgreSQL']",1,0,0,1
-332,345,['Ukraine'],2024-04-09 16:49:00,15,87,"['Redis', 'CSS', 'Upper-Intermediate', 'English', 'Celery', 'HTML', 'Django', 'MySQL', 'PostgreSQL']",3,0,0,1
-333,346,"['Armenia', 'Ukraine']",2024-04-09 16:26:00,26,99,"['Degree', 'Hadoop', 'Lead', 'Proficiency', 'Data Architect', 'Spark', 'Provide', 'Familiarity', 'Hive', 'Big Data', 'Collaborate', 'Excellent', 'Databricks', 'AWS CLOUD', 'Design', 'Minimum', 'PySpark', 'Contribute', 'Python', 'Extensive', 'Bachelor', 'Senior Data Engineer', 'Skills', 'Computer Science', 'Leadership', 'ETL', 'Stay']",5,0,0,1
-334,347,"['Relocate', 'Latvia']",2024-04-09 15:00:00,6,109,"['FastAPI', 'Python']",5,0,1,0
-335,348,['Ukraine'],2024-04-09 14:11:00,36,150,"['Symfony', 'NoSQL', 'RabbitMQ', 'JavaScript', 'SQL']",3,0,0,1
-336,349,['Ukraine'],2024-04-09 13:54:00,107,540,"['RESTful APIs', 'Selenium', 'Project Management', 'JQuery', 'AWS', 'PHP', 'JavaScript React', 'JSON', 'UX', 'BitBucket', 'WordPress', 'Bootstrap', 'Party APIs', 'CSS', 'Python', 'Git', 'HTML', 'Scrum', 'TDD', 'UI', 'Agile', 'Jira', 'CD', 'UI Testing Automation', 'Team Members']",3,0,0,1
-337,351,"['Argentina', 'Canada', 'Costa Rica']",2024-04-09 12:58:00,34,131,"['Snowflake', 'Your Expertise', 'Preset', 'Prefect', 'AWS', 'Kubernetes', 'Python', 'APIs', 'Azure', 'AdTech', 'PST', 'PDT', 'SQL', 'DBT']",3,0,0,1
-338,352,"['Ukraine', 'Israel']",2024-04-09 12:08:00,51,179,"['Statistics', 'Computer Science', 'English', 'Python', 'Tableau', 'Data Analyst', 'Mathematics', 'SQL']",3,0,0,1
-339,353,"['Relocate', 'Canada']",2024-04-09 12:00:00,2,15,"['Unix', 'WTX', 'Shell', 'Perl', 'IBM MQ', 'JSON', 'SFTP', 'EDI', 'Python', 'JMS', 'Axway Secure Transport', 'IBM ITX', 'EDIFACT', 'XML', 'ANSI', 'HTTP', 'EAI', 'ESB']",5,1,0,0
-340,354,"['Relocate', 'Ukraine']",2024-04-09 11:46:00,25,181,"['CSS', 'Pytest']",2,1,0,0
-341,355,['Ukraine'],2024-04-09 11:42:00,3,41,"['Statistics', 'Computer Science', 'English', 'Python', 'Tableau', 'Data Analyst', 'Mathematics', 'SQL']",3,0,0,1
-342,356,['Poland'],2024-04-09 11:20:00,21,88,"['AWS', 'Golang', 'Kubernetes', 'Docker', 'Python', 'DevOps Engineer']",3,0,0,1
-343,357,"['Cyprus', 'Ukraine']",2024-04-09 11:20:00,40,120,"['Rest Framework', 'API', 'Gitlab', 'TypeScript', 'Developer', 'Redis', 'GraphQL', 'Clickhouse', 'Senior', 'Docker', 'Python', 'ElasticSearch', 'CD', 'Middle', 'JavaScript', 'Django']",3,0,0,1
-344,358,"['Poland', 'Ukraine']",2024-04-09 10:06:00,7,37,"['MLOps', 'GCP', 'TensorFlow', 'Physics', 'Docker', 'Kubernetes', 'LLMs', 'Deep Learning', 'PyTorch', 'NLP', 'Hugging Face', 'Python', 'Linux', 'Mathematics', 'Electrical Engineering', 'Software Engineering', 'Computer Science', 'CUDA', 'English', 'DeepSpeed']",5,0,0,1
-345,359,['Ukraine'],2024-04-09 09:06:00,41,162,"['R', 'QlikView', 'Python', 'Microsoft Excel', 'KPIs', 'Tableau', 'Power BI', 'P&L', 'SQL']",2,0,1,1
-346,360,['Ukraine'],2024-04-08 17:41:00,51,243,"['RESTful APIs', 'Selenium', 'Project Management', 'JQuery', 'AWS', 'PHP', 'JavaScript React', 'JSON', 'UX', 'BitBucket', 'WordPress', 'Bootstrap', 'Party APIs', 'CSS', 'Python', 'Git', 'HTML', 'Scrum', 'TDD', 'UI', 'Agile', 'Jira', 'CD', 'UI Testing Automation', 'Team Members']",5,0,0,1
-347,361,['Ukraine'],2024-04-08 17:34:00,151,499,"['RESTful APIs', 'Selenium', 'Project Management', 'JQuery', 'AWS', 'PHP', 'JavaScript React', 'JSON', 'UX', 'BitBucket', 'WordPress', 'Bootstrap', 'Party APIs', 'CSS', 'Python', 'Git', 'HTML', 'Scrum', 'TDD', 'UI', 'Agile', 'Jira', 'CD', 'UI Testing Automation', 'Team Members']",5,0,0,1
-348,362,"['Bulgaria', 'Poland', 'Portugal', 'Ukraine']",2024-04-08 16:01:00,13,146,"['Aurora', 'Kinesis', 'AWS', 'Python', 'ETL', 'Athena', 'APIs', 'Linux', 'DevOps', 'API Gateway', 'RDS', 'SQL']",5,0,1,1
-349,363,['Ukraine'],2024-04-08 15:10:00,13,108,"['Crypto', 'AWS', 'WebSockets', 'CTO', 'NodeJS', 'Celery', 'Postgres', 'Technical Lead', 'SOA', 'Team Lead', 'Chief Technology Officer', 'Python', 'RabbitMQ', 'Development Team', 'FastAPI', 'Flask', 'Redis', 'CV', 'AsyncIO']",5,0,0,1
-350,364,['Ukraine'],2024-04-08 13:44:00,73,243,"['API', 'Swagger', 'Redis', 'MongoDB', 'FastAPI', 'Docker Compose']",3,0,0,1
-351,365,['Ukraine'],2024-04-08 13:17:00,68,224,"['Ideally', 'Postgres SQL DB', 'REST API', 'AWS', 'English', 'Python', 'APIs', 'Django', 'Pydantic', 'Experience']",2,0,0,1
-352,366,"['Relocate', 'Poland', 'Ukraine']",2024-04-08 12:52:00,25,115,"['Document DB', 'Software', 'Python', 'Fast API', 'Django']",3,0,1,1
-353,367,['Poland'],2024-04-08 12:08:00,26,83,"['Java', 'Python', 'ML', 'Windows', 'Spring']",5,0,0,1
-354,368,"['Ukraine', 'Poland', 'Moldova', 'Spain']",2024-04-08 12:07:00,39,152,"['Russian', 'English', 'Python', 'CD', 'Ukrainian']",2,0,0,1
-355,370,['Ukraine'],2024-04-08 11:12:00,35,239,"['ClickUp', 'Adobe Analytics', 'Google Analytics', 'Google Sheets']",3,0,0,1
-356,371,['Ukraine'],2024-04-08 10:50:00,5,23,"['Computer Science', 'TypeScript', 'AWS', 'Redux', 'GCP', 'Python', 'Engineering', 'React', 'Azure', 'JavaScript', 'Django']",5,0,1,1
-357,372,['Ukraine'],2024-04-08 10:46:00,12,49,"['TypeScript', 'Authorization', 'NO-SQL DB', 'Full Stack', 'DynamoDB', 'GUIs', 'Authentication', 'AWS API Gateway', 'SQL', 'Node', 'CloudWatch', 'Upper Intermediate', 'Python', 'PostgreSQL', 'Cognito', 'Computer Science', 'English', 'Engineering', 'React', 'MongoDB', 'MySQL']",3,0,1,1
-358,373,['United States'],2024-04-08 10:40:00,8,55,"['Software Engineering', 'Airflow', 'Kedro', 'GCP', 'Docker', 'Python', 'Data Structures', 'Scipy', 'Git', 'Bayes', 'Pandas']",5,0,0,1
-359,374,['Ukraine'],2024-04-08 10:38:00,6,51,"['TypeScript', 'Authorization', 'NO-SQL DB', 'Full Stack', 'DynamoDB', 'GUIs', 'Authentication', 'AWS API Gateway', 'SQL', 'Node', 'CloudWatch', 'Upper Intermediate', 'Python', 'Focusing', 'PostgreSQL', 'Cognito', 'Computer Science', 'English', 'Engineering', 'React', 'MongoDB', 'MySQL']",5,0,1,1
-360,375,['Ukraine'],2024-04-08 10:34:00,17,253,"['Java', 'We Expect', 'DynamoDB', 'Kinesis', 'AWS', 'English', 'Python', 'Ukraine', 'SQS', 'Golang', 'React', 'OpenSearch', 'Kyiv', 'API Gateway', 'JavaScript', 'Lambda']",5,1,0,0
-361,376,['Ukraine'],2024-04-08 08:48:00,21,215,"['SOAR', 'IPS', 'Zero-Trust', 'NAC', 'XDR', 'WAF', 'Deception', 'NGWW']",2,0,1,1
-362,377,['Ukraine'],2024-04-08 08:42:00,8,183,"['AppDynamics', 'PromQL', 'RHEL', 'CentOS', 'SCORCH', 'API Query', 'Flux', 'SCOM', 'System Center', 'PageDuty Rundeck', 'CD', 'InfluxDB', 'Opalis', 'Docker Containers', 'Telegraf', 'MSSQL', 'Elastic']",3,0,0,1
+contracts,employment_type,level_of_exp,location,optional_skills,os,required_skills,ua_support
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['Python', 'C#', 'C++', 'Java']",True
+['pełny etat'],['praca zdalna'],['senior'],Kraków,"['Google Cloud Platform', 'Django']",['macOS'],"['Docker', 'Ansible', 'Python', 'Teamcity', 'K8s']",False
+['pełny etat'],['praca zdalna'],['senior'],Warszawa,,,"['Python', 'PostgreSQL', 'REST API', 'Django']",False
+['full-time'],['home office work'],['senior'],Kraków,['Kotlin'],,"['Python', 'Docker', 'SQL', 'AWS']",True
+['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['BigQuery', 'PostgreSQL', 'Redis', 'Microsoft Power BI']",,"['Python', 'Docker', 'Google Cloud Platform']",True
+['full-time'],['home office work'],['senior'],Gdynia,['Linux'],,"['C', 'C++', 'Go', 'Python', 'Java']",True
+['full-time'],['home office work'],['mid'],Bielsko-Biała,,,"['Python', 'SQL']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,['SAS'],,"['Python', 'data engineering']",False
+['full-time'],['home office work'],['mid'],Warszawa,,,"['Docker', 'SQL', 'Python', 'Flask', 'Django']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Pandas', 'PyTorch', 'NumPy', 'Python', 'TensorFlow']",True
+[],['home office work'],['mid'],Gdańsk,"['Flask', 'Git', 'REST']",,"['Python', 'Vue.js']",True
+['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['MySQL', 'Google Cloud Platform', 'Cassandra', 'PostgreSQL', 'AWS', 'Django']",,"['Python', 'SQL']",True
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['MySQL', 'CSS', 'HTML', 'Python', 'PostgreSQL', 'Django']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Gdańsk,"['MySQL', 'Flutter', 'Ubuntu', 'Linux', 'PostgreSQL', 'Microsoft Excel']","['Windows', 'Linux']","['Python', 'Git', 'Visual Studio Code']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Warszawa,"['Azure IoT Hub', 'QUIC', 'MQTT', 'Terraform', 'LwM2M', 'SD-WAN concepts', 'CoAP', 'Azure IoT', 'Protocols', 'HTTP3', 'Networking', 'AWS', 'OSI model', 'IoT', 'AWS IoT Core', 'Kubernetes', 'WebTransport', 'Open Flow Protocol']","['Windows', 'macOS', 'Linux']","['Low Level Linux', 'RestAPI', 'MongoDB', 'HTTP', 'gRPC-based APIs', 'CI/CD', 'FastAPI', 'Docker', 'English', 'Linux', 'Python']",True
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,['Robocorp'],"['Windows', 'macOS']","['Pandas', 'Selenium', 'SQL', 'Asyncio', 'Dramaturg', 'Fastapi', 'AWS', 'Azure DevOps', 'Flet', 'Python', 'pywinauto']",False
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,"['Kubernetes', 'AWS']",,"['MySQL', 'Snowflake Data Cloud', 'TeamCity', 'Bitbucket', 'Docker', 'Python', 'Confluence', 'Jira']",True
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,,,"['Git', 'Selenium', 'SQL', 'TeamCity', 'Azure DevOps', 'Jenkins', 'Python', 'Jira', 'API']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,['AWS'],['Linux'],"['MySQL', 'Docker', 'Snowflake Data Cloud', 'Python', 'Confluence', 'Jira', 'Unix']",False
+['pełny etat'],['praca zdalna'],['lead'],Kraków,['Google Cloud Platform'],['macOS'],"['Docker', 'SQL', 'Ansible', 'Python', 'Teamcity', 'K8s']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Dąbrowa Górnicza,"['SQL', 'C++']",,"['Python', 'C#']",False
+['pełny etat'],['praca zdalna'],['senior'],Kraków,"['Git', 'Docker', 'Jenkins', 'Marshmallow', 'Firebase']",,"['Pytest', 'CloudFormation', 'DynamoDB', 'Python', 'AWS']",False
+['full-time'],['home office work'],['mid'],Kraków,['AWS'],,"['Python', 'SQL']",False
+['full-time'],['home office work'],['senior'],Kraków,"['Apache Kafka', 'Flask', 'RabbitMQ', 'Apache Pulsar', 'Django']",['Linux'],"['Pandas', 'Apache Airflow', 'Numpy', 'AWS', 'C', 'Kubernetes', 'Docker', 'C++', 'Splunk', 'Slack', 'Python', 'Grafana', 'Jira']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['senior'],Warszawa,"['Linux', 'PostgreSQL', 'Bash', 'Jenkins']","['Windows', 'Linux']","['Python', 'SQL']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Docker', 'CMake', 'FluxDB', 'Ansible', 'Jenkins', 'ElasticSearch']",,['Python'],True
+[],['praca hybrydowa'],['senior'],Warszawa,,,"['MySQL', 'Git', 'WebSocket', 'AMQP', 'REST', 'Docker', 'Kubernetes', 'Python']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['Postgress', 'Elasticsearch', 'Microsoft SQL Server']",,"['MongoDB', 'Python', 'React', 'Django']",False
+['full-time'],['home office work'],['mid'],Gdańsk,"['Angular', 'CSS', 'HTML']",,"['Python', 'Git', 'Django']",False
+['full-time'],['home office work'],['senior'],Gdańsk,['Kubernetes'],,"['Python', 'Docker', 'Git', 'Django']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Katowice,['Windows'],,"['Python', 'Microsoft Excel', 'Jira']",False
+['full-time'],['home office work'],['junior'],Warszawa,"['Check Point', 'Ansible', 'Cisco', 'Juniper', 'Docker', 'GitLab', 'Jenkins', 'Fortinet', 'Palo Alto', 'VMWare']",['Linux'],"['Linux', 'Python']",False
+['full-time'],['home office work'],['mid'],Warszawa,"['Linux', 'Windows', 'macOS']",,"['Python', 'PostgreSQL', 'SQL']",True
+['full-time'],['full office work'],['junior'],Gliwice,,,"['React.js', 'JavaScript', 'TypeScript', 'Python', 'Django']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['expert'],Poznań,"['Java', 'React.js', 'JavaScript', 'TypeScript']",,"['Python', 'GCP']",True
+['full-time'],['home office work'],['senior'],Wrocław,,,"['Python', 'Git', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['SQL', 'JavaScript', 'MongoDB', 'Docker', 'Microsoft SQL Server', 'Python', 'PostgreSQL', 'React Native', 'Redis']",False
+['full-time'],['home office work'],['senior'],Kraków,,,"['Python', 'AWS']",True
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,"['Linux', 'Windows']",,"['Docker', 'SQL', 'Linux', 'Python', 'AWS', 'Django']",False
+['pełny etat'],['praca zdalna'],['senior'],Warszawa,['Perl'],['Windows'],"['Pandas', 'Python', 'Git', 'SQL']",True
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['MySQL', 'PostgreSQL']",,"['Linux', 'Python']",False
+['full-time'],['home office work'],['senior'],Wrocław,['Windows'],,"['Git', 'Kubernetes', 'SQL', 'Docker', 'Python', 'AWS', 'Django']",True
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,['Windows'],,['Python'],False
+[],['praca hybrydowa'],"['mid', 'senior']",Warszawa,,,"['Python', 'SQL', 'Automation']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Python', 'SAS']",False
+['pełny etat'],['praca stacjonarna'],"['mid', 'senior']",Warszawa,"['Celery', 'Keycloak', 'Redis']",,"['Docker', 'SQL', 'Python', 'Fastapi', 'RabbitMQ', 'REST API']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Poznań,"['Kubernetes', 'Google Cloud Platform']",['Linux'],"['Oracle', 'Python', 'Postgres']",True
+['full-time'],['home office work'],['mid'],Warszawa,['Kafka'],,['Python'],False
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['MySQL', 'Docker', 'PostgreSQL']",['Linux'],"['Linux', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Cucumber', 'TeamCity', 'Graylog', 'Jenkins', 'Salesforce', 'Kibana']",,"['Python', 'Selenium', 'Robot Framework']",True
