@@ -2,8 +2,14 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import time
 
+from scrapy.http.response.html import HtmlResponse
 from scrapy import signals
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 
 class ScrapingSpiderMiddleware:
@@ -98,3 +104,58 @@ class ScrapingDownloaderMiddleware:
 
     def spider_opened(self, spider):
         spider.logger.info("Spider opened: %s" % spider.name)
+
+
+class ClickTheProtocolCookiesButton:
+    def __init__(self, crawler):
+        chr_options = Options()
+        chr_options.add_argument("--headless")
+        chr_options.add_argument("--disable-gpu")
+        chr_options.add_argument("--no-sandbox")
+        chr_options.add_argument("--disable-dev-shm-usage")
+        self.driver = webdriver.Chrome(options=chr_options)
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        s = cls(crawler)
+        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
+        return s
+
+    @staticmethod
+    def spider_opened(spider):
+        spider.logger.info("Spider opened: %s" % spider.name)
+
+    def process_spider_input(self, response: HtmlResponse, spider):
+
+        if response.css("aside[data-test=section-cookieModal]"):
+            self.driver.get(response.url)
+
+            accept_button = self.driver.find_element(
+                By.CSS_SELECTOR, "button[data-test=button-acceptAll]"
+            )
+            accept_button.click()
+            response.body = self.driver.page_source
+            time.sleep(2)
+
+        return HtmlResponse(
+            body=response.body,
+            url=response.url,
+            encoding="utf-8",
+            request=response.request
+        )
+
+    def spider_closed(self, spider):
+        self.driver.quit()
+#
+#
+# class RememberFirstVacancyMiddleware:
+#     def __init__(self):
+#         self.cache_file = "cached_vc_urls.txt"
+#         self.first_request_url = None
+#
+    #     def process_spider_output(self, response, result, spider):
+#         """Check if we are not going circles, and parsing same page """
+#         if self.first_request_url:
+#             if response.url == self.first_request_url:
+#                 return []
+#         return result
