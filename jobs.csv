@@ -1,464 +1,52 @@
-country,date_time,employment_type,num_applications,num_views,skills,year_of_exp
-"['United Kingdom', 'Slovakia', 'Ukraine']",19:09 14.05.2024,['Remote'],26,113,"['Python', 'SQL', 'Helm', 'Flask', 'Celery', 'VueJS', 'Jenkins', 'English', 'Javascript', 'Docker', 'Kubernetes', 'CD', 'TypeScript', 'SQLAlchemy', 'FastApi']",5
-"['Israel', 'Poland']",17:51 14.05.2024,['Remote'],3,9,"['Python', 'ETL', 'Israeli', 'Overview:We', 'Docker', 'Kubernetes', 'CD', 'AWS.Substantial']",5
-['Ukraine'],17:49 14.05.2024,"['Office', 'Remote']",2,18,"['GitLab-CI', 'Secret', 'SQS', 'SQL', 'JIRA', 'Scrum', 'Spark', 'Kafka', 'DWH', 'Confluence', 'IAM', 'Python', 'Big Data', 'Java', 'Common', 'AWS', 'Agile', 'CD', 'Airflow', 'KMS']",5
-['Ukraine'],17:26 14.05.2024,['Remote'],12,81,"['GraphQL', 'Unit', 'Performance Testing', 'Integration', 'Test Frameworks', 'Websocket', 'Terraform', 'AWS', 'Framework', 'IaC', 'JavaScript', 'APIs', 'RESTful', 'DevOps', 'CD', 'TypeScript', 'SOLID']",5
-"['Poland', 'Ukraine']",16:53 14.05.2024,"['Office', 'Remote']",3,14,"['Python', 'Azure', 'NLP', 'English', 'NLU', 'AWS', 'MLLMs', 'GCP', 'ML', 'Software Engineering.Knowledge', 'Agents', 'RAG.Have']",5
-['Ukraine'],15:57 14.05.2024,['Hybrid'],9,20,"['USA', 'Python', 'Django', 'Senior', 'Flask', 'Git']",5
-['Ukraine'],15:29 14.05.2024,['Hybrid'],2,29,"['Lambda', 'Python', 'NoSQL', 'Postgres', 'Kinesis', 'DynamoDB', 'Reporting', 'Experience', 'Memcached', 'Advance English', 'AWS', 'Elasticsearch', 'Redis', 'SQS', 'MySQL', 'API Gateway']",5
-"['Poland', 'Ukraine', 'Israel']",14:57 14.05.2024,['Remote'],10,37,"['Python', 'ETL', 'Israeli', 'Overview:We', 'AWS', 'Docker', 'Kubernetes', 'CD']",5
-"['Poland', 'Ukraine']",13:47 14.05.2024,"['Office', 'Remote']",1,26,"['Python', 'MongoDB', 'Middle Data Engineer', 'Computer Science', 'PySpark', 'Snowflake', 'Apache Spark']",2
-['Ukraine'],13:39 14.05.2024,"['Office', 'Remote']",5,13,"['Python', 'Kinesis', 'APIsWorking', 'Athena', 'AWS', 'Linux', 'APIs', 'DevOps', 'ETL', 'SQLExperience', 'RDS', 'API Gateway', 'AuroraExperience']",5
-['Poland'],12:29 14.05.2024,['Remote'],8,83,"['Python', 'Java', 'Ruby', 'Strong', 'AWS', 'Golang', 'Cloud', 'Advantage)Ability']",3
-['Ukraine'],12:26 14.05.2024,"['Office', 'Remote']",6,60,[],5
-['Ukraine'],12:24 14.05.2024,['Remote'],0,17,"['Python', 'Azure', 'Ansible', 'AWS', 'Bash', 'Docker', 'Kubernetes)Expertise', 'DevOps', 'GCPExperience']",5
-['Ukraine'],12:22 14.05.2024,['Hybrid'],0,18,['Python'],1
-['Ukraine'],12:05 14.05.2024,['Remote'],10,33,"['Python', 'Data ScienceHands', 'English']",2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,6,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,125,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,6,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,125,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,6,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,125,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,125,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,125,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,7,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,8,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,8,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,8,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,8,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
-"['Czechia', 'Germany', 'Hungary', 'Ireland', 'Poland']",22:17 14.05.2024,['Remote'],176,779,[],5
-['Czechia'],22:07 14.05.2024,"['Office', 'Remote']",0,4,[],3
-['Ukraine'],22:01 14.05.2024,['Remote'],2,8,[],2
-['Ukraine'],21:43 14.05.2024,['Hybrid'],2,9,[],3
-['Ukraine'],21:31 14.05.2024,"['Office', 'Remote']",1,5,[],3
-['Ukraine'],20:43 14.05.2024,['Remote'],5,29,[],1
-"['Relocate', 'Ukraine']",20:37 14.05.2024,['Office'],0,1,[],5
-"['Cyprus', 'United Kingdom', 'Slovakia', 'Ukraine']",20:18 14.05.2024,['Remote'],33,97,[],2
-"['Relocate', 'Ukraine']",20:18 14.05.2024,"['Office', 'Remote']",0,9,[],1
-['Ukraine'],20:17 14.05.2024,['Remote'],1,7,[],2
-['United Kingdom'],20:17 14.05.2024,['Remote'],24,126,[],3
-['United States'],20:00 14.05.2024,['Remote'],26,59,[],5
-"['Relocate', 'Ukraine']",19:58 14.05.2024,['Office'],0,3,[],1
-['United Arab Emirates'],19:54 14.05.2024,"['Office', 'Remote']",10,31,[],2
+contracts,employment_type,level_of_exp,location,optional_skills,os,required_skills,ua_support
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['Python', 'C#', 'C++', 'Java']",True
+['pełny etat'],['praca zdalna'],['senior'],Kraków,"['Google Cloud Platform', 'Django']",['macOS'],"['Docker', 'Ansible', 'Python', 'Teamcity', 'K8s']",False
+['pełny etat'],['praca zdalna'],['senior'],Warszawa,,,"['Python', 'PostgreSQL', 'REST API', 'Django']",False
+['full-time'],['home office work'],['senior'],Kraków,['Kotlin'],,"['Python', 'Docker', 'SQL', 'AWS']",True
+['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['BigQuery', 'PostgreSQL', 'Redis', 'Microsoft Power BI']",,"['Python', 'Docker', 'Google Cloud Platform']",True
+['full-time'],['home office work'],['senior'],Gdynia,['Linux'],,"['C', 'C++', 'Go', 'Python', 'Java']",True
+['full-time'],['home office work'],['mid'],Bielsko-Biała,,,"['Python', 'SQL']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,['SAS'],,"['Python', 'data engineering']",False
+['full-time'],['home office work'],['mid'],Warszawa,,,"['Docker', 'SQL', 'Python', 'Flask', 'Django']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Pandas', 'PyTorch', 'NumPy', 'Python', 'TensorFlow']",True
+[],['home office work'],['mid'],Gdańsk,"['Flask', 'Git', 'REST']",,"['Python', 'Vue.js']",True
+['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['MySQL', 'Google Cloud Platform', 'Cassandra', 'PostgreSQL', 'AWS', 'Django']",,"['Python', 'SQL']",True
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['MySQL', 'CSS', 'HTML', 'Python', 'PostgreSQL', 'Django']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Gdańsk,"['MySQL', 'Flutter', 'Ubuntu', 'Linux', 'PostgreSQL', 'Microsoft Excel']","['Windows', 'Linux']","['Python', 'Git', 'Visual Studio Code']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Warszawa,"['Azure IoT Hub', 'QUIC', 'MQTT', 'Terraform', 'LwM2M', 'SD-WAN concepts', 'CoAP', 'Azure IoT', 'Protocols', 'HTTP3', 'Networking', 'AWS', 'OSI model', 'IoT', 'AWS IoT Core', 'Kubernetes', 'WebTransport', 'Open Flow Protocol']","['Windows', 'macOS', 'Linux']","['Low Level Linux', 'RestAPI', 'MongoDB', 'HTTP', 'gRPC-based APIs', 'CI/CD', 'FastAPI', 'Docker', 'English', 'Linux', 'Python']",True
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,['Robocorp'],"['Windows', 'macOS']","['Pandas', 'Selenium', 'SQL', 'Asyncio', 'Dramaturg', 'Fastapi', 'AWS', 'Azure DevOps', 'Flet', 'Python', 'pywinauto']",False
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,"['Kubernetes', 'AWS']",,"['MySQL', 'Snowflake Data Cloud', 'TeamCity', 'Bitbucket', 'Docker', 'Python', 'Confluence', 'Jira']",True
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,,,"['Git', 'Selenium', 'SQL', 'TeamCity', 'Azure DevOps', 'Jenkins', 'Python', 'Jira', 'API']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,['AWS'],['Linux'],"['MySQL', 'Docker', 'Snowflake Data Cloud', 'Python', 'Confluence', 'Jira', 'Unix']",False
+['pełny etat'],['praca zdalna'],['lead'],Kraków,['Google Cloud Platform'],['macOS'],"['Docker', 'SQL', 'Ansible', 'Python', 'Teamcity', 'K8s']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Dąbrowa Górnicza,"['SQL', 'C++']",,"['Python', 'C#']",False
+['pełny etat'],['praca zdalna'],['senior'],Kraków,"['Git', 'Docker', 'Jenkins', 'Marshmallow', 'Firebase']",,"['Pytest', 'CloudFormation', 'DynamoDB', 'Python', 'AWS']",False
+['full-time'],['home office work'],['mid'],Kraków,['AWS'],,"['Python', 'SQL']",False
+['full-time'],['home office work'],['senior'],Kraków,"['Apache Kafka', 'Flask', 'RabbitMQ', 'Apache Pulsar', 'Django']",['Linux'],"['Pandas', 'Apache Airflow', 'Numpy', 'AWS', 'C', 'Kubernetes', 'Docker', 'C++', 'Splunk', 'Slack', 'Python', 'Grafana', 'Jira']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['senior'],Warszawa,"['Linux', 'PostgreSQL', 'Bash', 'Jenkins']","['Windows', 'Linux']","['Python', 'SQL']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Docker', 'CMake', 'FluxDB', 'Ansible', 'Jenkins', 'ElasticSearch']",,['Python'],True
+[],['praca hybrydowa'],['senior'],Warszawa,,,"['MySQL', 'Git', 'WebSocket', 'AMQP', 'REST', 'Docker', 'Kubernetes', 'Python']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['Postgress', 'Elasticsearch', 'Microsoft SQL Server']",,"['MongoDB', 'Python', 'React', 'Django']",False
+['full-time'],['home office work'],['mid'],Gdańsk,"['Angular', 'CSS', 'HTML']",,"['Python', 'Git', 'Django']",False
+['full-time'],['home office work'],['senior'],Gdańsk,['Kubernetes'],,"['Python', 'Docker', 'Git', 'Django']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Katowice,['Windows'],,"['Python', 'Microsoft Excel', 'Jira']",False
+['full-time'],['home office work'],['junior'],Warszawa,"['Check Point', 'Ansible', 'Cisco', 'Juniper', 'Docker', 'GitLab', 'Jenkins', 'Fortinet', 'Palo Alto', 'VMWare']",['Linux'],"['Linux', 'Python']",False
+['full-time'],['home office work'],['mid'],Warszawa,"['Linux', 'Windows', 'macOS']",,"['Python', 'PostgreSQL', 'SQL']",True
+['full-time'],['full office work'],['junior'],Gliwice,,,"['React.js', 'JavaScript', 'TypeScript', 'Python', 'Django']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['expert'],Poznań,"['Java', 'React.js', 'JavaScript', 'TypeScript']",,"['Python', 'GCP']",True
+['full-time'],['home office work'],['senior'],Wrocław,,,"['Python', 'Git', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['SQL', 'JavaScript', 'MongoDB', 'Docker', 'Microsoft SQL Server', 'Python', 'PostgreSQL', 'React Native', 'Redis']",False
+['full-time'],['home office work'],['senior'],Kraków,,,"['Python', 'AWS']",True
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,"['Linux', 'Windows']",,"['Docker', 'SQL', 'Linux', 'Python', 'AWS', 'Django']",False
+['pełny etat'],['praca zdalna'],['senior'],Warszawa,['Perl'],['Windows'],"['Pandas', 'Python', 'Git', 'SQL']",True
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['MySQL', 'PostgreSQL']",,"['Linux', 'Python']",False
+['full-time'],['home office work'],['senior'],Wrocław,['Windows'],,"['Git', 'Kubernetes', 'SQL', 'Docker', 'Python', 'AWS', 'Django']",True
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,['Windows'],,['Python'],False
+[],['praca hybrydowa'],"['mid', 'senior']",Warszawa,,,"['Python', 'SQL', 'Automation']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Python', 'SAS']",False
+['pełny etat'],['praca stacjonarna'],"['mid', 'senior']",Warszawa,"['Celery', 'Keycloak', 'Redis']",,"['Docker', 'SQL', 'Python', 'Fastapi', 'RabbitMQ', 'REST API']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Poznań,"['Kubernetes', 'Google Cloud Platform']",['Linux'],"['Oracle', 'Python', 'Postgres']",True
+['full-time'],['home office work'],['mid'],Warszawa,['Kafka'],,['Python'],False
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['MySQL', 'Docker', 'PostgreSQL']",['Linux'],"['Linux', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Cucumber', 'TeamCity', 'Graylog', 'Jenkins', 'Salesforce', 'Kibana']",,"['Python', 'Selenium', 'Robot Framework']",True
+
