@@ -8,8 +8,6 @@ from typing import Any
 import scrapy
 from scrapy.http.response.html import HtmlResponse
 from scrapy.selector import Selector
-from scrapy.crawler import CrawlerProcess
-from scrapy.utils.project import get_project_settings
 
 import config
 from scraping.items import VacancyItem, VacancySkills
@@ -37,22 +35,16 @@ REQ_OPTIONAL = "ul[data-test='section-requirements-optional'] li div::text"
 
 class VacancyScraper(scrapy.Spider):
     name = "vacancies"
-    start_urls = [config.JOBS_URL]
+    start_urls = [config.JOB_URL]
 
     def parse(self, response: HtmlResponse, **kwargs: Any) -> VacancyItem:
         # get vacancies
-        # yield from response.follow_all(
-        #     css=".o1onjy6t .a4pzt2q", callback=self.parse_vc
-        # )
         for vc in tqdm(response.css(".o1onjy6t .a4pzt2q")):
-            # if not last_vc:
-                # self.last_vc_url = last_vc = vc.attrib["href"]
             yield response.follow(vc, callback=self.parse_vc)
 
-        # next page
-        # yield from response.follow_all(
-        #     css=".anchor-nextPage", callback=self.parse
-        # )
+        yield from response.follow_all(
+            css=".anchor-nextPage", callback=self.parse
+        )
 
     def parse_vc(self, vc: HtmlResponse, **kwargs) -> VacancyItem:
 
@@ -108,22 +100,3 @@ class VacancyScraper(scrapy.Spider):
     def get_optional_requirements(requirements: Selector) -> list[str]:
         """Get description about optional skills."""
         return requirements.css(REQ_OPTIONAL).getall()
-
-    @property
-    def last_vc_url(self) -> str:
-        try:
-            with open("last_vc_url.txt", "r") as f:
-                return f.read().strip()
-        except FileNotFoundError:
-            return ""
-
-    @last_vc_url.setter
-    def last_vc_url(self, vc_url: str) -> None:
-        with open("last_vc_id.txt", "w") as f:
-            f.write(vc_url)
-            self.logger.info(f"The vacancy url:{vc_url} we will stop next time")
-#
-#
-# pr = CrawlerProcess(settings=get_project_settings())
-# pr.crawl(VacancyScraper)
-# pr.start()
