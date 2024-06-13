@@ -49,3 +49,4 @@ contracts,employment_type,level_of_exp,location,optional_skills,os,required_skil
 ['full-time'],['home office work'],['mid'],Warszawa,['Kafka'],,['Python'],False
 ['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['MySQL', 'Docker', 'PostgreSQL']",['Linux'],"['Linux', 'Python']",False
 ['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Cucumber', 'TeamCity', 'Graylog', 'Jenkins', 'Salesforce', 'Kibana']",,"['Python', 'Selenium', 'Robot Framework']",True
+
