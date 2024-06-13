@@ -4,12 +4,18 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 import time
 
-from scrapy.http.response.html import HtmlResponse
+from scrapy.http import Response
 from scrapy import signals
+from scrapy.spiders import Spider
+from scrapy.exceptions import CloseSpider
+
+from typing import Optional
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+
+from config import JOB_URL
 
 
 class ScrapingSpiderMiddleware:
@@ -106,56 +112,84 @@ class ScrapingDownloaderMiddleware:
         spider.logger.info("Spider opened: %s" % spider.name)
 
 
-class ClickTheProtocolCookiesButton:
-    def __init__(self, crawler):
-        chr_options = Options()
-        chr_options.add_argument("--headless")
-        chr_options.add_argument("--disable-gpu")
-        chr_options.add_argument("--no-sandbox")
-        chr_options.add_argument("--disable-dev-shm-usage")
-        self.driver = webdriver.Chrome(options=chr_options)
+class CacheUrlMiddleware:
+    def __init__(self):
+        self.cache_file = "first_vacancy_url.txt"
+        self.last_vacancy_url = self.read_last_vc_url()
+        self.first_vacancy_url: Optional[str] = None
+
+    def read_last_vc_url(self) -> str:
+        try:
+            with open(self.cache_file, "r") as f:
+                return f.read().strip()
+        except FileNotFoundError:
+            return ""
+
+    def save_last_vc_url(self, vc_url: str) -> None:
+        with open(self.cache_file, "w") as f:
+            f.write(vc_url)
 
     @classmethod
     def from_crawler(cls, crawler):
-        s = cls(crawler)
-        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
-        return s
+        middleware = cls()
+        crawler.signals.connect(middleware.spider_closed, signal=signals.spider_closed)
+        return middleware
 
-    @staticmethod
-    def spider_opened(spider):
-        spider.logger.info("Spider opened: %s" % spider.name)
+    def process_spider_input(self, response: Response, spider: Spider) -> Optional[None]:
+        # we do not want to cash response url for getting all vacancies
+        if not self.first_vacancy_url and response.url != JOB_URL:
+            # Remember the first vacancy URL
+            self.first_vacancy_url = response.url
 
-    def process_spider_input(self, response: HtmlResponse, spider):
-
-        if response.css("aside[data-test=section-cookieModal]"):
-            self.driver.get(response.url)
-
-            accept_button = self.driver.find_element(
-                By.CSS_SELECTOR, "button[data-test=button-acceptAll]"
+        if self.last_vacancy_url and response.url == self.last_vacancy_url:
+            # Stop processing further requests if we encounter the last vacancy URL
+            raise CloseSpider(
+                reason=f"Encountered last vacancy URL: {self.last_vacancy_url}"
             )
-            accept_button.click()
-            response.body = self.driver.page_source
-            time.sleep(2)
 
-        return HtmlResponse(
-            body=response.body,
-            url=response.url,
-            encoding="utf-8",
-            request=response.request
-        )
+    def spider_closed(self, spider: Spider) -> None:
+        if self.first_vacancy_url:
+            self.save_last_vc_url(self.first_vacancy_url)
 
-    def spider_closed(self, spider):
-        self.driver.quit()
+
+# TODO: i might remove this class.
+# class ClickTheProtocolCookiesButton:
+#     def __init__(self, crawler):
+#         chr_options = Options()
+#         chr_options.add_argument("--headless")
+#         chr_options.add_argument("--disable-gpu")
+#         chr_options.add_argument("--no-sandbox")
+#         chr_options.add_argument("--disable-dev-shm-usage")
+#         self.driver = webdriver.Chrome(options=chr_options)
 #
+#     @classmethod
+#     def from_crawler(cls, crawler):
+#         s = cls(crawler)
+#         crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
+#         return s
 #
-# class RememberFirstVacancyMiddleware:
-#     def __init__(self):
-#         self.cache_file = "cached_vc_urls.txt"
-#         self.first_request_url = None
+#     @staticmethod
+#     def spider_opened(spider):
+#         spider.logger.info("Spider opened: %s" % spider.name)
 #
-    #     def process_spider_output(self, response, result, spider):
-#         """Check if we are not going circles, and parsing same page """
-#         if self.first_request_url:
-#             if response.url == self.first_request_url:
-#                 return []
-#         return result
+#     def process_spider_input(self, response: HtmlResponse, spider):
+#
+#         if response.css("aside[data-test=section-cookieModal]"):
+#             self.driver.get(response.url)
+#
+#             accept_button = self.driver.find_element(
+#                 By.CSS_SELECTOR, "button[data-test=button-acceptAll]"
+#             )
+#             accept_button.click()
+#             response.body = self.driver.page_source
+#             time.sleep(2)
+#
+#         return HtmlResponse(
+#             body=response.body,
+#             url=response.url,
+#             encoding="utf-8",
+#             request=response.request
+#         )
+#
+#     def spider_closed(self, spider):
+#         self.driver.quit()
