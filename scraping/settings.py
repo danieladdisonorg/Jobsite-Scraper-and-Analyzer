@@ -6,6 +6,8 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+from shutil import which
+
 
 BOT_NAME = "scraping"
 
@@ -46,19 +48,19 @@ COOKIES_ENABLED = False
 #     "Sec-Ch-Ua-Platform": "\"Windows\"",
 #     'User-Agent': "Mozilla/5.0 (Windows; Windows NT 6.0; x64) AppleWebKit/603.41 (KHTML, like Gecko) Chrome/49.0.1078.242 Safari/534.4 Edge/13.28476",
 # }
+
 # "gzip, deflate, br",
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-   "scraping.middlewares.ScrapingSpiderMiddleware": 543,
-   "scraping.middlewares.CacheUrlMiddleware": 544,
+    "scraping.middlewares.CacheUrlMiddleware": 544,
 }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#     "scraping.middlewares.ScrapingDownloaderMiddleware": 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+    "scrapy_selenium.SeleniumMiddleware": 800,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -76,7 +78,7 @@ SPIDER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 AUTOTHROTTLE_ENABLED = True
 # The initial download delay
-# AUTOTHROTTLE_START_DELAY = 5
+AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
 # AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
@@ -97,3 +99,8 @@ AUTOTHROTTLE_ENABLED = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+# scrapy-selenium configurations
+SELENIUM_DRIVER_NAME = "chrome"
+SELENIUM_DRIVER_EXECUTABLE_PATH = which("chromedriver")
+SELENIUM_DRIVER_ARGUMENTS = []
