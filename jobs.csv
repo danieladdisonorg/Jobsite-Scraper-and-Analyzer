@@ -1,4 +1,4 @@
-contracts,employment_type,level_of_exp,location,optional_skills,os,required_skills,ua_support
+
 ['full-time'],['hybrid work'],['mid'],Kraków,,,"['Java', 'C#', 'Python', 'C++']",True
 ['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['PostgreSQL', 'MySQL', 'Docker']",['Linux'],"['Linux', 'Python']",False
 ['full-time'],['home office work'],['senior'],Warszawa,"['Palo Alto', 'Ansible', 'Fortinet', 'Check Point', 'Cisco', 'VMWare', 'Docker']",['Linux'],"['Linux', 'Python']",False
@@ -490,5 +490,3 @@ contracts,employment_type,level_of_exp,location,optional_skills,os,required_skil
 ['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Poznań,"['Google Cloud Platform', 'Kubernetes']",['Linux'],"['Oracle', 'Postgres', 'Python']",True
 ['full-time'],['home office work'],['mid'],Warszawa,['Kafka'],,['Python'],False
 ['pełny etat'],['praca hybrydowa'],['mid'],Sopot,,,"['SQL', 'PySpark', 'Python']",False
-['pełny etat'],['praca zdalna'],['mid'],Wrocław,['Windows'],,['Python'],False
-['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Python', 'SAS']",False
