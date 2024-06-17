@@ -118,15 +118,46 @@ def removing_duplicates(skills: set[str]) -> list[str]:
 
 def parentheses_value(v: str) -> list[str]:
     """Get value that is in parentheses"""
-    return re.findall(r"\(([^)]+)\)", v)
+    parenth_value = re.findall(r"\(([^)]+)\)", v)
+
+    # split if we have several values
+    return parenth_value[0].split(", ") if parenth_value else []
 
 
 def split_on_dot(v: str) -> list[str]:
     return v.split(" • ")
 
 
-def first_integer(value: str) -> int:
-    return int(value.split()[0]) if value else 0
+def contracts_to_english(contracts: list[str]) -> list[str]:
+    """
+    Convert 'contracts' polish values to english one.
+    :param contracts:
+    :return:
+    """
+    contacts_eng = {
+        "pełny etat": "full-time",
+        "część etatu": "part time",
+        "dodatkowa / tymczasowa": "additional / temporary",
+    }
+    return [contacts_eng.get(contract, contract) for contract in contracts]
+
+
+def employment_to_english(employments: list[str]) -> list[str]:
+    """
+    Convert 'employments' polish values to english one.
+    :param employments:
+    :return:
+    """
+    employments_eng = {
+        "praca stacjonarna": "full office work",
+        "część etatu": "part time",
+        "praca hybrydowa": "hybrid work",
+        "praca zdalna": "home office work",
+    }
+    return [
+        employments_eng.get(employment, employment)
+        for employment in employments
+    ]
 
 
 class VacancyItem(scrapy.Item):
@@ -135,8 +166,16 @@ class VacancyItem(scrapy.Item):
     optional_skills = Field(serializer=lambda v: list(v) if v else None)
     os = Field(serializer=lambda v: v if v else None)
     level_of_exp = Field(serializer=split_on_dot)
-    employment_type = Field(serializer=split_on_dot)
-    contracts = Field(serializer=parentheses_value)
+    employment_type = Field(
+        serializer=lambda v: employment_to_english(
+            split_on_dot(v)
+        )
+    )
+    contracts = Field(
+        serializer=lambda v: contracts_to_english(
+            parentheses_value(v)
+        )
+    )
     location = Field(
         serializer=lambda v: v.split(", ")[0]
     )
