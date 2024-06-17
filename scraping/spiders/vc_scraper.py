@@ -1,13 +1,13 @@
 """
 Vacancy scraper module
 """
-from scrapy import Request
 from tqdm import tqdm
-from typing import Any
+from typing import Any, Iterable
 
 import scrapy
 from scrapy.http.response.html import HtmlResponse
 from scrapy.selector import Selector
+from scrapy_selenium import SeleniumRequest
 
 import config
 from scraping.items import VacancyItem, VacancySkills
@@ -32,19 +32,40 @@ REQUIREMENTS = "div[data-test='section-requirements']"
 REQ_EXPECTED = "ul[data-test='section-requirements-expected'] li div::text"
 REQ_OPTIONAL = "ul[data-test='section-requirements-optional'] li div::text"
 
+# next pagination button
+NEXT_PAGE = "nav ul li a[data-test='anchor-nextPage'][data-disabled='false']::attr(href)"
+LAST_PAGE_NUM = "nav ul li:nth-last-child(2) a::text"
+
 
 class VacancyScraper(scrapy.Spider):
     name = "vacancies"
     start_urls = [config.JOB_URL]
+    page_num = 1
+    # last pagination button
+    last_page_num = 0
+
+    def start_requests(self) -> Iterable[SeleniumRequest]:
+        for url in self.start_urls:
+            yield SeleniumRequest(url=url, callback=self.parse)
 
     def parse(self, response: HtmlResponse, **kwargs: Any) -> VacancyItem:
         # get vacancies
         for vc in tqdm(response.css(".o1onjy6t .a4pzt2q")):
             yield response.follow(vc, callback=self.parse_vc)
 
-        yield from response.follow_all(
-            css=".anchor-nextPage", callback=self.parse
-        )
+        self.page_num += 1
+
+        # get last pagination number at the beginning
+        # because later we would not be able to get it
+        if not self.last_page_num:
+            self.last_page_num = int(response.css(LAST_PAGE_NUM).get())
+
+        # checking if we are not going over self.last_page_num
+        if self.page_num < self.last_page_num:
+            yield SeleniumRequest(
+                url=response.urljoin(f"?pageNumber={self.page_num}"),
+                callback=self.parse
+            )
 
     def parse_vc(self, vc: HtmlResponse, **kwargs) -> VacancyItem:
 
