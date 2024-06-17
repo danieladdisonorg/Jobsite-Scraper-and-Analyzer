@@ -1,15 +1,13 @@
 """
 Vacancy scraper module
 """
-from scrapy import Request
 from tqdm import tqdm
-from typing import Any
+from typing import Any, Iterable
 
 import scrapy
 from scrapy.http.response.html import HtmlResponse
 from scrapy.selector import Selector
-from scrapy.crawler import CrawlerProcess
-from scrapy.utils.project import get_project_settings
+from scrapy_selenium import SeleniumRequest
 
 import config
 from scraping.items import VacancyItem, VacancySkills
@@ -34,25 +32,40 @@ REQUIREMENTS = "div[data-test='section-requirements']"
 REQ_EXPECTED = "ul[data-test='section-requirements-expected'] li div::text"
 REQ_OPTIONAL = "ul[data-test='section-requirements-optional'] li div::text"
 
+# next pagination button
+NEXT_PAGE = "nav ul li a[data-test='anchor-nextPage'][data-disabled='false']::attr(href)"
+LAST_PAGE_NUM = "nav ul li:nth-last-child(2) a::text"
+
 
 class VacancyScraper(scrapy.Spider):
     name = "vacancies"
-    start_urls = [config.JOBS_URL]
+    start_urls = [config.JOB_URL]
+    page_num = 1
+    # last pagination button
+    last_page_num = 0
+
+    def start_requests(self) -> Iterable[SeleniumRequest]:
+        for url in self.start_urls:
+            yield SeleniumRequest(url=url, callback=self.parse)
 
     def parse(self, response: HtmlResponse, **kwargs: Any) -> VacancyItem:
         # get vacancies
-        # yield from response.follow_all(
-        #     css=".o1onjy6t .a4pzt2q", callback=self.parse_vc
-        # )
         for vc in tqdm(response.css(".o1onjy6t .a4pzt2q")):
-            # if not last_vc:
-                # self.last_vc_url = last_vc = vc.attrib["href"]
             yield response.follow(vc, callback=self.parse_vc)
 
-        # next page
-        # yield from response.follow_all(
-        #     css=".anchor-nextPage", callback=self.parse
-        # )
+        self.page_num += 1
+
+        # get last pagination number at the beginning
+        # because later we would not be able to get it
+        if not self.last_page_num:
+            self.last_page_num = int(response.css(LAST_PAGE_NUM).get())
+
+        # checking if we are not going over self.last_page_num
+        if self.page_num < self.last_page_num:
+            yield SeleniumRequest(
+                url=response.urljoin(f"?pageNumber={self.page_num}"),
+                callback=self.parse
+            )
 
     def parse_vc(self, vc: HtmlResponse, **kwargs) -> VacancyItem:
 
@@ -108,22 +121,3 @@ class VacancyScraper(scrapy.Spider):
     def get_optional_requirements(requirements: Selector) -> list[str]:
         """Get description about optional skills."""
         return requirements.css(REQ_OPTIONAL).getall()
-
-    @property
-    def last_vc_url(self) -> str:
-        try:
-            with open("last_vc_url.txt", "r") as f:
-                return f.read().strip()
-        except FileNotFoundError:
-            return ""
-
-    @last_vc_url.setter
-    def last_vc_url(self, vc_url: str) -> None:
-        with open("last_vc_id.txt", "w") as f:
-            f.write(vc_url)
-            self.logger.info(f"The vacancy url:{vc_url} we will stop next time")
-#
-#
-# pr = CrawlerProcess(settings=get_project_settings())
-# pr.crawl(VacancyScraper)
-# pr.start()
