@@ -1,51 +1,494 @@
 contracts,employment_type,level_of_exp,location,optional_skills,os,required_skills,ua_support
-['full-time'],['hybrid work'],['mid'],Kraków,,,"['Python', 'C#', 'C++', 'Java']",True
-['pełny etat'],['praca zdalna'],['senior'],Kraków,"['Google Cloud Platform', 'Django']",['macOS'],"['Docker', 'Ansible', 'Python', 'Teamcity', 'K8s']",False
-['pełny etat'],['praca zdalna'],['senior'],Warszawa,,,"['Python', 'PostgreSQL', 'REST API', 'Django']",False
-['full-time'],['home office work'],['senior'],Kraków,['Kotlin'],,"['Python', 'Docker', 'SQL', 'AWS']",True
-['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['BigQuery', 'PostgreSQL', 'Redis', 'Microsoft Power BI']",,"['Python', 'Docker', 'Google Cloud Platform']",True
-['full-time'],['home office work'],['senior'],Gdynia,['Linux'],,"['C', 'C++', 'Go', 'Python', 'Java']",True
-['full-time'],['home office work'],['mid'],Bielsko-Biała,,,"['Python', 'SQL']",False
-['pełny etat'],['praca zdalna'],['mid'],Warszawa,['SAS'],,"['Python', 'data engineering']",False
-['full-time'],['home office work'],['mid'],Warszawa,,,"['Docker', 'SQL', 'Python', 'Flask', 'Django']",False
-['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Pandas', 'PyTorch', 'NumPy', 'Python', 'TensorFlow']",True
-[],['home office work'],['mid'],Gdańsk,"['Flask', 'Git', 'REST']",,"['Python', 'Vue.js']",True
-['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['MySQL', 'Google Cloud Platform', 'Cassandra', 'PostgreSQL', 'AWS', 'Django']",,"['Python', 'SQL']",True
-['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['MySQL', 'CSS', 'HTML', 'Python', 'PostgreSQL', 'Django']",False
-['pełny etat'],['praca stacjonarna'],['mid'],Gdańsk,"['MySQL', 'Flutter', 'Ubuntu', 'Linux', 'PostgreSQL', 'Microsoft Excel']","['Windows', 'Linux']","['Python', 'Git', 'Visual Studio Code']",False
-['full-time'],['hybrid work'],"['senior', 'expert']",Warszawa,"['Azure IoT Hub', 'QUIC', 'MQTT', 'Terraform', 'LwM2M', 'SD-WAN concepts', 'CoAP', 'Azure IoT', 'Protocols', 'HTTP3', 'Networking', 'AWS', 'OSI model', 'IoT', 'AWS IoT Core', 'Kubernetes', 'WebTransport', 'Open Flow Protocol']","['Windows', 'macOS', 'Linux']","['Low Level Linux', 'RestAPI', 'MongoDB', 'HTTP', 'gRPC-based APIs', 'CI/CD', 'FastAPI', 'Docker', 'English', 'Linux', 'Python']",True
-['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,['Robocorp'],"['Windows', 'macOS']","['Pandas', 'Selenium', 'SQL', 'Asyncio', 'Dramaturg', 'Fastapi', 'AWS', 'Azure DevOps', 'Flet', 'Python', 'pywinauto']",False
-['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,"['Kubernetes', 'AWS']",,"['MySQL', 'Snowflake Data Cloud', 'TeamCity', 'Bitbucket', 'Docker', 'Python', 'Confluence', 'Jira']",True
-['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,,,"['Git', 'Selenium', 'SQL', 'TeamCity', 'Azure DevOps', 'Jenkins', 'Python', 'Jira', 'API']",False
-['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,['AWS'],['Linux'],"['MySQL', 'Docker', 'Snowflake Data Cloud', 'Python', 'Confluence', 'Jira', 'Unix']",False
-['pełny etat'],['praca zdalna'],['lead'],Kraków,['Google Cloud Platform'],['macOS'],"['Docker', 'SQL', 'Ansible', 'Python', 'Teamcity', 'K8s']",False
-['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Dąbrowa Górnicza,"['SQL', 'C++']",,"['Python', 'C#']",False
-['pełny etat'],['praca zdalna'],['senior'],Kraków,"['Git', 'Docker', 'Jenkins', 'Marshmallow', 'Firebase']",,"['Pytest', 'CloudFormation', 'DynamoDB', 'Python', 'AWS']",False
-['full-time'],['home office work'],['mid'],Kraków,['AWS'],,"['Python', 'SQL']",False
-['full-time'],['home office work'],['senior'],Kraków,"['Apache Kafka', 'Flask', 'RabbitMQ', 'Apache Pulsar', 'Django']",['Linux'],"['Pandas', 'Apache Airflow', 'Numpy', 'AWS', 'C', 'Kubernetes', 'Docker', 'C++', 'Splunk', 'Slack', 'Python', 'Grafana', 'Jira']",False
-['full-time'],"['home office work', 'hybrid work', 'full office work']",['senior'],Warszawa,"['Linux', 'PostgreSQL', 'Bash', 'Jenkins']","['Windows', 'Linux']","['Python', 'SQL']",False
-['full-time'],['hybrid work'],['mid'],Warszawa,"['Docker', 'CMake', 'FluxDB', 'Ansible', 'Jenkins', 'ElasticSearch']",,['Python'],True
-[],['praca hybrydowa'],['senior'],Warszawa,,,"['MySQL', 'Git', 'WebSocket', 'AMQP', 'REST', 'Docker', 'Kubernetes', 'Python']",False
-['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['Postgress', 'Elasticsearch', 'Microsoft SQL Server']",,"['MongoDB', 'Python', 'React', 'Django']",False
-['full-time'],['home office work'],['mid'],Gdańsk,"['Angular', 'CSS', 'HTML']",,"['Python', 'Git', 'Django']",False
-['full-time'],['home office work'],['senior'],Gdańsk,['Kubernetes'],,"['Python', 'Docker', 'Git', 'Django']",False
-['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Katowice,['Windows'],,"['Python', 'Microsoft Excel', 'Jira']",False
-['full-time'],['home office work'],['junior'],Warszawa,"['Check Point', 'Ansible', 'Cisco', 'Juniper', 'Docker', 'GitLab', 'Jenkins', 'Fortinet', 'Palo Alto', 'VMWare']",['Linux'],"['Linux', 'Python']",False
-['full-time'],['home office work'],['mid'],Warszawa,"['Linux', 'Windows', 'macOS']",,"['Python', 'PostgreSQL', 'SQL']",True
-['full-time'],['full office work'],['junior'],Gliwice,,,"['React.js', 'JavaScript', 'TypeScript', 'Python', 'Django']",False
-['full-time'],"['home office work', 'hybrid work', 'full office work']",['expert'],Poznań,"['Java', 'React.js', 'JavaScript', 'TypeScript']",,"['Python', 'GCP']",True
-['full-time'],['home office work'],['senior'],Wrocław,,,"['Python', 'Git', 'AWS']",False
-['full-time'],['hybrid work'],['mid'],Warszawa,,,"['SQL', 'JavaScript', 'MongoDB', 'Docker', 'Microsoft SQL Server', 'Python', 'PostgreSQL', 'React Native', 'Redis']",False
-['full-time'],['home office work'],['senior'],Kraków,,,"['Python', 'AWS']",True
-['pełny etat'],['praca zdalna'],['mid'],Wrocław,"['Linux', 'Windows']",,"['Docker', 'SQL', 'Linux', 'Python', 'AWS', 'Django']",False
-['pełny etat'],['praca zdalna'],['senior'],Warszawa,['Perl'],['Windows'],"['Pandas', 'Python', 'Git', 'SQL']",True
-['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['MySQL', 'PostgreSQL']",,"['Linux', 'Python']",False
-['full-time'],['home office work'],['senior'],Wrocław,['Windows'],,"['Git', 'Kubernetes', 'SQL', 'Docker', 'Python', 'AWS', 'Django']",True
-['pełny etat'],['praca zdalna'],['mid'],Wrocław,['Windows'],,['Python'],False
-[],['praca hybrydowa'],"['mid', 'senior']",Warszawa,,,"['Python', 'SQL', 'Automation']",False
-['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Python', 'SAS']",False
-['pełny etat'],['praca stacjonarna'],"['mid', 'senior']",Warszawa,"['Celery', 'Keycloak', 'Redis']",,"['Docker', 'SQL', 'Python', 'Fastapi', 'RabbitMQ', 'REST API']",False
-['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Poznań,"['Kubernetes', 'Google Cloud Platform']",['Linux'],"['Oracle', 'Python', 'Postgres']",True
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['Java', 'C#', 'Python', 'C++']",True
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['PostgreSQL', 'MySQL', 'Docker']",['Linux'],"['Linux', 'Python']",False
+['full-time'],['home office work'],['senior'],Warszawa,"['Palo Alto', 'Ansible', 'Fortinet', 'Check Point', 'Cisco', 'VMWare', 'Docker']",['Linux'],"['Linux', 'Python']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Warszawa,"['Flask', 'GitLab']",,"['PostgreSQL', 'Git', 'Python', 'PWA', 'MySQL', 'Django', 'Docker']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,,,"['Jenkins', 'Jira', 'Git', 'API', 'Azure DevOps', 'SQL', 'Selenium', 'TeamCity', 'Python']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Warszawa,"['CoAP', 'Networking', 'AWS IoT Core', 'OSI model', 'Azure IoT', 'Azure IoT Hub', 'QUIC', 'Open Flow Protocol', 'MQTT', 'Protocols', 'SD-WAN concepts', 'IoT', 'LwM2M', 'Terraform', 'WebTransport', 'HTTP3', 'AWS', 'Kubernetes']","['Windows', 'macOS', 'Linux']","['gRPC-based APIs', 'HTTP', 'English', 'Low Level Linux', 'FastAPI', 'Docker', 'CI/CD', 'Linux', 'Python', 'RestAPI', 'MongoDB']",True
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,['Robocorp'],"['Windows', 'macOS']","['Pandas', 'Flet', 'Fastapi', 'Azure DevOps', 'Asyncio', 'pywinauto', 'Selenium', 'AWS', 'Python', 'SQL', 'Dramaturg']",False
+['full-time'],['home office work'],['junior'],Warszawa,"['Ansible', 'GitLab', 'VMWare', 'Docker']","['Windows', 'Linux']","['Python', 'Linux', 'Windows Server']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,['SQL'],,"['NumPy', 'Pandas', 'Python']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['expert'],Poznań,"['React.js', 'JavaScript', 'TypeScript', 'Java']",,"['GCP', 'Python']",True
+['full-time'],['home office work'],['junior'],Warszawa,"['Juniper', 'Jenkins', 'GitLab', 'Fortinet', 'VMWare', 'Docker', 'Palo Alto', 'Ansible', 'Check Point', 'Cisco']",['Linux'],"['Linux', 'Python']",False
+[],['praca hybrydowa'],['senior'],Warszawa,,,"['Git', 'MySQL', 'Docker', 'AMQP', 'WebSocket', 'Python', 'REST', 'Kubernetes']",False
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,"['AWS', 'Kubernetes']",,"['Jira', 'Bitbucket', 'MySQL', 'Docker', 'Snowflake Data Cloud', 'TeamCity', 'Python', 'Confluence']",True
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['CSS', 'Python', 'PostgreSQL', 'MySQL', 'HTML', 'Django']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Dąbrowa Górnicza,"['SQL', 'C++']",,"['C#', 'Python']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']","['senior', 'expert']",Wrocław,"['React.js', 'Google Cloud Platform', 'AWS', 'Vue.js', 'Azure', 'JavaScript', 'Docker']",,"['Flask', 'Git', 'Python', 'PostgreSQL', 'FastAPI', 'Django']",False
+['full-time'],['home office work'],['senior'],Kraków,"['Apache Kafka', 'Flask', 'RabbitMQ', 'Apache Pulsar', 'Django']",['Linux'],"['Pandas', 'Jira', 'Numpy', 'C++', 'C', 'Docker', 'Apache Airflow', 'Grafana', 'Python', 'Slack', 'Splunk', 'AWS', 'Kubernetes']",False
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['ETL', '.NET', 'C#', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Łódź,,,"['Java', 'SQL', 'Python']",True
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['REST API', 'SQL', 'Vmware', 'CUPS', 'SOA GATEWAY']",['Linux'],"['Nagios', 'Tomcat', 'Bash', 'Python', 'Oracle', 'Zabbix']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Poznań,"['Windows', 'Linux']",,"['Postman', 'Jira', 'Jmeter', 'Robot framework', 'SoapUI', 'Selenium', 'SQL', 'Python']",False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,['Hadoop'],"['Windows', 'Linux']","['PowerShell', 'IBM WebSphere', 'Bash', 'Linux', 'Python', 'Windows Server']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Poznań,,,"['Ruby', 'DB2', 'LXC', 'rkt', 'Java', 'JavaScript', 'Docker', 'SQL', 'Linux', 'Python', 'PostgreSQL', 'MongoDB']",False
+['full-time'],['hybrid work'],['mid'],Gdańsk,['Python'],"['Windows', 'Linux']","['Jenkins', 'Jira', 'Git', 'C++']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Gdynia,"['Windows', 'Linux']",,"['PHP', 'Selenium', 'Jira', 'Python']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Łódź,"['SQL', 'Golang', 'HTTP', 'HTTPS', 'Python', 'SSL']",['Linux'],"['Jira', 'GitLab', 'Java', 'Spring Boot', 'JavaScript', 'Azure Cosmos DB', 'Linux', 'AWS', 'Kubernetes']",False
+['full-time'],['home office work'],['senior'],Warszawa,,,"['Snowflake Data Cloud', 'Apache Airflow', 'Python', 'Apache Spark', 'AWS']",False
+['pełny etat'],['praca zdalna'],['senior'],Kraków,"['CAKE', 'AWS', 'Python', 'Powershell', '.Net', 'JavaScript']",['Windows'],"['CI/CD', 'Git']",False
+['full-time'],['home office work'],['senior'],Warszawa,"['ELK', 'Kotlin', 'Terraform', 'Python', 'Go', 'Prometheus', 'AWS']",,['Kubernetes'],False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['senior'],Warszawa,"['Perl', 'Bash', 'Python', 'LaTex', 'I2C', 'SPI', 'Lua']",,"['Embedded', 'Git', 'SVN', 'Verilog', 'TCP/IP', 'C++', 'C', 'Ethernet', 'Embedded C']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['CI/CD', 'Jenkins', 'OpenSearch', 'DynaTrace', 'Python', 'Java', 'Grafana']",['Linux'],"['SQL', 'Microservices', 'GitLab', 'non SQL', 'AWS']",False
+[],['hybrid work'],['trainee'],Warszawa,"['REST API', 'Spring Framework', 'Figma', 'Git', 'Python', 'Java', 'Design Patterns']",,"['TypeScript', 'JavaScript']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Zabierzów (pow. krakowski),"['Boost Qt', 'CMake 3', 'Python', 'OpenGL', 'WebAssembly', 'QML']","['Windows', 'Linux']","['STL', 'Git', 'SVN', 'C++']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['senior'],Wrocław,"['Kafka', 'Apache Kafka', 'Linux', 'Robot Framework', 'Python', 'Oracle', 'Camel']",['Linux'],"['Spring Framework', 'JUnit', 'Mockito', 'Git', 'Maven', 'Java', 'Hibernate']",False
+['pełny etat'],['praca stacjonarna'],['junior'],Szczecin,"['Pi Pico', 'Curiosity', 'Python', 'Arduino', 'Raspberry Pi', 'C#', 'JavaScript']",,['C'],False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Kraków,"['Kafka', 'Python', 'PostgreSQL', 'MySQL', 'Airflow']",,"['Snowflake', 'Google Cloud Platform', 'AWS', 'Microsoft Azure', 'Databrics', 'BigQuery']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Gdańsk,"['Python', 'Java', 'Unix', 'C#', 'C++']",,"['CI/CD', 'Jenkins', 'Linux', 'Kubernetes', 'Docker']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Warszawa,"['Scala', 'Python', 'Java', 'Go', 'R', 'JavaScript', 'C++']",,['Cloud technologies'],False
+['pełny etat'],['praca hybrydowa'],['mid'],Kraków,"['Docker', 'Grafana', 'Git', 'Python', 'Zabbix', 'JavaScript', 'Kubernetes']",,"['PowerShell', 'SQL', 'PostgreSQL', 'Linux', 'Bash', 'Ansible', 'Windows Server']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Bytom,,,"['SQL', 'Python', 'Microsoft Power BI', 'VBA', 'R']",False
+['full-time'],"['home office work', 'hybrid work']",['senior'],Katowice,"['Bash', 'Microsoft Azure', 'Python', 'Pearl', 'AWS']","['Windows', 'Linux']","['Solaris', 'Linux', 'Red Hat']",True
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,"['Java', 'Google Cloud Monitoring', 'Scala', 'Python']",,"['Google Cloud Platform', 'Dataflow', 'Big Table', 'Git', 'Big Query', 'Kubernetes']",True
+['pełny etat'],['praca hybrydowa'],['mid'],Łódź,"['GoLang', 'Gradle', 'Maven', 'Python', 'IntelliJ', 'Docker']",['Linux'],"['Helm', 'Jira', 'Git', 'Java', 'Spring Boot', 'Linux', 'Terraform', 'Kubernetes']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Wrocław,"['Python', 'Ansible', 'Java', 'Terraform', 'C#', 'JavaScript']",,"['Jenkins', 'Linux']",False
+['full-time'],['home office work'],['mid'],Poznań,,,"['Java', '.NET', 'C#', 'Python']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Warszawa,"['Machine Learning', 'Python', 'SAS']","['Windows', 'Linux']","['SQL', 'R']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Kraków,,,"['SQL', 'Jira', 'Git', 'Python']",True
+['pełny etat'],['praca stacjonarna'],['senior'],Wrocław,,,"['SQL', 'R', 'Python']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['MySQL', 'Python', 'Bash', 'Kubernetes']",,"['PostgreSQL', 'Elasticsearch', 'SQL', 'Docker']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Bash', 'Python', 'Groovy']",['Linux'],['Git'],False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,['Windows'],,"['SQL', 'Perl', 'Python']",False
+['full-time'],['home office work'],['senior'],Katowice,"['Jenkins', 'Jira', 'Git', 'Shell', 'Python']",['Windows'],['C'],False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['Jira', 'Git', 'Python', 'SAS', 'Bitbucket']",,['SQL'],False
+"['część etatu, pełny etat']",['praca mobilna'],['mid'],Warszawa,"['WordPress', 'MariaDB', 'Python', 'Linux']",['Linux'],"['PHP', 'MySQL']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Wrocław,"['React.js', 'Vue.js', 'Python']",,"['PostgreSQL', '.NET', 'C#', 'Azure Logic Apps']",False
+['pełny etat'],['praca hybrydowa'],['junior'],Warszawa,,,"['SQL', 'VBA', 'Python']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['junior'],Gliwice,"['Ruby', 'PHP', 'Perl', 'Bash', 'Python']","['Windows', 'Linux']","['.NET', 'Visual Studio Code', 'Visual Studio', 'Docker', 'SQL', 'React', 'PostgreSQL', 'ASP.NET Core MVC', 'Entity Framework', 'HTML']",False
+['full-time'],['home office work'],['mid'],Warszawa,"['Terraform', 'Azure DevOps', 'AWS', 'Python']",,"['Docker', 'Kubernetes']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Rust', 'Go programming languages', 'Python']",['Linux'],"['Tizen', 'C', 'Linux', 'Android', 'C++']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,"['Angular', 'Bash', 'TypeScript', 'Python', 'Terraform', 'React', 'JS']",,"['Kafka', 'Spring Framework', 'Kuberentes', 'Gradle', 'Maven', 'Java', 'Spring Boot']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Warszawa,"['Java', 'Data Distribution Service', 'Bash', 'Python']","['Windows', 'Linux']",['C++'],False
+['full-time'],['hybrid work'],['expert'],Warszawa,"['Google Cloud Platform', 'Machine Learning', 'IaC', 'Python']","['Windows', 'macOS']","['Kafka', 'Golang', 'Git', 'Cloud', 'CI/CD', 'REST API', 'SQL', 'NoSQL', 'Kubernetes']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Bytom,"['Microsoft Power BI', 'R', 'Python', 'Java']",,['SQL'],False
+['pełny etat'],['praca hybrydowa'],['junior'],Warszawa,"['Java', 'Python', 'C']",,"['Microsoft Power BI', 'Google Cloud Platform', 'SQL', 'Looker']",False
+['pełny etat'],['praca stacjonarna'],['lead'],Warszawa,"['PHP', 'Flask', 'Python', 'Django']","['Windows', 'Linux']","['PostgreSQL', 'SQL', 'MariaDB']",False
+[],['hybrid work'],['trainee'],Warszawa,"['JWT', 'JSON', 'Python', 'JMESPath', 'C++']",,"['Jetpack', 'Coroutines', 'GitHub', 'Jira', 'Java', 'Kotlin', 'Gerrit', 'Confluence', 'Android']",False
+['full-time'],['hybrid work'],['mid'],Kraków,['Windows'],,"['Bash', 'Python']",False
+['full-time'],['home office work'],['mid'],Gdańsk,"['PowerShell', 'Python']",['Windows'],"['Tomcat', 'German', 'Java', 'Java Database Connectivity', 'JBoss EAP']",False
+['full-time'],"['home office work', 'hybrid work']",['mid'],Kraków,"['MongoDB', 'Python', 'Kubernetes']","['Windows', 'Linux']","['Jenkins', 'Git', 'Microsoft Azure', 'Java', 'Spring Boot', 'Google Cloud Platform', 'TeamCity', 'JPA', 'AWS']",True
+['pełny etat'],"['praca zdalna', 'praca hybrydowa', 'praca stacjonarna']",['senior'],Łódź,"['Jira', 'Git', 'Python', 'Confluence']",,['C'],False
+['full-time'],['home office work'],['senior'],Warszawa,"['Llamasoft', 'SQL', 'Python']",,"['Kinaxis', 'SAP', 'Blue Yonder', 'JDA']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Warszawa,"['Java', 'JavaScript', 'TypeScript', 'Python']",,"['GitHub', 'Linux', 'Terraform', 'AWS', 'Docker']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Kraków,"['MongoDB', 'Python', 'Kubernetes']",['Windows'],"['Java', 'Google Cloud Platform', 'Spring Boot', 'JPA']",False
+['pełny etat'],['praca hybrydowa'],['expert'],Warszawa,['Windows'],,"['SQL', 'Perl', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Łódź,"['PHP', 'Kubernetes', 'Python', 'Docker']",['Linux'],"['WordPress', 'Git', 'Bash', 'CentOS', 'Debian', 'MySQL', 'Zabbix', 'Ubuntu', 'MariaDB', 'Linux', 'PostgreSQL', 'AWS', 'Red Hat']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,"['Java', 'C#', 'JavaScript', 'Python']",,"['BPMN', 'SQL', 'UML', 'Git']",False
+"['additional / temporary, full-time, part time']",['hybrid work'],['trainee'],Wrocław,"['PowerShell', 'AWS', 'Microsoft Azure', 'Python']","['Windows', 'Linux']","['Veeam', 'SQL', 'VMware', 'Linux']",True
+['część etatu'],['praca stacjonarna'],['trainee'],Zielona Góra,['Windows'],,"['Ansible', 'Terraform', 'Python', 'Bash']",False
+['full-time'],['home office work'],['mid'],Gdańsk,,,"['Java', 'R', 'Python', 'C++']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['NumPy', 'Pandas', 'Python']",,"['Shiny', 'SQL', 'R']",False
+['full-time'],['hybrid work'],['mid'],Białystok,"['PowerShell', 'SQL', 'Python', 'Bash']","['Windows', 'Linux']","['Ansible', 'Terraform', 'Puppet', 'Kubernetes']",False
+['pełny etat'],['praca zdalna'],['mid'],Gliwice,"['Jenkins', 'GitHub', 'OpenCV', 'Python']",,"['C', 'Linux', 'C++']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['PowerShell', 'Python', 'Perl', 'Bash']","['Windows', 'Linux']","['Unix', 'Windows', 'Linux']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['junior'],Warszawa,"['Python', 'Perl', 'Bash', 'Lua']",,"['C++', 'Git', 'SVN', 'C']",False
+['full-time'],['hybrid work'],['junior'],Bydgoszcz,"['Java', 'Scala', 'Python']",,['SQL'],True
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,"['RabbitMQ', 'Python']",,"['Node.js', 'Redis', 'AWS']",False
+['full-time'],['home office work'],"['lead', 'manager']",Warszawa,,,"['Kotlin', 'Python', 'AWS']",False
+['full-time'],"['home office work', 'hybrid work']",['mid'],Warszawa,"['Go', 'TeamCity', 'Python', 'Java']",,"['Node.js', 'CSS', 'SQL', 'HTML', 'NoSql', 'JavaScript']",False
+['dodatkowa / tymczasowa'],['praca hybrydowa'],['mid'],Wrocław,"['Windows', 'Linux']",,"['PHP', 'SQL', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],dolnośląskie,"['Java', 'JS', 'Python']",,"['Postman', 'Swagger', 'SQL', 'Jira']",False
+['full-time'],['hybrid work'],['senior'],Gdynia,"['React.js', 'Python']","['Windows', 'macOS', 'Linux']","['.NET', 'MongoDB']",True
+['pełny etat'],['praca stacjonarna'],['junior'],Kraków,['Python'],['Linux'],['C++'],False
+['pełny etat'],['praca hybrydowa'],['mid'],Sopot,['Python'],,"['Oracle', 'SQL']",False
+['full-time'],['hybrid work'],['trainee'],Warszawa,['Python'],['Linux'],['C++'],False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,['Python'],,"['SQL', 'R']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Łódź,['Python'],,"['ETL', 'SQL', 'SSIS']",False
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,"['AWS', 'NgRx', 'Redux', 'Python']",['Linux'],"['REST API', 'Angular', 'RxJS', 'UI']",False
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,"['PostgreSQL', 'MySQL', 'Python', 'Bash']","['Windows', 'Linux']","['OpenShift', 'Linux', 'Enterprise Architect', 'Ansible', 'Red Hat']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['Java', 'UML', 'Python']",,"['BPMN', 'SQL']",False
+['full-time'],['hybrid work'],['mid'],Łódź,"['Go', 'Python', 'JavaScript', 'Maven']",['Linux'],"['Helm', 'Git', 'Linux', 'Java', 'Terraform', 'Kubernetes']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['Jira', 'JavaScript', 'Zabbix', 'Python']",['Linux'],"['Linux', 'Bash']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Opole,"['Git', 'Python']","['Windows', 'Linux']","['Microsoft Excel', 'Linux', 'C++']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Angular', 'Python']",,"['Selenium', 'Jira', 'RestAssured', 'Java', 'JavaScript']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,"['Python', 'Bash']",,"['CRM', 'VPN', 'Windows', 'LAN/WAN', 'TCP/IP', 'MySQL', 'PowerShell', 'Linux', 'Microsoft SQL Server', 'Oracle', 'ERP']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,"['Tableau', 'Python']",,"['SQL', 'SAS']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Kraków,"['Python', 'Bash']",['Windows'],"['DNS', 'PROXY', 'Cisco', 'HTTP']",False
+['full-time'],['hybrid work'],['mid'],Kraków,"['Python', 'AWS']",,"['RDS', 'NO-SQL']",True
+['pełny etat'],['praca hybrydowa'],['mid'],Wrocław,['Python'],,"['SQL', 'PL/SQL']",False
+['full-time'],['full office work'],['mid'],Warszawa,['Python'],['Windows'],"['PowerShell', 'PowerPlatform', 'Microsoft Azure', 'PowerAutomate', 'Microsoft 365', 'SharePoint']",False
+['pełny etat'],['praca stacjonarna'],['junior'],Warszawa,['Python'],"['Windows', 'macOS', 'Linux']","['SQL', 'Linux', 'Windows Server']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Warszawa,['Windows'],,['Python'],False
+['full-time'],['hybrid work'],['lead'],Kraków,"['AWS', 'Angular', 'Python', 'React JS']",,"['Jenkins', 'JIRA', 'Git', 'Octopus Deploy', 'C#']",False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,['Python'],['Linux'],"['Jenkins', 'Apache', 'Git', 'Ansible', 'Bash', 'Shell', 'MySQL', 'Nginx', 'PostgreSQL', 'SQL', 'Tomcat', 'iptables', 'Oracle']",False
+['full-time'],['home office work'],['senior'],Łódź,['Python'],['Linux'],"['Node.js', 'AWS', 'JavaScript', 'TypeScript']",False
+['pełny etat'],['praca hybrydowa'],['trainee'],Warszawa,"['CSS', 'SQL', 'HTML', 'Python', 'JavaScript']",['Windows'],['Microsoft Excel'],False
+['full-time'],['hybrid work'],"['mid', 'senior']",Warszawa,"['ONNX', 'TensorFlow', 'Python', 'PyTorch', 'Keras']",['Linux'],"['Kotlin', 'C', 'Java', 'Android', 'C#', 'C++']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,"['SQL', 'Python']",,"['CRM', 'RFP']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,['Windows'],,"['Python', 'JavaScript']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Zaczernie (pow. rzeszowski),"['Python', 'Bash']",['Linux'],['Linux'],True
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,['Python'],,"['Jira', 'Confluence']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['Java', 'Python', 'Linux', 'JavaScript']",,['SQL'],False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['junior'],Warszawa,"['Machine Learning', 'Python', 'SAS']","['Windows', 'Linux']","['SQL', 'R']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['senior'],Wrocław,"['React.js', 'Vue.js', 'Python']",,"['.NET', 'Azure Logic Apps', 'SQL', 'PostgreSQL', 'Azure', 'C#']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Dębowiec (pow. cieszyński),['Python'],,"['PHP', 'HTML5', 'AJAX', 'JQuery', 'MySQL', 'CSS3', 'JavaScript']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,['Python'],['Linux'],['C++'],False
+['full-time'],['home office work'],['senior'],Wrocław,['Python'],['macOS'],"['Kafka', 'Apache Flink', 'Apache Spark', 'Snowflake', 'SQL', 'Kinesis', 'Google BigQuery', 'Amazon Redshift', 'AWS']",False
+['full-time'],['home office work'],"['lead', 'manager']",Warszawa,,,['Python'],True
+['full-time'],"['home office work', 'hybrid work']",['mid'],Warszawa,"['Windows', 'Linux']",,['Python'],False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Wrocław,['Python'],,"['SQL', 'R']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Zabierzów (pow. krakowski),['Python'],['Linux'],['Jira'],False
+['full-time'],"['home office work', 'hybrid work', 'full office work']","['mid', 'senior']",Białystok,"['Performance tests', 'Artillery.io', 'TypeScript']","['Windows', 'macOS']","['Jenkins', 'Jira', 'Git', 'BDD', 'Selenium', 'Behave', 'Page Object Pattern', 'Allure/ Serenity', 'Selenium WebDriver', 'Cucumber', 'Xray', 'Docker', 'API testing', 'CI/CD', 'Python', 'AWS']",True
+['full-time'],['hybrid work'],['mid'],Łódź,,,"['CircleCI', 'Travis CI', 'Google Cloud', 'Jenkins', 'Nessus', 'PowerShell', 'GitLab CI', 'OWASP ZAP', 'CloudFormation', 'Invicti', 'Bash', 'Docker', 'Python', 'Ansible', 'Azure', 'Terraform', 'SonarQube', 'AWS', 'Kubernetes']",True
+['część etatu'],['praca zdalna'],['mid'],Wrocław,['Windows'],,"['Microsoft IIS', 'Microsoft Azure', 'Tableau', 'T-SQL', 'SCSS', 'Qlickview', 'ASP.NET Web API', 'Microsoft SQL Server', 'Python', 'Microsoft Power BI', 'Microsoft SSIS']",False
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['CircleCI', 'Travis CI', 'Google Cloud', 'Jenkins', 'Nessus', 'PowerShell', 'GitLab CI', 'OWASP ZAP', 'CloudFormation', 'Invicti', 'Bash', 'Docker', 'Python', 'Ansible', 'Azure', 'Terraform', 'SonarQube', 'AWS', 'Kubernetes']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,['Linux'],,"['Helm', 'GitLab', 'Shell', 'Cassandra', 'Java Spring Boot Framework', 'Redis', 'Kibana', 'Prometheus', 'PostgreSQL', 'Grafana', 'Python', 'Ansible', 'Terraform', 'Kubernetes']",False
+['pełny etat'],['praca hybrydowa'],"['senior', 'expert']",Poznań,,,"['Jenkins', 'Git', 'Windows Server', 'Chef', 'Bash', 'Dynatrace', 'Openshift', 'Zabbix', 'Docker', 'SQL', 'PostgreSQL', 'Linux', 'Python', 'Ansible', 'MongoDB', 'Kubernetes']",False
+['full-time'],['home office work'],['senior'],Kraków,"['Google Cloud Platform', 'Microsoft Azure']",,"['Ruby', 'Bash', 'Cassandra', 'Java', 'MongoDB', 'Python', 'Ansible', 'Terraform', 'Chef', 'AWS', 'Kubernetes']",True
+['full-time'],['hybrid work'],['lead'],Warszawa,,,"['Git', 'SVN', 'Playwright', 'Test Complete', 'Selenium', 'TFS', 'Python', 'Tosca', 'C#', 'Mercurial']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['senior'],Warszawa,,,"['XML', 'Java', 'UML', 'Sparx Enterprise Architect', 'REST API', 'SQL', 'Archimate 3.0', 'SOAP', 'Python', 'BPMN', 'C#']",False
+['part time'],['hybrid work'],['mid'],Warszawa,,,"['Spark', 'PyTorch', 'Github Actions', 'Rest', 'Snowflake Data Cloud', 'Grafana', 'TensorFlow', 'Python', 'Terraform', 'Snowpark', 'Airflow', 'AWS', 'Kubernetes']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Poznań,"['Jenkins', 'Kubernetes', 'Logstash', 'Microsoft Azure', 'Filebeat', 'Kibana', 'Metricbeat', 'AWS', 'Grafana']",['Linux'],"['Git', 'Bash', 'GitLab', 'Cassandra', 'Zabbix', 'NGINX', 'Docker', 'Elasticsearch', 'PostgreSQL', 'Linux', 'Python', 'Ansible']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,"['MSSQL', 'Foreman', 'AWX', 'Microsoft Azure', 'Puppet', 'Oracle', 'Google Cloud Platform', 'Postgres', 'Ansible', 'Terraform', 'Chef']",,"['Bash', 'Shell', 'Active Directory', 'Windows Server', 'Docker', 'Rancher', 'Linux', 'Python', 'Unix', 'Red Hat', 'Kubernetes']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Warszawa,['Google Cloud Platform'],"['Windows', 'macOS']","['Kafka', 'Cloud', 'R', 'GraphQL', 'SQL', 'NoSQL', 'Python', 'gRPC', 'ETL applications', 'REST']",False
+['full-time'],['home office work'],"['lead', 'manager']",Warszawa,['OpenProject'],"['Windows', 'Linux']","['Zscaler', 'Logstash', 'Shell', 'Qradar', 'Windows Server', 'Kibana', 'Elasticsearch', 'Sentiel One', 'Linux', 'Python', 'Splunk']",False
+['full-time'],['home office work'],['senior'],Kraków,,,"['Helm', 'Vue.js', 'Redis', 'MySQL', 'JavaScript', 'Docker', 'TypeScript', 'Python', 'PostgreSQL', 'Terraform', 'AWS', 'Kubernetes']",True
+['full-time'],['home office work'],['mid'],Warszawa,"['Databricks', 'Snowflake Data Cloud', 'Kafka', 'Docker']",,"['Big Data', 'Azure DevOps', 'Apache Spark', 'Google Cloud Platform', 'Apache Airflow', 'Scala', 'Python', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['Microsoft Azure', 'Microsoft Entra ID', 'SailPoint IdentityIQ', 'Azure DevOps', 'ServiceNow', 'PowerShell', 'Python', 'IdentityNow', 'AWS']",False
+['full-time'],['home office work'],['senior'],Warszawa,"['Kafka', 'Databricks', 'Docker']",,"['Big Data', 'Azure DevOps', 'Apache Spark', 'Google Cloud Platform', 'Snowflake Data Cloud', 'Apache Airflow', 'Scala', 'Python', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Wrocław,,,"['GKE', 'Dataproc', 'Dataflow', 'Apache Beam', 'Kafka', 'Spark', 'Java', 'Pub/Sub', 'Cloud Bigtable', 'Scala', 'Python', 'Google Data Studio', 'BigQuery']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,['nUnit'],['Windows'],"['Jenkins', 'React Native', 'iOS', 'Java', 'Swift', 'GraphQL', 'C#', 'JavaScript', 'SQL', 'Gerrit', 'Python', 'Android']",False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Zabierzów (pow. krakowski),"['SQL', 'Golang']",['Linux'],"['Helm', 'Bash', 'Docker', 'Prometheus', 'Grafana', 'Python', 'Ansible', 'Terraform', 'VMware', 'AWS', 'Kubernetes']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Kraków,['Windows'],,"['Ruby', 'Jenkins', 'GitLab', 'Bash', 'Docker', 'Google Cloud Platform', 'Python', 'Terraform', 'AWS', 'Kubernetes']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Karczew (pow. otwocki),,,"['PHP', 'Perl', 'Bash', 'MySQL', 'PowerShell', 'Microsoft SQL Server', 'Python', 'PostgreSQL', 'VMware']",False
+['pełny etat'],['praca zdalna'],['senior'],Wrocław,['Windows'],,"['CSS', 'Angular', 'Java', 'Spring Boot', 'JavaScript', 'Docker', 'AWS', 'Elasticsearch', 'TypeScript', 'Python', 'MongoDB', 'HTML', 'Kubernetes']",False
+['full-time'],['home office work'],"['senior', 'expert']",Warszawa,"['Databricks', 'Apache Airflow', 'Azure DevOps', 'Apache Spark']",,"['Data Lake', 'Microsoft Azure', 'DWH', 'CI/CD', 'SQL', 'Python', 'Microsoft SQL Server', 'PostgreSQL', 'ETL/ELT']",True
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,['OpenProject'],"['Windows', 'Linux']","['Zscaler', 'Logstash', 'Shell', 'Qradar', 'Windows Server', 'Kibana', 'Elasticsearch', 'Linux', 'Python', 'Splunk']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa', 'praca stacjonarna']",['senior'],Lublin,"['Artifactory', 'Nexus']",['Windows'],"['Git', 'Bash', 'Puppet', 'Docker', 'PowerShell', 'Linux', 'Python', 'Ansible', 'Unix', 'Terraform', 'AWS', 'Kubernetes']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,['Windows'],,"['Scikit-learn', 'Flask', 'Microsoft Azure', 'FastAPI', 'Google Cloud Platform', 'SQL', 'TensorFlow', 'Python', 'PyTorch', 'AWS']",False
+['full-time'],['hybrid work'],['senior'],Kraków,['Windows'],,"['Travis CI', 'Jenkins', 'GitHub', 'Git', 'Bash', 'Shell', 'Microsoft Azure', 'Docker', 'Google Cloud Platform', 'Python', 'Gitlab', 'Kubernetes']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,['Linux'],,"['Spark', 'Github Actions', 'Snowflake Data Cloud', 'scikit-learn', 'TensorFlow', 'Python', 'PyTorch', 'AWS']",False
+['full-time'],"['hybrid work', 'full office work']","['senior', 'expert']",Gdańsk,['Windows'],,"['Spark', 'Microsoft Azure', 'Databricks', 'Azure SQL', 'Azure DevOps', 'SQL', 'Python', 'Azure']",False
+['full-time'],['home office work'],"['mid', 'senior']",300 Spectrum Center Drive/Suite 400 92618 Irvine,"['Figma', 'Big Data', 'MLOPS', 'Microsoft Fabric', 'Delta Lake']",,"['Data Lake', 'DAX', 'agile', 'Power BI', 'Business Analytics', 'SQL', 'Python', 'PBI']",True
+['full-time'],['hybrid work'],"['senior', 'expert']",Poznań,"['Kibana', 'Elasticsearch', 'Logstash', 'Prometheus', 'AWS', 'Grafana']",,"['Jenkins', 'Git', 'Bash', 'MySQL', 'Docker', 'PostgreSQL', 'Linux', 'Python', 'Ansible', 'Red Hat', 'Kubernetes']",True
+['full-time'],['home office work'],['mid'],Kraków,['Windows'],,"['Jira', 'Bash', 'Make', 'Bazel', 'GIT', 'JavaScript', 'C++', 'C', 'CMake', 'Docker', 'Python']",False
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,"['Azure Data Factory', 'Microsoft Azure', 'Databricks', 'Azure DevOps', 'Azure Synapse']",,"['DAX', 'DWH', 'Data lake', 'M language', 'PostgreSQL', 'SQL', 'Microsoft SQL Server', 'Python', 'Microsoft Power BI']",True
+['full-time'],['hybrid work'],['trainee'],Warszawa,['Windows'],,"['Git', 'Google Acts', 'MySQL', 'JavaScript', 'Docker', 'Windows Server', 'Ubuntu Server', 'Python', 'Nginx', 'PostgreSQL']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Zabierzów (pow. krakowski),"['SQL', 'Golang', 'Cassandra']",['Linux'],"['Helm', 'Bash', 'Docker', 'Prometheus', 'Grafana', 'Python', 'Ansible', 'Terraform', 'VMware', 'AWS', 'Kubernetes']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Warszawa,,,"['XML', 'Java', 'UML', 'Sparx Enterprise Architect', 'REST API', 'SQL', 'Archimate 3.0', 'SOAP', 'Python', 'BPMN', 'C#']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['senior'],Warszawa,,,"['Troubleshooting', 'Front-End', 'Cloud', 'C++', 'CI/CD', 'Testing', 'Python', 'Databases', 'Problem Solving', 'Analytical Thinking']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Cloudflare', 'Kubecost', 'ElasticSearch', 'Datadog', 'Prometheus', 'MySQL', 'Grafana']",['Windows'],"['Jenkins', 'GitLab', 'Bash', 'TeamCity', 'Python', 'Ansible', 'Terraform', 'AWS', 'Kubernetes']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,,,"['Snowflake Data Cloud', 'SQL', 'Microsoft Azure', 'Python', 'SAP HANA']",False
+['full-time'],['home office work'],['senior'],Kraków,"['Kotlin', 'Scala']",['Windows'],"['Kafka', 'Java', 'Python', 'PostgreSQL', 'Prometheus', 'MongoDB', 'AWS', 'Kubernetes']",True
+['full-time'],['home office work'],['senior'],Wrocław,"['Kafka', 'Kinesis', 'Apache Flink', 'AWS Glue', 'Apache Spark']",['macOS'],"['Snowflake', 'SQL', 'Google BigQuery', 'Python', 'Java', 'Amazon Redshift']",False
+['full-time'],['hybrid work'],['expert'],Kraków,['SAP HANA'],,"['Ruby', 'Perl', 'GitLab', 'Hadoop', 'SQL', 'Python', 'UNIX', 'AWS']",True
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Wrocław,,,"['Microsoft Excel', 'SQL', 'Python', 'Microsoft Power BI', 'R']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Wrocław,"['AWS', 'Docker']",,"['Pandas', 'TensorFlow', 'Python', 'scikit-learn', 'Keras', 'Numpy', 'PyTorch']",False
+['full-time'],"['home office work', 'hybrid work']",['mid'],Katowice,"['Windows', 'Linux']",,"['Bash', 'Go', 'MySQL', 'Python', 'Ansible', 'Terraform', 'Postgress', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Windows', 'Linux']",,"['Shell', 'API', 'Docker', 'CI/CD', 'OpenShift', 'Python', 'Ansible', 'Network', 'Kubernetes']",True
+['full-time'],['full office work'],['mid'],Kraków,"['Windows', 'Linux']",,"['Microsoft Project', 'Python', 'Microsoft Visio', 'Microsoft Office', 'C#', 'C++']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,,,"['MLFlo', 'Dataiku', 'Microsoft Azure', 'TensorFlow', 'Python', 'Databricks', 'PyTorch', 'AML']",False
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,,,"['Microsoft Excel', 'Git', 'Python', 'Microsoft Power BI', 'R']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,"['Kafka', 'Hashicorp', 'SageMaker', 'DBT', 'OpenTelemetry', 'Airflow', 'ElasticSearch']",,"['Bamboo', 'Git', 'Vault', 'Docker', 'Consul', 'Python', 'Terraform', 'Nomad', 'AWS']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,['Linux'],,"['PostgreSQL', 'Apache', 'Rest API', 'JSON', 'Bash', 'Python', 'Django']",True
+['full-time'],['home office work'],['senior'],Warszawa,,,"['Elasticsearch', 'node.js).', 'Python', 'Java', 'JS (Angular', 'Django Rest Framework', 'Django']",True
+['full-time'],['hybrid work'],['mid'],Katowice,,,"['C', 'Git', 'XML', 'Python', 'Java', 'Azure DevOps', 'C++']",False
+['full-time'],"['home office work', 'hybrid work']","['mid', 'senior']",Wrocław,"['Jenkins', 'GitLab', 'Functions', 'Docker', 'Lambda', 'Ansible', 'Terraform', 'Kubernetes']","['Windows', 'Linux']","['SQL', 'AWS', 'Perl', 'Shell', 'Microsoft Azure', 'Python', 'Oracle']",False
+['full-time'],['hybrid work'],['mid'],Kraków,['Windows'],,"['Microsoft Excel', 'Tableau', 'Python', 'Microsoft Power BI', 'R']",False
+['pełny etat'],['praca zdalna'],['senior'],Warszawa,"['Falcon', 'Elasticsearch', 'RabbitMQ', 'Redis', 'Celery']",,"['PHP', 'Rest API', 'Python', 'UNIX', 'Ansible', 'Django', 'Docker']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Jira', 'SAS', 'C#', 'Tableau', 'JavaScript']",,"['Microsoft Excel', 'SQL', 'GitLab', 'Python', 'PostgreSQL', 'PySpark', 'AWS']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Warszawa,['Kubeflow'],"['Windows', 'Linux']","['Kafka', 'Kudu', 'Hive', 'Java', 'Scala', 'HBase', 'Python', 'Ansible', 'Apache Nifi']",True
+['pełny etat'],['praca zdalna'],['mid'],Poznań,,,"['TPC/IP', 'PHP', 'Git', 'Proxmox/KVM', 'NGINX', 'Docker', 'Linux', 'Python', 'Ansible', 'Terraform', 'Kubernetes']",False
+['full-time'],['hybrid work'],['senior'],Kraków,,,"['Angular', 'Bash', 'JavaScript', 'React.js', 'Okta', 'HTML5', 'Linux', 'Python', 'Alfabet', 'MongoDB', 'AWS']",True
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,,,"['Jira', 'Cassandra', 'Bash', 'MySQL', 'Oracle', 'SQL', 'RabbitMQ', 'Python', 'Microsoft SQL Server', 'PostgreSQL']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['Spark', 'Github Actions', 'Snowpark', 'Snowflake Data Cloud', 'TensorFlow', 'Python', 'PyTorch', 'Airflow', 'AWS', 'Grafana']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['manager'],Warszawa,,,"['Kafka', 'Java', 'Spring Boot', 'JavaScript', 'Google Cloud Platform', 'PostgreSQL', 'OpenShift', 'Python', 'Oracle', 'Kubernetes']",False
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,"['Kafka', 'Scali', 'Docker']",['Linux'],"['Bash', 'Snowflake', 'SQL', 'Apache Airflow', 'NoSQL', 'Redshift', 'Python', 'Databricks', 'AWS']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,,,"['Spark', 'SAS 4GL', 'SQL', 'Python', 'Microsoft Power BI', 'Tableau']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['senior'],Katowice,['Linux'],,"['Kafka', 'Git', 'Java', 'Oracle', 'Flink', 'Python', 'PostgreSQL', 'REST']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']","['mid', 'senior']",Warszawa,,,"['Bamboo', 'Git', 'Jira', 'Bitbucket', 'Docker', 'Python', 'Confluence', 'Terraform', 'AWS']",False
+['full-time'],['full office work'],['senior'],Gdańsk,['Windows'],,"['Databricks', 'R', 'Azure DevOps', 'Azure', 'SQL', 'Scala', 'Python', 'no-SQL']",False
+['full-time'],['full office work'],['mid'],Rzeszów,,,"['ASP.NET', 'Tableau', 'JavaScript', 'Google Cloud Platform', 'SQL', 'Python', 'Azure', 'C#']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,['React.js'],['Linux'],"['REST API', 'Flask', 'Git', 'HTML5', 'Python', 'CSS3', 'FastAPI']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Google Cloud Platform', 'Dataflow', 'SQL', 'Python', 'PySpark', 'Airflow', 'BigQuery']",False
+['full-time'],['home office work'],['senior'],Wrocław,['Linux'],,"['Jenkins', 'Git', 'Robot', 'Perl', 'Shell', 'Gerrit', 'Python', 'WebSphere', 'Kubernetes']",True
+['full-time'],"['home office work', 'hybrid work']",['senior'],Kraków,['SAP HANA'],['Windows'],"['T-SQL', 'SQL', 'Microsoft Azure', 'Python', 'Microsoft Power BI']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['SQL', 'Jira', 'GPG/PGP', 'Confluence', 'Sops', 'GNU Make']",,"['Terragrunt', 'GitHub Actions', 'Containers', 'Docker', 'Python', 'Terraform', 'SonarQube', 'AWS']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']","['senior', 'expert']",Kraków,"['React.js', 'Node.js', 'Vue.js', 'JavaScript']",['macOS'],"['Ruby', 'SQL', 'Kubernetes', 'Python', 'Ruby on Rails', 'AWS', 'Docker']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Katowice,['Windows'],,"['Enterprise Architect', 'Java', 'R', 'UML', 'C++', 'SQL', 'Python', 'BPMN', 'C#']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,,,"['Kubernetes', 'Bash', 'Go', 'Loki', 'Docker', 'AWS', 'Python', 'Prometheus', 'Sentry', 'Grafana']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,"['Kubernetes', 'Linux', 'Docker']",,"['Sybase', 'GitLab', 'Cassandra', 'GIT', 'Elasticsearch', 'Postgres', 'Python', 'Oracle', 'SQL/NoSQL']",False
+['full-time'],['home office work'],"['mid', 'senior']","300 Spectrum Center Drive/Suite 400
+92618 Irvine","['Microsoft Fabric', 'Big Data', 'Delta Lake', 'MLOPS']",,"['Data Pipelines', 'ETL', 'Data Lake', 'SQL', 'Python', 'Data Engineer', 'agile']",True
+['pełny etat'],['praca stacjonarna'],['junior'],Warszawa,"['Streamlit', 'Django']",,"['Python', 'bazy wektorowe qdrant', 'bazy wektorowe milvus', 'Docker']",False
+['full-time'],['hybrid work'],['senior'],Kraków,"['Jenkins', 'Git', 'Gerrit', 'Artifactory', 'Nexus']",['Windows'],"['Perl', 'Microsoft Azure', 'Gradle', 'Java', 'Python', 'AWS', 'C++']",True
+['pełny etat'],['praca zdalna'],['mid'],Kraków,,,"['PowerShell', 'Google Cloud Platform', 'Bash', 'Python', 'Azure DevOps', 'AWS']",True
+['pełny etat'],['praca hybrydowa'],['senior'],Gdańsk,,,"['.NET', 'Bash', 'Go', 'Docker', 'Python', 'Ansible', 'Terraform', 'AWS', 'Kubernetes']",False
+['full-time'],"['hybrid work', 'full office work']","['mid', 'senior']",Warszawa,['Kubeflow'],"['Windows', 'Linux']","['Kafka', 'Kudu', 'Hive', 'Java', 'Scala', 'HBase', 'Python', 'Ansible', 'Apache Nifi']",True
+['full-time'],['hybrid work'],['mid'],Gdańsk,"['Pandas', 'Rust', 'PWA', 'PowerBI', 'NumPy', 'SciKit', 'PHP', 'CSS', 'JavaScript', 'WebSockets', 'C', 'SELinux', 'Torch/PyTorch', 'Python', 'Tensorflow', 'HTML']",,"['Rust', 'RHEL', 'Envoy', 'C', 'Mosquitto', 'MariaDB', 'Python', 'Nginx', 'Linux', 'Podman']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Warszawa,"['Windows', 'Linux']",,"['Java', 'Windows Server', 'Docker', 'Linux', 'Python', 'Azure', 'AWS', 'Kubernetes']",True
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,,,"['SQL', 'Hadoop', 'GenAI', 'Hive', 'LLM', 'Python', 'Apache Spark']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Kraków,['Linux'],,"['Apache', 'Proxmox', 'Debian', 'Bash', 'PostgreSQL Vmware', 'RedHat', 'Python', 'Nginx', 'Oracle']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Wrocław,"['macOS', 'Windows', 'Linux']",,"['T-SQL', 'TensorFlow', 'Python', 'PyTorch', 'Keras']",False
+['full-time'],['hybrid work'],['mid'],Leszno,"['Windows', 'Linux']",,"['C', 'Git', 'Python', 'Java', 'Azure DevOps', 'C++']",False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,,,"['Data Lake', 'SQL', 'Data Governance', 'Cloud', 'Python']",False
+['pełny etat'],['praca zdalna'],"['junior', 'mid']",Warszawa,,,"['SQL', 'Microsoft Azure', 'Python', 'Databricks', 'PySpark']",False
+['pełny etat'],['praca zdalna'],['mid'],Kraków,,,"['IaaS', 'Node.js', 'CI/CD', 'Python', 'TypeScript', 'AWS']",True
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['expert'],Białystok,"['automotive', 'AI']","['Windows', 'macOS']","['Selenium', 'Jenkins', 'AWS', 'TypeScript', 'Python', 'JavaScript']",True
+['full-time'],['hybrid work'],['senior'],Wrocław,['Windows'],,"['CSS', 'SQL', 'HTML', 'Python', 'SAP CPQ features']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,"['Google Cloud Platform', 'Microsoft Azure', 'AWS', 'Kubernetes']","['Windows', 'Linux']","['PowerShell', 'Python', 'Terraform', 'VMware', 'Cloud Formation']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Warszawa,,,"['Hadoop', 'SQL', 'Kubernetes', 'Python', 'Apache Spark', 'Docker']",False
+['full-time'],['home office work'],['junior'],Warszawa,['Linux'],,"['SQL', 'Git', 'Python', 'Airflow', 'Kedro', 'Docker']",False
+['full-time'],['hybrid work'],['mid'],Raszyn (pow. pruszkowski),"['Windows', 'Linux']",,"['Selenium', 'Jenkins', 'SQL', 'Python', 'SVN', 'Behave']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,['Windows'],,"['Jenkins', 'Git', 'Python', 'Java', 'Spring Boot']",True
+['full-time'],['hybrid work'],['mid'],Wrocław,['Windows'],,"['CSS', 'SQL', 'HTML', 'Python', 'SAP CPQ features']",False
+['full-time'],['home office work'],['senior'],Warszawa,,,"['GitLab', 'Git', 'Bash', 'Go', 'Linux', 'Python', 'Ansible', 'VMware']",False
+['full-time'],['home office work'],['junior'],Warszawa,"['Jenkins', 'Palo Alto', 'GitLab']",['Linux'],"['Linux', 'Python', 'Ansible', 'Go', 'Terraform', 'Cloud Formation', 'Bicep']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Kraków,['Windows'],,"['CSS', 'Vue.js', 'Git', 'Java', 'Docker', 'React.js', 'Python', 'HTML']",False
+['full-time'],['home office work'],['mid'],Warszawa,"['Snowflake Data Cloud', 'Looker', 'Tableau', 'Apache Spark', 'Power BI']",,"['Google Cloud Platform', 'SQL', 'Big Data', 'Python', 'Azure DevOps', 'AWS']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Wrocław,['Grafana'],,"['CentOS', 'Bash', 'Ubuntu', 'Azure DevOps', 'Linux', 'Python', 'Terraform', 'Kubernetes']",False
+['pełny etat'],['praca zdalna'],['senior'],Warszawa,"['Bazel', 'Franca IDL', 'QNX']",,"['CI/CD', 'RTOS', 'Git', 'Python', 'C++']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Selenium', 'Jenkins', 'Jira', 'Ansible', 'Bitbucket', 'Redis', 'Grafana']","['Windows', 'Linux']","['SQL', 'Git', 'Linux', 'Python', 'PostgreSQL', 'Ansible', 'Kubernetes']",True
+[],['praca zdalna'],['mid'],Wrocław,"['React.js', 'Next.js', 'Git', 'TypeScript', 'Docker']",,"['Node.js', 'PHP', 'SQL', 'Python', 'Java', 'MongoDB', 'JavaScript']",False
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['SQL', 'Python', 'SAS', 'R', 'Matlab', 'C++']",True
+['full-time'],"['home office work', 'hybrid work']",['lead'],Wrocław,"['PostgreSQL', 'Redis', 'GraphQL', 'BigQuery']",,"['Google Cloud Platform', 'SQL', 'Python', 'Docker']",True
+['pełny etat'],['praca hybrydowa'],"['senior', 'expert']",Warszawa,,,"['SQL', 'Jira', 'Python', 'Big Query', 'R', 'Power BI']",False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,"['RabbitMQ', 'Apache ServiceMix', 'MS Service Broker']",['Linux'],"['Kubernetes', 'Bash', 'Maven', 'Java', 'Spring Boot', 'Python', 'Docker']",False
+['pełny etat'],['praca zdalna'],['senior'],Warszawa,"['Kafka', 'ELK', 'Spark', 'Kubernetes', 'CockroachDB', 'Prometheus', 'Docker']",,"['Kotlin', 'Google Cloud Platform', 'Scala', 'Python', 'Go', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['SciPy ecosystem', 'Hadoop', 'GCP/AWS', 'SQL', 'TensorFlow', 'Python', 'PyTorch', 'PySpark']",False
+['pełny etat'],['praca hybrydowa'],['manager'],Warszawa,['.NET'],,"['Helm', 'Microsoft Azure', 'Bash', 'Python', 'Windows Server', 'Kubernetes']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['GoLang', 'Spring', 'Kubernetes', 'Python', 'Java', 'AWS', 'Docker']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Hadoop', 'Apache Spark', 'Hive']",['Windows'],"['SQL', 'Microsoft SQL Server', 'Python', 'PostgreSQL', 'AWS']",False
+['full-time'],['hybrid work'],['senior'],Kraków,['macOS'],,"['Spark', 'Hadoop', 'Big Data', 'Python', 'Pyspark']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,"['DevOps', 'Kubernetes']",,"['Kafka', 'Spark', 'Presto', 'Scala', 'Python', 'Java', 'Airflow']",False
+['full-time'],['home office work'],['mid'],Warszawa,['Broadcast Automation'],"['Windows', 'Linux']","['SQL', 'MariaDB', 'Python', 'Networking', 'Aurora', 'JavaScript']",False
+['pełny etat'],['praca hybrydowa'],['mid'],dolnośląskie,,,"['SQL', 'Cloudflare', 'GCP', 'Python', 'Azure Cosmos DB']",False
+['full-time'],['home office work'],['mid'],Warszawa,"['Streamlit', 'Shiny R', 'Dash']",['Windows'],"['SQL', 'Git', 'Microsoft Azure', 'Python', 'Databricks']",True
+['full-time'],['hybrid work'],['mid'],Wrocław,,,"['C', 'GitHub', 'Polarion', 'Python', 'Azure DevOps', 'C++']",False
+['full-time'],"['hybrid work', 'full office work']",['senior'],Kraków,,,"['AltTester', 'Java', 'Firebase', 'Appium', 'Python', 'C#', 'Unity Test Framework', 'AWS']",True
+"['część etatu, pełny etat']","['praca hybrydowa', 'praca stacjonarna']",['mid'],Sosnowiec,"['Bash', 'Active Directory', 'Windows Server', 'Docker']","['Windows', 'Linux']","['Check_MK', 'Proxmox', 'Direct Admin', 'Linux', 'Python', 'Nginx', 'Apache Tomcat']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Poznań,"['Windows', 'Linux']",,"['Postman', 'Jira', 'Jmeter', 'Robot framework', 'SoapUI', 'Selenium', 'SQL', 'Python']",False
+['full-time'],['hybrid work'],['lead'],Kraków,,,"['Python', 'SAS', 'VBA', 'R', 'Matlab', 'C++']",True
+['full-time'],['hybrid work'],['mid'],Kraków,['Windows'],,"['Spark', 'Google Cloud Platform', 'Scala', 'Python']",True
+['full-time'],['hybrid work'],"['mid', 'senior']",Gdańsk,"['Windows', 'Linux']",,"['Linux', 'Python', 'Azure DevOps', 'AWS', 'Kubernetes']",True
+['full-time'],"['home office work', 'hybrid work']",['senior'],Warszawa,,,"['GenAI', 'LangChain', 'LLM', 'TenserFlow', 'Python', 'PyTorch']",False
+['full-time'],['home office work'],['mid'],Warszawa,,,"['Kafka', 'Hadoop', 'Scala', 'Python', 'Ansible', 'Java']",True
+['pełny etat'],['praca zdalna'],['senior'],Kraków,,,"['Kafka', 'Snowflake Data Cloud', 'SQL', 'Python', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['Jenkins', 'Voila', 'Flask', 'Ansible', 'DevOps', 'Dash', 'Openstack', 'Grafana', 'InfluxDB', 'Python visualization stack', 'nginx', 'Bash', 'git', 'Docker', 'Linux', 'Python', 'PostgreSQL', 'Jupyter']",False
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['Google Cloud Platform', 'JavaScript', 'Python']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Warszawa,,,"['Microsoft Excel', 'SQL', 'Tableau', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Lublin,,,"['AWS Cloud Services', 'Tableau', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Kraków,,,"['SQL', 'Git', 'Python', 'R', 'PowerBI']",True
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,['Git'],,"['Microsoft Power BI', 'SQL', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,['Windows'],,"['Azure', 'AWS', 'Google Cloud', 'Python']",False
+['full-time'],['hybrid work'],['lead'],Kraków,,,"['Google Cloud Platform', 'SQL', 'Python', 'Azure', 'AWS']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Lublin,"['C++', 'Angular', 'Vue.js', 'GraphQL', 'Docker']",,"['Git', 'Python', 'Lambda', 'Java', 'DynamoDB', 's3', 'AWS']",False
+['pełny etat'],['praca hybrydowa'],['expert'],Poznań,['Azure DevOps'],,"['T-SQL', 'SQL', 'Jira', 'Git', 'Python', 'PostgreSQL']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Kraków,,,"['SQL', 'Jira', 'Python', 'SAS', 'PySpark', 'Confluence']",True
+['full-time'],['hybrid work'],"['junior', 'mid']",Gdańsk,['Linux'],,"['Kafka', 'Hadoop', 'Linux', 'Python', 'Kubernetes', 'Docker']",False
+['full-time'],['hybrid work'],['mid'],Łódź,"['Windows', 'Linux']",,"['Jenkins', 'Git', 'Bash', 'Python', 'Ansible', 'VMware', 'Docker']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Windows', 'Linux']",,"['Rust', 'C', 'Debian', 'Python', 'JavaScript', 'C++']",False
+['full-time'],['home office work'],['senior'],Wrocław,['Windows'],,"['React.js', 'TypeScript', 'Python', 'PostgreSQL', 'Django']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['ETL', 'Python', 'SQL', 'Informatica PowerCenter']",True
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['Python', 'VBA', 'R', 'Matlab', 'C++']",True
+['full-time'],['hybrid work'],['senior'],Kraków,"['MLOps', 'Airflow', 'Scala']","['Windows', 'macOS']","['Spark', 'Kubernetes', 'Python', 'AWS', 'Docker']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Poznań,,,"['SQL', 'Tableau', 'Python', 'Data Studio']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']","['mid', 'senior']",Warszawa,"['Terragrunt', 'Istio', 'ArgoCD', 'DevOps', 'OpenShift', 'Grafana', 'ELK stack', 'Prometheus', 'AWS', 'Kubernetes']",['Linux'],"['Jenkins', 'GitOps', 'Bash', 'PowerShell', 'GitLab CI/CD', 'Python', 'Terraform', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Confluence', 'Jira', 'Git', 'Docker']",,"['Project Reactor', 'Spring Data', 'Python', 'Java', 'Spring Boot', 'AWS']",False
+['full-time'],"['home office work', 'hybrid work']",['senior'],Kraków,,,"['Rust', 'Kotlin', 'Python', 'Java', 'Go', 'Android', 'C++']",False
+['pełny etat'],['praca hybrydowa'],"['junior', 'mid']",Poznań,"['Windows', 'Linux']",,"['Git', 'Linux', 'SVN', 'Java', 'Python', 'C++']",False
+['full-time'],"['home office work', 'hybrid work']",['mid'],Warszawa,['Windows'],,"['SQL', 'Selenium', 'Cypress', 'Robot Framework', 'Python']",True
+['pełny etat'],['praca hybrydowa'],"['junior', 'mid']",Poznań,"['Java', 'PostgreSQL']","['Windows', 'Linux']","['Git', 'Linux', 'SVN', 'Python', 'C++']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Gdańsk,,,"['Abacus', 'Elixir', 'Mustache', 'Python', 'AbacusSql']",False
+['full-time'],['hybrid work'],['manager'],Kraków,,,"['SQL', 'Python', 'SAS', 'VBA', 'R']",True
+['full-time'],['hybrid work'],['senior'],Wrocław,"['macOS', 'Windows', 'Linux']",,"['C++', 'Azure DevOps', 'Python', 'C']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Wrocław,['Windows'],,"['T-SQL', 'Python', 'Microsoft Azure']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,['Windows'],,"['Spark', 'SQL', 'XGBoost', 'Python', 'PyTorch']",False
+['full-time'],['hybrid work'],['mid'],Kraków,"['AWS ECS/EKS', 'Azure DevOps', 'Fargate', 'Kubernetes']",['Windows'],"['Linux', 'Bash', 'Python', 'AWS', 'Docker']",False
+['full-time'],['hybrid work'],['junior'],Kraków,['Linux'],,"['C', 'Python', 'Java', 'JavaScript', 'C++']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Java', 'Node.js', 'Kafka']",,"['Bash', 'Python', 'Ansible', 'Terraform', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Gdańsk,['TensorFlow'],,"['C++', 'Python', 'C']",False
+['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['PostgreSQL', 'MySQL', 'Cassandra']",,"['React.js', 'JavaScript', 'TypeScript', 'Python']",True
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Warszawa,['Linux'],,"['C++', 'Python', 'C']",False
+['full-time'],"['home office work', 'hybrid work']",['senior'],Kraków,['macOS'],,"['integration', 'JAMF', 'Python', 'networking']",True
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,,,"['SQL', 'R', 'Git', 'Python']",False
+['full-time'],"['home office work', 'hybrid work']","['mid', 'senior']",Kraków,['Linux'],,"['SQL', 'Bash', 'Python', 'Java', 'AppDynamics', 'Splunk', 'Oracle']",True
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,,,"['Spark', 'SQL', 'Hadoop', 'Git', 'Hive', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['SQL', 'Python', 'Google Analytics', 'R', 'Tableau', 'PowerBI']",False
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Gliwice,"['Azure', 'Linux', 'AWS']",,"['Pandas', 'TensorFlow', 'Python', 'NumPy', 'PyTorch', 'Keras', 'C++']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']","['mid', 'senior']",Warszawa,"['Kafka', 'Jira', 'Confluence', 'Ansible', 'Kubeflow']",,"['Spark', 'SQL', 'Hadoop', 'Hive', 'Maven', 'Java', 'Python']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Kraków,['AWS'],,"['SQL', 'Python', 'R', 'Tableau', 'Data Studio']",False
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Poznań,,,"['SQL', 'GCP', 'Python', 'Azure', 'Tableau', 'AWS']",True
+['full-time'],['hybrid work'],['senior'],Kraków,,,"['SQL', 'Python', 'SAS', 'R', 'Matlab', 'C++']",True
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,['Linux'],,"['SQL', 'Jira', 'Linux', 'Python', 'Confluence', 'VMware', 'AWS']",False
+['full-time'],"['home office work', 'hybrid work']",['expert'],Gdynia,['Linux'],,"['Selenium', 'Angular', 'Bash', 'TypeScript', 'Python', 'JavaScript']",True
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,"['Hadoop', 'Apache Spark', 'AWS', 'Docker']",,"['SQL', 'NoSQL', 'Python', 'BeautifulSoup', 'pandas', 'Scrapy', 'JavaScript']",False
+['full-time'],['hybrid work'],['mid'],Legnica,,,"['SAP', 'SQL', 'Git', 'Python']",False
+['part time'],['full office work'],['trainee'],Kraków,,,"['Microsoft Excel', 'VBA', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['SQL', 'PySpark', 'Python']",True
+['full-time'],['hybrid work'],['senior'],Warszawa,"['Azure', 'GCP', 'AWS']",,"['Go', 'SQL', 'Python']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Kraków,,,"['Java', 'Python', 'JavaScript']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Kafka', 'Terraform']",,"['AWS', 'Python', 'Docker']",False
+['full-time'],['home office work'],"['lead', 'manager']",Warszawa,"['Salesforce', 'Snowflake Data Cloud', 'Tableau']",,"['Databricks', 'SQL', 'Looker', 'Python']",False
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,,,"['Go', 'Terraform', 'Python']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Warszawa,"['PostgreSQL', 'Jenkins', 'TypeScript']",['Linux'],"['Node.js', 'SQL', 'Git', 'Python', 'BigQuery']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['RPA', 'Python', 'C#', 'VB.NET', 'UiPath']",False
+['full-time'],['hybrid work'],['lead'],Kraków,,,"['Google Cloud Platform', 'SQL', 'Python']",False
+['pełny etat'],['praca hybrydowa'],"['junior', 'mid']",Poznań,"['Java', 'PostgreSQL']","['Windows', 'Linux']","['Git', 'Linux', 'SVN', 'Python', 'C++']",False
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,['Windows'],,"['PowerShell', 'Microsoft Azure', 'Python', 'Terraform', 'AWS']",True
+['pełny etat'],['praca hybrydowa'],"['senior', 'expert']",Zabierzów (pow. krakowski),['AWS'],,"['Jenkins', 'Python', 'TypeScript', 'VMware', 'JavaScript', 'Docker']",False
+['full-time'],['home office work'],"['mid', 'senior']",Kraków,['Linux'],,"['Selenium', 'Cypress', 'JUnit', 'AWS', 'Python', 'GraphQL', 'JavaScript']",False
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,,,"['Elasticsearch', 'Terraform', 'Python', 'PostgreSQL', 'Redis', 'MySQL']",False
+['full-time'],['hybrid work'],['manager'],Warszawa,,,"['C++', 'Python', 'Java', 'JavaScript', 'C']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Łódź,"['Node.js', 'JavaScript']","['Windows', 'Linux']","['Pandas', 'SQL', 'TensorFlow', 'Python', 'PostgreSQL']",False
+['full-time'],['home office work'],['senior'],Wrocław,['macOS'],,"['SQL', 'R', 'AWS', 'Python']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,"['Windows', 'Linux']",,"['Ansible', 'Git', 'Python']",True
+['full-time'],['home office work'],['mid'],Gliwice,,,"['C', 'Python', 'C++']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,,,"['PostgreSQL', 'SQL', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,['Windows'],,"['AWS', 'R', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Kraków,['Windows'],,"['C++', 'Python', 'C']",False
+['full-time'],['hybrid work'],['mid'],Łódź,"['Selenium', 'Jira', 'Xray', 'Robot Framework', 'ArgoCD', 'Confluence']",,"['Gherkin', 'Bitbucket', 'Git', 'Python']",True
+['full-time'],"['home office work', 'hybrid work']",['senior'],Lublin,"['VMware', 'Hyper-V']",['Windows'],"['Java', 'Ruby', 'Bash', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Hadoop', 'Git', 'GitLab', 'Python', 'PySpark']",False
+['full-time'],['home office work'],"['junior', 'mid']",Warszawa,,,"['SQL', 'Python', 'Terraform', 'AWS', 'Docker']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['C', 'Python', 'PostgreSQL', 'Oracle', 'C++']",True
+['pełny etat'],['praca hybrydowa'],['mid'],Gdynia,"['DB2', 'Jira', 'Perl', 'Java', 'Hibernate', 'UML', 'JavaScript']",['Windows'],"['C++', 'SQL', 'Git', 'Python', 'C']",False
+['full-time'],['home office work'],['senior'],Kraków,['Windows'],,"['Jenkins', 'GitLab', 'Bash', 'Python', 'AWS']",True
+['full-time'],['home office work'],['senior'],Warszawa,"['Oracle', 'SailPoint', 'CyberArk', 'CA', 'IBM', 'ForgeRock']","['Windows', 'Linux']","['AWS', 'Active Directory', 'Python', 'API']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,,,"['Microsoft Power BI', 'SQL', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Kraków,,,"['SQL', 'Git', 'Python', 'R', 'PowerBI']",True
+['full-time'],['home office work'],['mid'],Warszawa,,,"['PostgreSQL', 'Pytest', 'Python', 'Docker']",True
+['full-time'],['home office work'],['senior'],Warszawa,,,"['Terraform', 'Pulumi', 'Python', 'AWS']",True
+['full-time'],"['hybrid work', 'full office work']",['mid'],Gdańsk,['Windows'],,"['JavaScript', 'TypeScript', 'Python']",False
+['full-time'],['home office work'],['senior'],Warszawa,,,"['Google Cloud Platform', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Kraków,,,"['SQL', 'R', 'Git', 'Python']",True
+['pełny etat'],['praca stacjonarna'],"['senior', 'expert']",Łódź,['Windows'],,"['PHP', 'Python', 'SDLC', 'JavaScript']",False
+['full-time'],['hybrid work'],['senior'],Kraków,,,"['Matlab', 'R', 'Python', 'SAS']",True
+['full-time'],['home office work'],['senior'],Warszawa,['Windows'],,"['PostgreSQL', 'Python', 'Django']",True
+"['full-time, part time']",['hybrid work'],['trainee'],Warszawa,"['Pandas', 'scikit-learn', 'PyTorch', 'NumPy', 'Caffe', 'Keras', 'Tensorflow']","['Windows', 'Linux']","['Java', 'Python', 'C++']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,,,"['Java', 'Xray', 'NOSQL', 'Python']",False
+['full-time'],['hybrid work'],['manager'],Warszawa,,,"['SQL', 'Git', 'Python']",False
+[],['full office work'],['trainee'],Warszawa,,,"['Java', 'C#', 'Python', 'C++']",False
+['pełny etat'],['praca zdalna'],"['senior', 'expert']",Gdańsk,,,"['Pandas', 'SQL', 'PySpark', 'Python']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['Java', 'Kafka', 'Jira', 'Confluence']",['Windows'],"['SQL', 'Scala', 'Python']",False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,,,"['Postman', 'REST API', 'Selenium', 'Jira', 'Python']",False
+['pełny etat'],['praca zdalna'],['junior'],Kraków,"['React.js', 'Angular']",,"['Node.js', 'CSS', 'Git', 'Python', 'Java', 'HTML']",False
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,"['Kibana', 'Cucumber.js', 'Certyfikat ISTQB']",,"['Selenium', 'SQL', 'Robot Framework', 'Python', 'REST']",False
+['full-time'],['hybrid work'],['senior'],Kraków,,,"['Swagger', 'Kubernetes', 'Python', 'Java', 'Spring Boot', 'Docker']",True
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Warszawa,"['Kubernetes', 'AWS', 'Docker']",['Linux'],"['Git', 'Bash', 'Python', 'Ansible', 'Terraform']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['AWS', 'R', 'Amazon Machine Learning (ML) Services']",,"['Oracle', 'SQL', 'T-SQL', 'Python']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Warszawa,"['Kafka', 'Git', 'Team City', 'Redis', 'Octopus', 'Mongo DB', 'JIRA', 'Microsoft SQL Server']",['Windows'],"['Pandas', 'Python', 'Numpy', 'AWS', 'Kubernetes']",False
+['full-time'],['home office work'],['mid'],Gdynia,,,"['SQL', 'Tableau', 'Python', 'R']",False
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,,,"['C#', 'JavaScript', 'Python', 'Docker']",False
+['full-time'],['hybrid work'],['senior'],Katowice,['Windows'],,"['SQL', 'SharePoint', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Wrocław,['SQL'],,"['Java', 'Python', 'JavaScript']",False
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['Github', 'Terraform', 'Python', 'AWS']",True
+['full-time'],['home office work'],['senior'],Gdynia,['SQL'],,"['Go', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,"['Windows', 'Linux']",,"['SQL', 'Python']",False
+['full-time'],['home office work'],['senior'],Warszawa,"['Kafka', 'PubSub', 'Kubernetes', 'Terraform', 'Docker']",,"['SQL', 'Python']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,['Linux'],,"['SQL', 'Python']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,"['OMX', 'FFmpeg', 'RISC-V', 'ARM', 'GStreamer']",['Linux'],"['STL', 'Git', 'Python', 'V4L2', 'C++']",False
+['full-time'],['hybrid work'],['senior'],Kraków,,,"['SQL', 'Python', 'DataBricks', 'Power BI']",False
+['full-time'],['home office work'],['senior'],Warszawa,"['NextJS', 'React']",,"['Pandas', 'Python', 'PostgreSQL', 'Prefect', 'Airflow']",True
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Wrocław,,,"['C++', 'Python', 'C']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Google Cloud Platform', 'Airflow', 'Microsoft Azure', 'AWS']",['Windows'],"['SQL', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Java', 'Hadoop', 'Scala', 'Apache Spark']",,"['Pandas', 'Python']",True
+['full-time'],['hybrid work'],['mid'],Gliwice,"['Microsoft Power BI', 'AWS', 'Docker']",['Windows'],"['Pandas', 'Python']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Kraków,,,"['SQL', 'Python']",True
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,,,"['SQL', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,['Windows'],,"['Jira', 'Python']",True
+['full-time'],['home office work'],['mid'],Warszawa,,,"['SQL', 'Python']",True
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']",['mid'],Warszawa,"['Rust', 'HTML', 'Bash', 'JavaScript', 'C++']",['Linux'],"['Python', 'C']",False
+['full-time'],['hybrid work'],['senior'],Kraków,,,"['Google Cloud Platform', 'JavaScript', 'Python']",False
+['full-time'],['hybrid work'],['senior'],Kraków,"['Windows', 'Linux']",,"['Google Cloud Platform', 'Linux', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Kraków,,,"['Python', 'VBA', 'R', 'Matlab', 'C++']",True
+['full-time'],['home office work'],['mid'],Wrocław,['AWS'],['macOS'],"['SQL', 'Python']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Warszawa,"['IBM Modeller/SPSS', 'SAS', 'Java', 'R', 'RapidMiner', 'Statistica', 'Groovy', 'KNIME']",,"['SQL', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Kraków,"['Java', 'Scala', 'C++']",['macOS'],"['SQL', 'Python']",False
+['full-time'],['hybrid work'],['senior'],Warszawa,['Windows'],,"['SQL', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Kraków,['Yocto'],['Linux'],"['GitLab', 'Python']",True
+['pełny etat'],['praca hybrydowa'],"['mid', 'senior']",Warszawa,"['Google Cloud Platform', 'Terraform', 'Airflow']",,"['Python', 'Kubernetes']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,,,"['Hadoop', 'Python']",False
+['full-time'],['hybrid work'],"['mid', 'senior']",Kraków,,,"['SQL', 'Python']",True
+['full-time'],['hybrid work'],['senior'],Warszawa,"['Windows', 'Linux']",,"['Ansible', 'Python']",True
+['część etatu'],['praca hybrydowa'],['trainee'],Warszawa,['AWS'],,"['Python', 'SAS']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Wrocław,['Windows'],,"['C#', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Kraków,"['Ruby', 'Perl', 'Python', 'Java', 'Terraform', 'Go']","['Windows', 'macOS', 'Linux']","['PowerShell', 'Linux', 'Bash', 'Python', 'MacOS', 'Windows Server']",True
+['pełny etat'],['praca hybrydowa'],['lead'],Kraków,"['Java', 'Docker', 'JavaScript', 'Groovy']",['Windows'],"['Spock', 'Cypress', 'Python', 'Groovy']",False
+['pełny etat'],['praca hybrydowa'],"['senior', 'expert']",Warszawa,"['Zabbix/Nagios', 'Jenkins', 'GitLab', 'Terraform', 'Docker', 'OpenShift', 'Grafana', 'HashiCorp Vault/ HashiCorp Consul', 'Gerrit', 'Ansible', 'Prometheus', '* Jenkins', 'Satellite', 'Kubernetes']",['Linux'],"['Perl', 'Python', 'Linux', 'Bash']",True
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Splunk', 'Jira']",,"['.NET', 'C#', 'Python']",False
+['full-time'],['home office work'],['mid'],Warszawa,['Windows'],,"['SQL', 'Python', 'Microsoft Azure']",True
+['full-time'],['hybrid work'],"['mid', 'senior']",Warszawa,,,"['SQL', 'Python', 'SAS']",False
+['full-time'],['home office work'],['mid'],Warszawa,"['Kafka', 'Jenkins', 'Jira', 'Git', 'GitLab', 'Docker', 'Terraform', 'Airflow', 'JetBrains IDEs']",,"['Spark', 'SQL', 'Python']",True
+['pełny etat'],['praca zdalna'],"['senior', 'expert']",Gdańsk,,,"['SQL', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Kafka', 'Hashicorp', 'SageMaker', 'DBT', 'OpenTelemetry', 'Airflow', 'ElasticSearch']",,"['Bamboo', 'Git', 'Python', 'Terraform', 'AWS']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Java', 'Red Hat']","['Windows', 'Linux']","['Oracle', 'Python']",True
+"['część etatu, pełny etat']",['praca hybrydowa'],['junior'],Warszawa,['Windows'],,"['R', 'Python']",True
+['pełny etat'],['praca zdalna'],"['junior', 'mid']",Warszawa,['Linux'],,"['SQL', 'Python', 'JavaScript']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,,,"['SQL', 'R', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['PowerShell', 'Python', 'Bash', 'AWS']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Gdańsk,,,"['SQL', 'Python']",False
+['full-time'],['hybrid work'],"['senior', 'expert']",Warszawa,,,"['Python', 'SAS']",False
+['pełny etat'],['praca zdalna'],['mid'],Kraków,['macOS'],,"['SQL', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Poznań,,,"['Python', 'JavaScript']",False
+['full-time'],['hybrid work'],['senior'],Kraków,['Python'],,"['SQL', 'Python', 'R', 'Tableau', 'PowerBI']",False
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,,,['Python'],False
+['full-time'],['hybrid work'],['mid'],Kraków,,,['Python'],True
+['full-time'],['home office work'],"['mid', 'senior']",Warszawa,"['PyTorch', 'TensorFlow', 'spaCy']",,['Python'],True
+['full-time'],['hybrid work'],['mid'],Wrocław,['Windows'],,['Python'],True
+['full-time'],['home office work'],['mid'],Gdańsk,,,"['SQL', 'Python']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Poznań,"['TensorFlow', 'Jira', 'Git', 'OpenCV']",['Windows'],"['Python', 'C++']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Windows', 'Linux']",,"['Ansible', 'Python']",True
+['full-time'],['hybrid work'],['senior'],Warszawa,"['KDB', 'Microsoft Azure', 'OneTick', 'Java', 'Docker', 'Snowflake', 'Google Cloud Platform', 'Redshift', 'Microsoft SQL Server', 'PostgreSQL', 'C#', 'Airflow', 'AWS', 'Kubernetes']","['Windows', 'Linux']",['Python'],False
+['full-time'],['home office work'],['mid'],Warszawa,"['Snowflake Data Cloud', 'Apache Airflow', 'Apache Spark', 'AWS']",,['Python'],False
+['full-time'],['hybrid work'],['manager'],Warszawa,['Windows'],,['Python'],False
+"['część etatu, pełny etat']",['praca zdalna'],['junior'],Wrocław,,,"['Git', 'Python', 'Django']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Gdańsk,"['Databricks', 'Power BI']",,"['SQL', 'R', 'Python']",False
+['część etatu'],['praca hybrydowa'],['trainee'],Warszawa,['Windows'],,"['SQL', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['macOS', 'Windows']",,"['Vue.js', 'Python']",True
+['pełny etat'],['praca hybrydowa'],['junior'],Warszawa,,,"['SQL', 'Python']",False
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,,,['Python'],False
+['full-time'],['hybrid work'],['mid'],Kraków,,,['Python'],False
+['full-time'],['hybrid work'],['mid'],Gliwice,['Postman'],['Linux'],['Python'],False
+['full-time'],['home office work'],['mid'],Kraków,,,['Python'],False
+"['część etatu, pełny etat']",['praca hybrydowa'],['assistant'],Warszawa,"['R Shiny', 'SQL', 'Python Dash', 'R', 'JavaScript']",['Windows'],['Python'],True
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,,,"['SQL', 'Python']",False
+['full-time'],"['home office work', 'hybrid work']","['mid', 'senior']",Kraków,"['GMock', 'Google Test']",,"['Bash', 'Python']",True
+['pełny etat'],['praca hybrydowa'],['mid'],Dąbrowa Górnicza,"['SQL', 'Python', 'C++']",['Windows'],"['.NET', 'C#']",False
+['pełny etat'],"['praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Warszawa,['Linux'],,['Python'],False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,['Python'],False
+['full-time'],['hybrid work'],['mid'],Warszawa,['SQL'],,['Python'],False
+['full-time'],['hybrid work'],['senior'],Kraków,,,['Python'],True
+['full-time'],['hybrid work'],['expert'],Warszawa,,,['Python'],False
+['full-time'],['hybrid work'],['senior'],Warszawa,,,"['SQL', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['PyTest', 'Linux', 'Python', 'PySpark', 'C']",True
+['pełny etat'],['praca zdalna'],"['mid', 'senior']",Warszawa,"['Google Cloud Platform', 'Cassandra', 'Microsoft Azure', 'PostgreSQL', 'MySQL', 'MongoDB', 'AWS']",,"['Pandas', 'Apache Spark', 'Docker', 'Hadoop', 'TensorFlow', 'Python', 'NumPy', 'scikit-learn']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['React.js', 'Google Cloud Platform', 'SQL', 'Python', 'JavaScript']",False
+['pełny etat'],['praca zdalna'],['mid'],Kraków,,,"['Akka', 'Trello', 'noSQL', 'Git', 'Jira', 'Doobie', 'Bitbucket', 'JavaScript', 'SQL', 'Scala', 'Python', 'TypeScript', 'Postgres', 'Confluence', 'BigQuery']",False
+['pełny etat'],['praca zdalna'],['lead'],Warszawa,,,"['React.js', 'Google Cloud Platform', 'SQL', 'Python', 'JavaScript']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,,,"['Pandas', 'Jenkins', 'Joblib', 'Celary', 'Oracle', 'Docker', 'SQL', 'Python', 'spaCy', 'PostgreSQL', 'MongoDB', 'AWS', 'Kubernetes']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa', 'praca stacjonarna']","['mid', 'senior']",Warszawa,"['Apache', 'FastAPI', 'Nginx']","['Windows', 'Linux']","['CSS', 'SQL', 'HTML', 'Python', 'JavaScript']",False
+['pełny etat'],['praca hybrydowa'],['senior'],Warszawa,['AWS'],['Linux'],"['Snowflake Data Cloud', 'Jira', 'Python', 'Confluence', 'Unix', 'MySQL', 'Docker']",False
+['pełny etat'],"['praca zdalna', 'praca hybrydowa']",['mid'],Katowice,['Windows'],,"['Microsoft Excel', 'Jira', 'Python']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Gdańsk,"['Microsoft Excel', 'Flutter', 'Linux', 'PostgreSQL', 'MySQL', 'Ubuntu']","['Windows', 'Linux']","['Visual Studio Code', 'Git', 'Python']",False
+['full-time'],['hybrid work'],['mid'],Warszawa,"['Jenkins', 'Docker', 'Ansible', 'ElasticSearch', 'FluxDB', 'CMake']",,['Python'],True
+['full-time'],['hybrid work'],['junior'],Poznań,,,"['MySQL', 'OpenStack', 'Python', 'Kubernetes']",False
+['full-time'],['home office work'],['senior'],Gdańsk,['Kubernetes'],,"['Docker', 'Git', 'Python', 'Django']",False
+['full-time'],['full office work'],['junior'],Gliwice,,,"['React.js', 'Python', 'TypeScript', 'JavaScript', 'Django']",False
+['pełny etat'],['praca zdalna'],['lead'],Kraków,['Google Cloud Platform'],['macOS'],"['SQL', 'Teamcity', 'Python', 'K8s', 'Ansible', 'Docker']",False
+['pełny etat'],['praca hybrydowa'],['mid'],Warszawa,"['Elasticsearch', 'Postgress', 'Microsoft SQL Server']",,"['React', 'MongoDB', 'Python', 'Django']",False
+['full-time'],['home office work'],['senior'],Kraków,,,"['AWS', 'Python']",True
+['full-time'],['hybrid work'],['mid'],Warszawa,,,"['React Native', 'Redis', 'JavaScript', 'Docker', 'SQL', 'Microsoft SQL Server', 'Python', 'PostgreSQL', 'MongoDB']",False
+['pełny etat'],['praca zdalna'],['senior'],Kraków,"['Jenkins', 'Git', 'Marshmallow', 'Firebase', 'Docker']",,"['Pytest', 'DynamoDB', 'Python', 'AWS', 'CloudFormation']",False
+['full-time'],['home office work'],['mid'],Warszawa,"['macOS', 'Windows', 'Linux']",,"['PostgreSQL', 'SQL', 'Python']",True
+['full-time'],['home office work'],['senior'],Wrocław,,,"['AWS', 'Git', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Salesforce', 'Kibana', 'TeamCity', 'Cucumber', 'Jenkins', 'Graylog']",,"['Selenium', 'Robot Framework', 'Python']",True
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Angular', 'React Native']",,"['Flask', 'Python', 'AWS', 'Django']",False
+['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['PostgreSQL', 'MySQL']",,"['Linux', 'Python']",False
+['pełny etat'],['praca zdalna'],['senior'],Warszawa,,,"['PostgreSQL', 'REST API', 'Python', 'Django']",False
+['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['PostgreSQL', 'Redis', 'Microsoft Power BI', 'BigQuery']",,"['Google Cloud Platform', 'Python', 'Docker']",True
+['pełny etat'],['praca zdalna'],['senior'],Kraków,"['Google Cloud Platform', 'Django']",['macOS'],"['Teamcity', 'Python', 'K8s', 'Ansible', 'Docker']",False
+['full-time'],['home office work'],['mid'],Gdańsk,"['CSS', 'Angular', 'HTML']",,"['Git', 'Python', 'Django']",False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,['SAS'],,"['data engineering', 'Python']",False
+['full-time'],['home office work'],['senior'],Kraków,['Kotlin'],,"['SQL', 'Python', 'AWS', 'Docker']",True
+['full-time'],['home office work'],['mid'],Kraków,['AWS'],,"['SQL', 'Python']",False
+['full-time'],"['home office work', 'hybrid work']",['mid'],Wrocław,"['Google Cloud Platform', 'Cassandra', 'PostgreSQL', 'MySQL', 'AWS', 'Django']",,"['SQL', 'Python']",True
+['full-time'],['home office work'],['mid'],Bielsko-Biała,,,"['SQL', 'Python']",False
+['pełny etat'],['praca stacjonarna'],"['mid', 'senior']",Warszawa,"['Keycloak', 'Redis', 'Celery']",,"['REST API', 'SQL', 'Python', 'RabbitMQ', 'Fastapi', 'Docker']",False
+[],['home office work'],['mid'],Gdańsk,"['REST', 'Flask', 'Git']",,"['Vue.js', 'Python']",True
+['full-time'],"['home office work', 'hybrid work', 'full office work']",['mid'],Poznań,"['Google Cloud Platform', 'Kubernetes']",['Linux'],"['Oracle', 'Postgres', 'Python']",True
 ['full-time'],['home office work'],['mid'],Warszawa,['Kafka'],,['Python'],False
-['pełny etat'],['praca stacjonarna'],['mid'],Warszawa,"['MySQL', 'Docker', 'PostgreSQL']",['Linux'],"['Linux', 'Python']",False
-['pełny etat'],['praca zdalna'],['mid'],Warszawa,"['Cucumber', 'TeamCity', 'Graylog', 'Jenkins', 'Salesforce', 'Kibana']",,"['Python', 'Selenium', 'Robot Framework']",True
+['pełny etat'],['praca hybrydowa'],['mid'],Sopot,,,"['SQL', 'PySpark', 'Python']",False
+['pełny etat'],['praca zdalna'],['mid'],Wrocław,['Windows'],,['Python'],False
+['pełny etat'],['praca zdalna'],['mid'],Warszawa,,,"['Python', 'SAS']",False
