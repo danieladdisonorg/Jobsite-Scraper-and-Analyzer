@@ -116,12 +116,10 @@ def removing_duplicates(skills: set[str]) -> list[str]:
     return list(unq_words)
 
 
-def parentheses_value(v: str) -> list[str]:
-    """Get value that is in parentheses"""
-    parenth_value = re.findall(r"\(([^)]+)\)", v)
-
-    # split if we have several values
-    return parenth_value[0].split(", ") if parenth_value else []
+def get_contracts(v: str) -> list[str]:
+    """Get employment contracts for example B2B or employment contract"""
+    contracts = re.sub(r"\(([^)]+)\)", "", v)
+    return contracts.split(", ")
 
 
 def split_on_dot(v: str) -> list[str]:
@@ -135,9 +133,10 @@ def contracts_to_english(contracts: list[str]) -> list[str]:
     :return:
     """
     contacts_eng = {
-        "pełny etat": "full-time",
-        "część etatu": "part time",
-        "dodatkowa / tymczasowa": "additional / temporary",
+        "pełny etat": "contract of employment",
+        "część etatu": "B2B contract",
+        "umowa o dzieło": "contract for specific work",
+        "umowa o staż / praktyki": "internship / apprenticeship contract",
     }
     return [contacts_eng.get(contract, contract) for contract in contracts]
 
@@ -173,7 +172,7 @@ class VacancyItem(scrapy.Item):
     )
     contracts = Field(
         serializer=lambda v: contracts_to_english(
-            parentheses_value(v)
+            get_contracts(v)
         )
     )
     location = Field(
