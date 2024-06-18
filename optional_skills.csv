@@ -1,0 +1,321 @@
+skills,count
+Python,124
+Windows,74
+Linux,50
+AWS,36
+Java,32
+Docker,32
+JavaScript,25
+Bash,23
+Kubernetes,23
+Jenkins,20
+SQL,19
+Git,19
+C,19
+Google Cloud Platform,19
+Postgres,17
+Jira,17
+Kafka,16
+Microsoft Azure,15
+Terraform,14
+Ansible,14
+React,13
+Grafana,10
+MySQL,10
+Perl,10
+GitLab,10
+R,9
+Airflow,8
+Go,8
+macOS,8
+Scala,8
+SAS,7
+Tensorflow,7
+VMware,7
+TypeScript,7
+Elasticsearch,7
+Angular,7
+Apache Spark,7
+Redis,6
+Tableau,6
+Prometheus,6
+PowerShell,6
+Rust,6
+Confluence,6
+Palo Alto,6
+GoLang,5
+Azure,5
+Node.js,5
+Kotlin,5
+Vue.js,5
+Django,5
+Azure DevOps,5
+PHP,5
+Microsoft Power BI,5
+Databricks,5
+.NET,5
+Cassandra,4
+Check Point,4
+PowerBI,4
+HTTP,4
+Flask,4
+RabbitMQ,4
+Fortinet,4
+MongoDB,4
+PyTorch,4
+UML,4
+Machine Learning,4
+Microsoft SQL Server,4
+Oracle,4
+Pandas,4
+Kibana,4
+HTML,4
+Snowflake Data Cloud,4
+Cisco,4
+DevOps,3
+Puppet,3
+Groovy,3
+NumPy,3
+Power Automate,3
+CSS,3
+Hadoop,3
+Artifactory,3
+Selenium,3
+TeamCity,3
+Power Apps,3
+CAKE,3
+BigQuery,3
+Kubeflow,3
+Boost,3
+MLOPS,3
+OpenCV,2
+MATLAB,2
+Big Data,2
+Cucumber,2
+SageMaker,2
+Hibernate,2
+ForgeRock,2
+Delta Lake,2
+RISC-V,2
+Streamlit,2
+Protocols,2
+GitHub,2
+ArgoCD,2
+Celery,2
+Bitbucket,2
+Hashicorp,2
+Microsoft Fabric,2
+Apache Airflow,2
+CyberArk,2
+Linux Kernel,2
+Red Hat,2
+OpenProject,2
+GraphQL,2
+SailPoint,2
+Apache Kafka,2
+CMake 3,2
+OpenTelemetry,2
+Robot Framework,2
+Windows Server,2
+Juniper,2
+Salesforce,2
+SAP HANA,2
+Power Platform,2
+Datadog,2
+Logstash,2
+Hyper-V,2
+Lua,2
+Maven,2
+CI/CD,2
+IBM,2
+Nexus,2
+Ruby,2
+JS,2
+Keras,2
+DBT,2
+CA,2
+DB2,2
+Gerrit,2
+Zabbix,2
+NextJS,2
+OpenGl,2
+Unix,2
+Conan,2
+Loki,2
+Figma,2
+Chef,2
+ARM,2
+Hyperledger,1
+DAX,1
+SPI,1
+OMX,1
+Artillery.io,1
+AWS ECS/EKS,1
+Marshmallow,1
+React Native,1
+Apache Flink,1
+KQL (KUSTO),1
+WebAssembly,1
+Google Test,1
+Raspberry Pi,1
+Falcon,1
+Statistica,1
+FIDO,1
+Sops,1
+GLSL,1
+Clang-Tidy,1
+Cloudflare,1
+containers,1
+WebSockets,1
+Terragrunt,1
+Metricbeat,1
+Helm,1
+ELK,1
+Xray,1
+OpenSearch,1
+RapidMiner,1
+Networking,1
+MQTT,1
+IaC,1
+I2C,1
+IoT,1
+automotive,1
+KDB,1
+GCP,1
+Google Tag Manager,1
+System On a Chip,1
+SSL,1
+Spring Framework,1
+Google Big Query,1
+Performance tests,1
+MS Service Broker,1
+IBM Modeller/SPSS,1
+Apache ServiceMix,1
+Open Flow Protocol,1
+Azure Data Factory,1
+scikit-learn,1
+Cross-Site Scripting,1
+AI,1
+Broadcast Automation,1
+VM,1
+P4,1
+Verifiable Credentials,1
+Google Cloud Monitoring,1
+Go programming languages,1
+Data Distribution Service,1
+Certyfikat ISTQB,1
+Active Directory,1
+Power Management,1
+VictoriaMetrics,1
+WebTransport,1
+AWS IoT Core,1
+Dash,1
+Torch/PyTorch,1
+Apache Pulsar,1
+JWT,1
+Azure IoT Hub,1
+Azure Synapse,1
+JetBrains IDEs,1
+AWX,1
+Android Kernel,1
+ETL,1
+Design Patterns,1
+PWA,1
+Microsoft Excel,1
+SD-WAN concepts,1
+Apache ActiveMQ,1
+QML,1
+Buffer Overflow,1
+OpenShift,1
+OpenStack,1
+Llamasoft,1
+Flutter,1
+Yocto,1
+FastAPI,1
+KNIME,1
+OneTick,1
+Proxmox,1
+Scrum,1
+Shell,1
+Fargate,1
+nUnit,1
+MSSQL,1
+Postman,1
+Arduino,1
+Pi Pico,1
+Tempo,1
+SELinux,1
+Scali,1
+Graylog,1
+R Shiny,1
+LaTex,1
+GPG/PGP,1
+Octopus,1
+Kinesis,1
+Icinga2,1
+SciKit,1
+PubSub,1
+FFmpeg,1
+OpenID,1
+Podman,1
+Erlang,1
+Apache,1
+Ubuntu,1
+Elixir,1
+Lambda,1
+Tomcat,1
+Looker,1
+Gradle,1
+Splunk,1
+T-SQL,1
+spaCy,1
+ISO mDL,1
+Android,1
+Laravel,1
+Shiny R,1
+Nginx,1
+Curiosity,1
+GNU Make,1
+Agile,1
+Redshift,1
+REST,1
+Robocorp,1
+QUIC,1
+CoAP,1
+NgRx,1
+ONNX,1
+IBCS,1
+Hive,1
+DynaTrace,1
+Snowflake,1
+Functions,1
+ELK stack,1
+FluxDB,1
+GStreamer,1
+OSI model,1
+JSON,1
+WordPress,1
+Caffe,1
+LwM2M,1
+Redux,1
+Keycloak,1
+Camel,1
+GTest,1
+Mimir,1
+MariaDB,1
+Cloud,1
+Foreman,1
+GMock,1
+OpenAPI,1
+JMESPath,1
+Jfrog,1
+oVirt,1
+REST API,1
+AWS Glue,1
+Kubecost,1
+Firebase,1
+Istio,1
+Filebeat,1
+CircleCI,1
+IntelliJ,1
+Amazon Machine Learning (ML) Services,1
