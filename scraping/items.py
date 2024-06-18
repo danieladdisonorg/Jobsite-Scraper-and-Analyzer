@@ -116,17 +116,47 @@ def removing_duplicates(skills: set[str]) -> list[str]:
     return list(unq_words)
 
 
-def parentheses_value(v: str) -> list[str]:
-    """Get value that is in parentheses"""
-    return re.findall(r"\(([^)]+)\)", v)
+def get_contracts(v: str) -> list[str]:
+    """Get employment contracts for example B2B or employment contract"""
+    contracts = re.sub(r"\(([^)]+)\)", "", v)
+    return contracts.split(", ")
 
 
 def split_on_dot(v: str) -> list[str]:
     return v.split(" • ")
 
 
-def first_integer(value: str) -> int:
-    return int(value.split()[0]) if value else 0
+def contracts_to_english(contracts: list[str]) -> list[str]:
+    """
+    Convert 'contracts' polish values to english one.
+    :param contracts:
+    :return:
+    """
+    contacts_eng = {
+        "pełny etat": "contract of employment",
+        "część etatu": "B2B contract",
+        "umowa o dzieło": "contract for specific work",
+        "umowa o staż / praktyki": "internship / apprenticeship contract",
+    }
+    return [contacts_eng.get(contract, contract) for contract in contracts]
+
+
+def employment_to_english(employments: list[str]) -> list[str]:
+    """
+    Convert 'employments' polish values to english one.
+    :param employments:
+    :return:
+    """
+    employments_eng = {
+        "praca stacjonarna": "full office work",
+        "część etatu": "part time",
+        "praca hybrydowa": "hybrid work",
+        "praca zdalna": "home office work",
+    }
+    return [
+        employments_eng.get(employment, employment)
+        for employment in employments
+    ]
 
 
 class VacancyItem(scrapy.Item):
@@ -135,8 +165,16 @@ class VacancyItem(scrapy.Item):
     optional_skills = Field(serializer=lambda v: list(v) if v else None)
     os = Field(serializer=lambda v: v if v else None)
     level_of_exp = Field(serializer=split_on_dot)
-    employment_type = Field(serializer=split_on_dot)
-    contracts = Field(serializer=parentheses_value)
+    employment_type = Field(
+        serializer=lambda v: employment_to_english(
+            split_on_dot(v)
+        )
+    )
+    contracts = Field(
+        serializer=lambda v: contracts_to_english(
+            get_contracts(v)
+        )
+    )
     location = Field(
         serializer=lambda v: v.split(", ")[0]
     )
