@@ -152,6 +152,7 @@ def employment_to_english(employments: list[str]) -> list[str]:
         "część etatu": "part time",
         "praca hybrydowa": "hybrid work",
         "praca zdalna": "home office work",
+        "praca mobilna": "mobile work",
     }
     return [
         employments_eng.get(employment, employment)
