@@ -102,5 +102,5 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 # scrapy-selenium configurations
 SELENIUM_DRIVER_NAME = "chrome"
+SELENIUM_DRIVER_ARGUMENTS = ["--headless"]
 SELENIUM_DRIVER_EXECUTABLE_PATH = which("chromedriver")
-SELENIUM_DRIVER_ARGUMENTS = []

@@ -118,7 +118,9 @@ def removing_duplicates(skills: set[str]) -> list[str]:
 
 def get_contracts(v: str) -> list[str]:
     """Get employment contracts for example B2B or employment contract"""
-    contracts = re.sub(r"\(([^)]+)\)", "", v)
+    # replace values in parentheses with space like
+    #  kontrakt B2B (pełny etat) ->  kontrakt B2B
+    contracts = re.sub(r"( \([^)]*\))", "", v)
     return contracts.split(", ")
 
 
@@ -133,8 +135,11 @@ def contracts_to_english(contracts: list[str]) -> list[str]:
     :return:
     """
     contacts_eng = {
-        "pełny etat": "contract of employment",
-        "część etatu": "B2B contract",
+        "umowa o pracę": "contract of employment",
+        "umowa zlecenie": "mandate contract",
+        "umowa na zastępstwo": "replacement contract",
+        "kontrakt B2B": "B2B contract",
+        "umowa o pracę tymczasową": "temporary employment contract",
         "umowa o dzieło": "contract for specific work",
         "umowa o staż / praktyki": "internship / apprenticeship contract",
     }
