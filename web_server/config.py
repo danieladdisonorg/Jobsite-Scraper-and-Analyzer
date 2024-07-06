@@ -7,6 +7,9 @@ dotenv.load_dotenv()
 class Config:
     basedir = os.path.abspath(os.path.dirname(__file__))
 
+    # Scheduling scraping x number of days
+    SCRAPING_EVERY_NUM_DAY = 7
+
     # database configurations
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "db.sqlite3")
     # SQLALCHEMY_TRACK_MODIFICATIONS = False
