@@ -1,10 +1,10 @@
 from sqlalchemy import (
     Column,
     String,
-    DateTime,
+    Date,
     Integer
 )
-from datetime import datetime
+from datetime import date
 
 from web_server.db.connnect_db import Base
 
@@ -19,4 +19,4 @@ class DiagramFileMetaData(Base):
         index=True,
         nullable=True
     )
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(Date, default=date.today())
