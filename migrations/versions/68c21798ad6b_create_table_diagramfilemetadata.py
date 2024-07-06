@@ -1,8 +1,8 @@
-"""Create model DiagramFileMetaData
+"""Create table DiagramFileMetaData 
 
-Revision ID: 9754a26eabb7
+Revision ID: 68c21798ad6b
 Revises: 
-Create Date: 2024-07-05 11:42:59.671373
+Create Date: 2024-07-06 20:36:11.374135
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '9754a26eabb7'
+revision: str = '68c21798ad6b'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -23,7 +23,7 @@ def upgrade() -> None:
     op.create_table('DiagramFileMetaData',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('file_name', sa.String(length=300), nullable=True),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.Date(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_DiagramFileMetaData_file_name'), 'DiagramFileMetaData', ['file_name'], unique=True)
