@@ -6,17 +6,17 @@
 
 # useful for handling different item types with a single interface
 import os
+import dotenv
 from datetime import date
 from itemadapter import ItemAdapter
 from scrapy import Item, Spider
 
-from pyarrow import feather
 import pandas as pd
 
-from mysql import connector
-from mysql.connector import errorcode
-from common.db.models import DiagramFileMetaData
+from common.db.models import ScrapingResultFileMetaData
 from common.db.connnect_db import session
+
+dotenv.load_dotenv()
 
 
 class FeatherMySQLItemPipeline:
@@ -27,7 +27,7 @@ class FeatherMySQLItemPipeline:
     """
     def __init__(self) -> None:
         self.items = []
-        self.result_dir = "scraping_results"
+        self.result_dir = os.getenv("SCRAPING_RESULT_DIR")
 
     @staticmethod
     def serialize_item(item: Item) -> dict:
@@ -57,7 +57,7 @@ class FeatherMySQLItemPipeline:
         df.to_feather(path=os.path.join(self.result_dir, file_name))
 
         # save metadata about created scraping result in DB
-        result_metadata = DiagramFileMetaData(
+        result_metadata = ScrapingResultFileMetaData(
             file_name=file_name,
             created_at=created_at
         )
