@@ -2,7 +2,7 @@ import enum
 from datetime import date
 from datetime import timedelta
 from flask_wtf import FlaskForm
-from wtforms import ValidationError
+from wtforms import ValidationError, validators, Form
 from wtforms.fields import (
     DateField,
     SelectMultipleField,
@@ -11,25 +11,19 @@ from wtforms.fields import (
 )
 
 from web_server.config import Config
+from common.db.models import DiagramTypes
 
 
-class DiagramTypes(enum.Enum):
-    employment_type = "Employment type"
-    location = "Location"
-    optional_skills = "Optional skills"
-    required_skills = "Required skills"
-    o_s = "OS"
-    skills_by_level_of_exp = "Skills by level of experience"
-    ua_support = "UA support"
-
-
-class DiagramsQueryFilter(FlaskForm):
-    to_date = DateField(default=date.today())
+class DiagramsQueryFilter(Form):
+    to_date = DateField(
+        validators=[validators.Optional()]
+    )
     from_date = DateField(
-        default=date.today() - timedelta(days=Config.SCRAPING_EVERY_NUM_DAY)
+        validators=[validators.Optional()],
     )
     diagrams_about = SelectMultipleField(
-        choices=DiagramTypes,
+        choices=[(field.name, field.value) for field in DiagramTypes],
+        validators=[validators.Optional()]
     )
     submit = SubmitField()
 
