@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 import os
-from datetime import datetime
+from datetime import date
 from itemadapter import ItemAdapter
 from scrapy import Item, Spider
 
@@ -15,6 +15,8 @@ import pandas as pd
 
 from mysql import connector
 from mysql.connector import errorcode
+from common.db.models import DiagramFileMetaData
+from common.db.connnect_db import session
 
 
 class FeatherMySQLItemPipeline:
@@ -50,5 +52,14 @@ class FeatherMySQLItemPipeline:
         """
         df = pd.DataFrame(self.items)
 
-        file_name = f"vacancies_{datetime.utcnow().strftime('%Y_%m_%d')}.feather"
+        created_at = date.today().strftime('%Y_%m_%d')
+        file_name = f"vacancies_{created_at}.feather"
         df.to_feather(path=os.path.join(self.result_dir, file_name))
+
+        # save metadata about created scraping result in DB
+        result_metadata = DiagramFileMetaData(
+            file_name=file_name,
+            created_at=created_at
+        )
+        session.add(result_metadata)
+        session.commit()
