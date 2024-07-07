@@ -10,6 +10,9 @@ class Config:
     # Scheduling scraping x number of days
     SCRAPING_EVERY_NUM_DAY = 7
 
+    # directory in which scraping results are contained
+    SCRAPING_RESULT_DIR = os.getenv("SCRAPING_RESULT_DIR")
+
     # database configurations
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "db.sqlite3")
     # SQLALCHEMY_TRACK_MODIFICATIONS = False
