@@ -15,6 +15,7 @@ import pandas as pd
 
 from common.db.models import ScrapingResultFileMetaData
 from common.db.connnect_db import session
+from global_config import GlobalConfig
 
 dotenv.load_dotenv()
 
@@ -41,8 +42,10 @@ class FeatherMySQLItemPipeline:
             if field_name in item.fields
         }
 
-    def process_item(self, item: Item, spider: Spider) -> None:
-        self.items.append(item)
+    def process_item(self, item: Item, spider: Spider) -> Item:
+        serialized_item = self.serialize_item(item)
+        self.items.append(serialized_item)
+        return item
 
     def close_spider(self, spider: Spider) -> None:
         """
@@ -63,3 +66,4 @@ class FeatherMySQLItemPipeline:
         )
         session.add(result_metadata)
         session.commit()
+        session.close()
