@@ -1,5 +1,6 @@
 import os
 import dotenv
+from datetime import timedelta
 
 dotenv.load_dotenv()
 
@@ -7,11 +8,17 @@ dotenv.load_dotenv()
 class Config:
     basedir = os.path.abspath(os.path.dirname(__file__))
 
-    # Scheduling scraping x number of days
-    SCRAPING_EVERY_NUM_DAY = 7
+    # set cache time for querying DB for scraping data file names
+    # which allows users to choose files it wants to analyze
+    # and since we are scraping every number of day 'SCRAPING_EVERY_NUM_DAY'
+    # that means we will update choices for users as soon as new
+    # scraping data file is created
+    FILES_NAME_CHOICES_CACHE_TIME = timedelta(
+        days=float(os.getenv("SCRAPING_EVERY_NUM_DAY"))
+    )
+    EXPLAIN_TEMPLATE_LOADING = False
 
-    # directory in which scraping results are contained
-    SCRAPING_RESULT_DIR = os.getenv("SCRAPING_RESULT_DIR")
+    SECRET_KEY = os.getenv("SECRET_KEY")
 
     # database configurations
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "db.sqlite3")
@@ -30,6 +37,7 @@ class ProductionConfig(Config):
 
 class Debug(Config):
     DEBUG = True
+    EXPLAIN_TEMPLATE_LOADING = True
 
 
 config_dict = {"production": ProductionConfig, "debug": Debug}

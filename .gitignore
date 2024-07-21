@@ -8,6 +8,7 @@
 # custom ignores
 first_vacancy_url.txt
 vacancies.csv
+*.feather
 
 # User-specific stuff
 .idea/**/workspace.xml

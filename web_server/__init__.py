@@ -1,6 +1,8 @@
 from flask import Flask, g
 
 from common.db.connnect_db import session
+from web_server.routes import diagrams
+# from global_config import GlobalConfig
 
 
 def init_sqlalchemy(app: Flask) -> None:
@@ -17,7 +19,7 @@ def init_sqlalchemy(app: Flask) -> None:
             if not exception:
                 db.commit()
             else:
-                db.roolback()
+                db.rollback()
             db.close()
 
 
@@ -25,6 +27,7 @@ def init_app(config) -> Flask:
     app = Flask(__name__)
     app.config.from_object(config)
 
+    app.register_blueprint(diagrams)
     init_sqlalchemy(app)
 
     return app

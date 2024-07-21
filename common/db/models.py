@@ -1,27 +1,29 @@
-import enum
+import os
+import dotenv
 from sqlalchemy import (
     Column,
     String,
     Date,
     Integer,
-    Enum
+    func
 )
+from sqlalchemy.ext.hybrid import hybrid_property
 from datetime import date
 
 from common.db.connnect_db import Base
 
-
-class DiagramTypes(enum.Enum):
-    employment_type = "Employment type"
-    location = "Location"
-    optional_skills = "Optional skills"
-    required_skills = "Required skills"
-    o_s = "OS"
-    skills_by_level_of_exp = "Skills by level of experience"
-    ua_support = "UA support"
+dotenv.load_dotenv()
 
 
-class BaseFileMetaData:
+class ScrapingResultFileMetaData(Base):
+    """Model for saving metadata of scraping result"""
+    __tablename__ = "scraping_result_file_meta_data"
+    __table_args__ = (
+        {"info": {
+            "default_order_by": ["created_at"]
+        }}
+    )
+
     id = Column(Integer, primary_key=True)
     file_name = Column(
         String(300),
@@ -31,14 +33,19 @@ class BaseFileMetaData:
     )
     created_at = Column(Date, default=date.today())
 
+    @hybrid_property
+    def file_path(self):
+        file_path = os.path.join(
+            os.getenv("SCRAPING_RESULT_DIR"),
+            self.file_name
+        )
+        if os.path.exists(file_path):
+            return file_path
+        return FileNotFoundError(f"File does not exist: {file_path}")
 
-class DiagramFileMetaData(Base, BaseFileMetaData):
-    """Model for saving the results of scraping in jupyter file"""
-    __tablename__ = "diagram_file_meta_data"
-
-    diagram_type = Column(Enum(DiagramTypes), nullable=False, index=True)
-
-
-class ScrapingResultFileMetaData(Base, BaseFileMetaData):
-    """Model for saving metadata of scraping result"""
-    __tablename__ = "scraping_result_file_meta_data"
+    @file_path.expression
+    def file_path(cls):
+        """Enable 'file_path' to be used in querying"""
+        return func.concat(
+            os.getenv("SCRAPING_RESULT_DIR"), "/", cls.file_name
+        )

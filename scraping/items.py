@@ -136,7 +136,7 @@ def contracts_to_english(contracts: list[str]) -> list[str]:
     """
     contacts_eng = {
         "umowa o pracę": "contract of employment",
-        "umowa zlecenie": "mandate contract",
+        "umowa zlecenie": "contract of mandate",
         "umowa na zastępstwo": "replacement contract",
         "kontrakt B2B": "B2B contract",
         "umowa o pracę tymczasową": "temporary employment contract",
