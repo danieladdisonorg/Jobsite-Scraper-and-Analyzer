@@ -38,7 +38,8 @@ class VacancySkills:
         return re.compile(
             (
                 r"(?<!^)"  # ignore words at the beginning of a new line
-                fr"(?<!{not_start})(?<!{not_start} )\b"  # - Competitive | .Competitive
+                # - Competitive | .Competitive
+                fr"(?<!{not_start})(?<!{not_start} )\b"
                 # matching pattern
                 # capturing capitalize word
                 f"(?:{re_lang}*)+"
@@ -54,7 +55,9 @@ class VacancySkills:
 
     def get_skills(self) -> set:
         """Return set with skills"""
-        return set().union(*(self.filter_text(remove_tags(text)) for text in self.texts))
+        return set().union(*(
+            self.filter_text(remove_tags(text)) for text in self.texts)
+                           )
 
     def filter_text(self, text: str) -> set[str]:
         """Aims for getting skills from text, by finding capitalize words"""
