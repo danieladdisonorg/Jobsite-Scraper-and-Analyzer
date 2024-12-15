@@ -7,7 +7,6 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 import os
-from shutil import which
 from webdriver_manager .chrome import ChromeDriverManager
 
 

@@ -8,14 +8,12 @@
 import os
 import dotenv
 from datetime import date
-from itemadapter import ItemAdapter
 from scrapy import Item, Spider
 
 import pandas as pd
 
 from common.db.models import ScrapingResultFileMetaData
 from common.db.connnect_db import session
-from global_config import GlobalConfig
 
 dotenv.load_dotenv()
 
@@ -57,6 +55,9 @@ class FeatherMySQLItemPipeline:
 
         created_at = date.today().strftime('%Y_%m_%d')
         file_name = f"vacancies_{created_at}.feather"
+
+        # saving scraped data in feather file, because I do not have
+        # Cloud Storage where I could save files.
         df.to_feather(path=os.path.join(self.result_dir, file_name))
 
         # save metadata about created scraping result in DB
