@@ -2,7 +2,6 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-import time
 import os
 
 from scrapy.http import Response
@@ -132,17 +131,24 @@ class CacheUrlMiddleware:
     @classmethod
     def from_crawler(cls, crawler):
         middleware = cls()
-        crawler.signals.connect(middleware.spider_closed, signal=signals.spider_closed)
+        crawler.signals.connect(
+            middleware.spider_closed, signal=signals.spider_closed
+        )
         return middleware
 
-    def process_spider_input(self, response: Response, spider: Spider) -> Optional[None]:
+    def process_spider_input(
+            self,
+            response: Response,
+            spider: Spider
+    ) -> Optional[None]:
         # we do not want to cash response url which gets all vacancies
         if not self.first_vacancy_url and response.url != JOB_URL:
             # Remember the first vacancy URL
             self.first_vacancy_url = response.url
 
         if self.last_vacancy_url and response.url == self.last_vacancy_url:
-            # Stop processing further requests if we encounter the last vacancy URL
+            # Stop processing further requests if we
+            # encounter the last vacancy URL
             raise CloseSpider(
                 reason=f"Encountered last vacancy URL: {self.last_vacancy_url}"
             )

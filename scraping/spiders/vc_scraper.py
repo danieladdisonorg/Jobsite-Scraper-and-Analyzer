@@ -33,7 +33,10 @@ REQ_EXPECTED = "ul[data-test='section-requirements-expected'] li div::text"
 REQ_OPTIONAL = "ul[data-test='section-requirements-optional'] li div::text"
 
 # next pagination button
-NEXT_PAGE = "nav ul li a[data-test='anchor-nextPage'][data-disabled='false']::attr(href)"
+NEXT_PAGE = (
+    "nav ul li a[data-test='anchor-nextPage']"
+    "[data-disabled='false']::attr(href)"
+)
 LAST_PAGE_NUM = "nav ul li:nth-last-child(2) a::text"
 
 
@@ -73,16 +76,19 @@ class VacancyScraper(scrapy.Spider):
         skills = vc.css(".c1fj2x2p")
         # Ensure the list has exactly 3 elements, filling with '[]' if fewer
         skills = (skills + [[]] * 3)[:3]
-        required_skills, optional_skills, os = [tools.css(SKILLS).getall() if tools else [] for tools in skills]
+        required_skills, optional_skills, os = \
+            [tools.css(SKILLS).getall() if tools else [] for tools in skills
+             ]
 
         # get vacancy description
         requirements = vc.css(REQUIREMENTS)
         req_required = self.get_required_requirements(requirements)
         req_optional = self.get_optional_requirements(requirements)
 
-        # Fallback to using 'requirements' if no 'REQ_EXPECTED' found in html tags
-        # then we take whole text from vacancy description if 'requirements' are not
-        # divided as 'req_required' and 'req_optional'
+        # Fallback to using 'requirements' if no 'REQ_EXPECTED'
+        # found in html tags then we take whole text from vacancy
+        # description If 'requirements' are not divided
+        # as 'req_required' and 'req_optional'
         req_required = req_required if req_required else requirements.getall()
 
         # vacancy information
@@ -95,8 +101,10 @@ class VacancyScraper(scrapy.Spider):
                     req_optional
                 ).union(set(optional_skills)),
                 "os": os,
-                "level_of_exp": vc.css(LEVEL_OF_EXP).xpath(ANCESTOR_TEXT).get(),
-                "employment_type": vc.css(EMPLOYMENT_TYPE).xpath(ANCESTOR_TEXT).get(),
+                "level_of_exp": vc.css(LEVEL_OF_EXP).xpath(
+                    ANCESTOR_TEXT).get(),
+                "employment_type": vc.css(EMPLOYMENT_TYPE).xpath(
+                    ANCESTOR_TEXT).get(),
                 "contracts": vc.css(CONTRACTS_SALARY).get(),
                 "location": vc.css(LOCATION).xpath(ANCESTOR_TEXT).get(),
                 "ua_support": vc.css(UA_SUPPORT).xpath(ANCESTOR_TEXT).get(),
