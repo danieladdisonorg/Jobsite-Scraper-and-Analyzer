@@ -14,9 +14,6 @@ from w3lib.html import remove_tags
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
-from config import POSITION
-
-
 nltk.download("stopwords")
 
 
