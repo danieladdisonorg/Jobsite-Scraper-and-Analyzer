@@ -21,7 +21,9 @@ class Config:
     SECRET_KEY = os.getenv("SECRET_KEY")
 
     # database configurations
-    SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "db.sqlite3")
+    SQLALCHEMY_DATABASE_URL = (
+            "sqlite:///" + os.path.join(basedir, "db.sqlite3")
+    )
     # SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # PAGINATION_MAX_PER_PAGE = 10
@@ -29,7 +31,7 @@ class Config:
 
 class ProductionConfig(Config):
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URI")
+    SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
 
     SESSION_COOKIE_HTTPONLY = True
     REMEMBER_COOKIE_HTTPONLY = True

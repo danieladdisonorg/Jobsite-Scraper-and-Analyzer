@@ -16,6 +16,7 @@ dotenv.load_dotenv()
 
 # get directory path for saving results of scraping
 scraped_data = os.path.join("..", os.getenv("SCRAPING_RESULT_DIR"))
+# TODO: I can use Celery and Redis for processing intensive tasks
 
 
 def count_required_skills(df: pd.DataFrame) -> dict:
@@ -31,8 +32,8 @@ def count_required_skills(df: pd.DataFrame) -> dict:
     # optional_skills_counts = optional_skills.value_counts()
 
     # Remove duplicates, because we have scraped data not only
-    # from set up labels on website but also we have processed text requirements
-    # and update counts for optional and required skills
+    # from set up labels on website but
+    # also we have processed text requirements
     required_skills_dict = removing_duplicates(required_skills_counts)
     # optional_skills_dict = removing_duplicates(optional_skills_counts)
 
@@ -49,7 +50,8 @@ def count_optional_skills(df: pd.DataFrame) -> dict:
     optional_skills_counts = optional_skills.value_counts()
 
     # Remove duplicates, because we have scraped data not only
-    # from set up labels on website but also we have processed text requirements
+    # from set up labels on website but also
+    # we have processed text requirements
     # and update counts for optional and required skills
     optional_skills_dict = removing_duplicates(optional_skills_counts)
 
@@ -101,14 +103,19 @@ def skills_by_level_of_exp(df: pd.DataFrame) -> str:
     level_of_exp = from_column_to_data_frame(df, "level_of_exp")
     df_exp = df.merge(level_of_exp, right_index=True, left_index=True)
 
-    fig, axes = plt.subplots(len(level_of_exp.columns), 2, figsize=(20, len(level_of_exp.columns) * 5))
+    fig, axes = plt.subplots(
+        len(level_of_exp.columns),
+        2,
+        figsize=(20, len(level_of_exp.columns) * 5)
+    )
 
     for i, exp_level in enumerate(level_of_exp.columns):
         # filter 'df_exp' base on level of experience
         exp_level_df = df_exp[df_exp[exp_level] == 1]
 
         required_skills, optional_skills = (
-            get_required_skills(exp_level_df), get_optional_skills(exp_level_df)
+            get_required_skills(exp_level_df),
+            get_optional_skills(exp_level_df)
         )
 
         required_top_skills = required_skills.iloc[:30]
@@ -122,11 +129,14 @@ def skills_by_level_of_exp(df: pd.DataFrame) -> str:
         re_axe.bar(required_top_skills["skills"], required_top_skills["count"])
 
         re_axe.set_title((
-            f"TOP {len(required_top_skills)} Required Skills for {POSITION} Developer"
-            f" with level of expirience: {exp_level}. Base on {exp_level_df.shape[0]} job descriptions"
+            f"TOP {len(required_top_skills)} Required Skills "
+            f"for {POSITION} Developer. With level of experience: {exp_level}."
+            f"Base on {exp_level_df.shape[0]} job descriptions"
         ))
         re_axe.set_xticks(range(len(required_top_skills["skills"])))
-        re_axe.set_xticklabels(required_top_skills["skills"], rotation=45, ha="right")
+        re_axe.set_xticklabels(
+            required_top_skills["skills"], rotation=45, ha="right"
+        )
 
         max_count = required_top_skills["count"].max()
         # dynamically calculate the step which are going
@@ -141,11 +151,14 @@ def skills_by_level_of_exp(df: pd.DataFrame) -> str:
         op_axe.bar(optional_top_skills["skills"], optional_top_skills["count"])
 
         op_axe.set_title((
-            f"TOP {len(optional_top_skills)} Optional Skills for {POSITION} Developer"
-            f" with level of expirience: {exp_level}. Base on {len(exp_level_df['optional_skills'].dropna())} job descriptions"
+            f"TOP {len(optional_top_skills)} Optional Skills for "
+            f"{POSITION} Developer. With level of experience: {exp_level}. "
+            f"Base on {len(exp_level_df['optional_skills'].dropna())} "
+            "job descriptions"
         ))
         op_axe.set_xticks(range(len(optional_top_skills["skills"])))
-        op_axe.set_xticklabels(optional_top_skills["skills"], rotation=45, ha="right")
+        op_axe.set_xticklabels(
+            optional_top_skills["skills"], rotation=45, ha="right")
         op_axe.grid(True)
 
     diagram = get_result_diagram()
@@ -164,7 +177,8 @@ def top_required_skills(df: pd.DataFrame) -> str:
     plt.bar(top_skills.skills, top_skills["count"])
 
     plt.title(
-        f"TOP {top_skills.shape[0]} Required Skills for {POSITION} Developer (base on {required_skills.shape[0]} job descriptions)")
+        f"TOP {top_skills.shape[0]} Required Skills for {POSITION}"
+        f" Developer (base on {required_skills.shape[0]} job descriptions)")
     plt.xticks(rotation=45, ha="right")
     plt.ylabel("Counts")
     set_y_labels(top_skills["count"])
@@ -186,7 +200,8 @@ def top_optional_skills(df: pd.DataFrame) -> str:
     plt.bar(top_skills.skills, top_skills["count"])
 
     plt.title(
-        f"TOP {top_skills.shape[0]} Optional Skills for {POSITION} Developer (base on {optional_skills.shape[0]} job descriptions)")
+        f"TOP {top_skills.shape[0]} Optional Skills for {POSITION}"
+        f" Developer (base on {optional_skills.shape[0]} job descriptions)")
 
     plt.xticks(rotation=45, ha="right")
     plt.ylabel("Counts")
@@ -232,7 +247,10 @@ def compare_ua_support_values(df: pd.DataFrame) -> str:
         labels=("No UA Support", "UA Support"),
         textprops={"verticalalignment": "center"},
     )
-    plt.title(f"How many job vacancies are open for ukraines. Base on {df.shape[0]} job descriptions")
+    plt.title(
+        "How many job vacancies are open for ukrainians."
+        f" Base on {df.shape[0]} job descriptions"
+    )
 
     diagram = get_result_diagram()
     plt.close()
@@ -243,7 +261,9 @@ def compare_ua_support_values(df: pd.DataFrame) -> str:
 def get_top_locations(df: pd.DataFrame) -> str:
     """Get top 20 locations to work in Poland"""
 
-    locations_values = df["location"].value_counts().sort_values(ascending=False)
+    locations_values = df["location"].value_counts().sort_values(
+        ascending=False
+    )
     top_locations = locations_values.iloc[:10]
 
     fig, ax = plt.subplots(figsize=(15, 15))
@@ -255,7 +275,10 @@ def get_top_locations(df: pd.DataFrame) -> str:
         textprops={"verticalalignment": "center"},
         pctdistance=0.9
     )
-    ax.set_title(f"Location of job vacancies. Base on {df.shape[0]} job vacancies")
+    ax.set_title(
+        f"Location of job vacancies."
+        f" Base on {df.shape[0]} job vacancies"
+    )
 
     diagram = get_result_diagram()
     plt.close()

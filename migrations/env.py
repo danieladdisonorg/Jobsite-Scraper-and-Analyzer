@@ -28,7 +28,9 @@ if config.config_file_name is not None:
 target_metadata = Base.metadata
 
 # path to alembic.ini file
-config.set_main_option("config_file_name", os.path.join("alembic", "alembic.ini"))
+config.set_main_option(
+    "config_file_name", os.path.join("alembic", "alembic.ini")
+)
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
@@ -36,7 +38,7 @@ config.set_main_option("config_file_name", os.path.join("alembic", "alembic.ini"
 # ... etc.
 
 # get DB URL from environment variable
-db_url = os.getenv("DATABASE_URI")
+db_url = os.getenv("DATABASE_URL").replace("%", "%%")
 if db_url:
     config.set_main_option("sqlalchemy.url", db_url)
 

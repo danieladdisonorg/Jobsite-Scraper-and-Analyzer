@@ -1,7 +1,7 @@
 """Create table DiagramFileMetaData  and ScrapingResultFileMetaData
 
 Revision ID: c09617cc24ab
-Revises: 
+Revises:
 Create Date: 2024-07-09 21:48:30.785391
 
 """
