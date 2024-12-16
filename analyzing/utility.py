@@ -51,8 +51,8 @@ def get_result_diagram() -> str:
     """
     Instead saving diagram to computer memory, we are going to save diagram in
     io.BytesIO object, and to be able to view it on HTML page we are encoding
-    diagram BytesIO object to base64.b64encode and decoding to 'utf-8' text format
-    as standard for all web application.
+    diagram BytesIO object to base64.b64encode and decoding to 'utf-8' text
+    format as standard for all web application.
     :param diagram:
     :return:
     """
@@ -81,17 +81,23 @@ def removing_duplicates(tool_counts) -> dict:
             matches = process.extractBests(
                 tool,
                 tool_counts_sorted.index,
-                scorer=lambda str1, str2: fuzz.ratio(str1.lower(), str2.lower()),
+                scorer=lambda str1, str2: fuzz.ratio(
+                    str1.lower(), str2.lower()
+                ),
                 score_cutoff=70
             )
 
             # Filter out matches that are similar to the current tool
-            filtered_matches = {match for match, score in matches if match != tool and (
+            filtered_matches = {
+                match for match, score in matches if match != tool and (
                     match.lower().startswith(tool.lower()) or score >= 85
-            )}
+                    )
+            }
 
             # Add count of similar tools to the current tool
-            unq_words[tool] = count + sum(tool_counts[match] for match in filtered_matches)
+            unq_words[tool] = count + sum(
+                tool_counts[match] for match in filtered_matches
+            )
             duplicates |= filtered_matches
 
     return unq_words

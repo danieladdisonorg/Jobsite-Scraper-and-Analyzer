@@ -47,7 +47,9 @@ def set_file_names_in_cache(file_names: list) -> None:
     session["file_names_cache_time"] = datetime.utcnow()
 
 
-def set_query_form_file_names_choices(query_form: ScrapingDataQueryFilter) -> ScrapingDataQueryFilter:
+def set_query_form_file_names_choices(
+        query_form: ScrapingDataQueryFilter
+) -> ScrapingDataQueryFilter:
     file_names = get_file_names_from_cache()
     if file_names is None:
         # get file names from DB and cache it
@@ -67,21 +69,25 @@ def get_diagrams_img(file_paths: list[str]) -> dict:
         "skills_by_level_of_exp_diagram": skills_by_level_of_exp(df),
         "required_skills_diagram": top_required_skills(df),
         "optional_skills_diagram": top_optional_skills(df),
-        "level_of_exp_diagram": bar_compare_column_values(df, column="level_of_exp"),
-        "employment_type_diagram": bar_compare_column_values(df, column="employment_type"),
+        "level_of_exp_diagram": bar_compare_column_values(
+            df, column="level_of_exp"
+        ),
+        "employment_type_diagram": bar_compare_column_values(
+            df, column="employment_type"
+        ),
         "contracts_diagram": bar_compare_column_values(df, column="contracts"),
         "us_support_diagram": compare_ua_support_values(df),
         "locations_diagram": get_top_locations(df),
     }
 
 
-def diagrams_query_filtering(queryset, query_form: ScrapingDataQueryFilter) -> Query:
-    # scraping_metadata = select(ScrapingResultFileMetaData.file_path)
-
+def diagrams_query_filtering(
+        queryset, query_form: ScrapingDataQueryFilter
+) -> Query:
     if query_form.validate():
-        session["scraping_to_date"] = to_date = query_form.to_date.data
-        session["scraping_from_date"] = from_date = query_form.from_date.data
-        session["scraping_file_names"] = file_names = query_form.files_name.data
+        session["scrp_to_date"] = to_date = query_form.to_date.data
+        session["scrp_from_date"] = from_date = query_form.from_date.data
+        session["scrp_file_names"] = file_names = query_form.files_name.data
 
         if to_date:
             queryset = queryset.filter(
@@ -103,7 +109,9 @@ def diagrams_query_filtering(queryset, query_form: ScrapingDataQueryFilter) -> Q
 
 @diagrams.get("/scraping/diagrams")
 def get_diagrams():
-    scraping_data_form = ScrapingDataQueryFilter(request.args, prefix="scraping_")
+    scraping_data_form = ScrapingDataQueryFilter(
+        request.args, prefix="scraping_"
+    )
     # set choices for field 'file_names'
     scraping_data_form = set_query_form_file_names_choices(scraping_data_form)
     scraping_metadata = select(ScrapingResultFileMetaData.file_path)
@@ -115,9 +123,9 @@ def get_diagrams():
     )
 
     # set query form inputs with user values
-    scraping_data_form.to_date.data = session.get("scraping_to_date", None)
-    scraping_data_form.from_date.data = session.get("scraping_from_date", None)
-    scraping_data_form.files_name.data = session.get("scraping_file_names", None)
+    scraping_data_form.to_date.data = session.get("scrp_to_date", None)
+    scraping_data_form.from_date.data = session.get("scrp_from_date", None)
+    scraping_data_form.files_name.data = session.get("scrp_file_names", None)
 
     # get file paths to scraped data
     scraping_files_path = g.db.scalars(queryset).all()

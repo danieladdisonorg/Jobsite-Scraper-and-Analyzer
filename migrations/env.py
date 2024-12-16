@@ -28,7 +28,9 @@ if config.config_file_name is not None:
 target_metadata = Base.metadata
 
 # path to alembic.ini file
-config.set_main_option("config_file_name", os.path.join("alembic", "alembic.ini"))
+config.set_main_option(
+    "config_file_name", os.path.join("alembic", "alembic.ini")
+)
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

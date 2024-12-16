@@ -1,2 +1,2 @@
 [flake8]
-exclude = scraping\settings.py
+exclude = scraping\settings.py migrations\
