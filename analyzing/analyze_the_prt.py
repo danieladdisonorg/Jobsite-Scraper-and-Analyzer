@@ -16,6 +16,7 @@ dotenv.load_dotenv()
 
 # get directory path for saving results of scraping
 scraped_data = os.path.join("..", os.getenv("SCRAPING_RESULT_DIR"))
+# TODO: I can use Celery and Redis for processing intensive tasks
 
 
 def count_required_skills(df: pd.DataFrame) -> dict:
@@ -32,7 +33,6 @@ def count_required_skills(df: pd.DataFrame) -> dict:
 
     # Remove duplicates, because we have scraped data not only
     # from set up labels on website but also we have processed text requirements
-    # and update counts for optional and required skills
     required_skills_dict = removing_duplicates(required_skills_counts)
     # optional_skills_dict = removing_duplicates(optional_skills_counts)
 

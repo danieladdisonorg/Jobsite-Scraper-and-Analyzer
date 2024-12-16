@@ -39,7 +39,7 @@ def get_file_names_from_cache() -> None | list:
 
 
 def set_file_names_in_cache(file_names: list) -> None:
-    """ Set scraping data file names since we are creating scraped dat file
+    """ Set scraping data file names since we are creating scraped data file
     every 'SCRAPING_EVERY_NUM_DAY' there is not need to request file names for
     request
     """
@@ -55,6 +55,7 @@ def set_query_form_file_names_choices(query_form: ScrapingDataQueryFilter) -> Sc
             select(ScrapingResultFileMetaData.file_name)
         ).all()
         set_file_names_in_cache(file_names)
+
     query_form.files_name.choices = file_names
 
     return query_form

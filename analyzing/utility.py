@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from base64 import b64encode
-from ast import literal_eval
 
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
