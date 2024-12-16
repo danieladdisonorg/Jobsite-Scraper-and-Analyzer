@@ -1,0 +1,76 @@
+version: "3.8"
+
+services:
+
+  db:
+    image: mysql
+    env_file:
+      - .env
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+#    entrypoint: ["./scripts/wait-for-it.sh", "db:3306"]
+    command: >
+      sh -c "alembic --config migrations/alembic.ini upgrade head && gunicorn -b 0.0.0.0:5000 --timeout 1000 run:app"
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  celery_worker:
+    build: .
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    command: celery -A scraping worker --loglevel=INFO
+
+  celery_beat:
+    build: .
+    depends_on:
+      - celery_worker
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    command: celery -A scraping beat --loglevel=INFO
+
+#  flower:
+#    image: mher/flower
+#    ports:
+#      - "5555:5555"
+#    depends_on:
+#      - celery_worker
+#    command: ["--broker", "redis://redis:6379", "--port=5555"]
+volumes:
+  mysql_data:
