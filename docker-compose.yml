@@ -44,7 +44,7 @@ services:
     ports:
       - "6379:6379"
 
-  celery_worker:
+  celery_worker_scraping:
     build: .
     depends_on:
       - db
@@ -53,17 +53,29 @@ services:
       - .env
     volumes:
       - .:/usr/src/app
-    command: celery -A scraping worker --loglevel=INFO
+    command: celery -A main_celery.celery worker --loglevel=INFO -Q scraping_queue
 
-  celery_beat:
+  celery_worker_diagrams:
     build: .
     depends_on:
-      - celery_worker
+      - db
+      - redis
     env_file:
       - .env
     volumes:
       - .:/usr/src/app
-    command: celery -A scraping beat --loglevel=INFO
+    command: celery -A main_celery.celery worker --loglevel=INFO -Q diagrams_queue
+
+  celery_beat:
+    build: .
+    depends_on:
+      - celery_worker_diagrams
+      - celery_worker_scraping
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    command: celery -A main_celery.celery beat --loglevel=INFO
 
 #  flower:
 #    image: mher/flower
