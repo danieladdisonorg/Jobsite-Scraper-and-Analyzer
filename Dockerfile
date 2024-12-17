@@ -9,17 +9,17 @@ WORKDIR /usr/src/app
 
 COPY requirements.txt ./
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    cmake \
-    libtool
+# set non interactive frontend
+ENV DEBIAN_FRONTEND=noninteractive
 
-# Upgrade pip to avoid issues with old versions
-RUN pip install --upgrade pip
+# set environment variables for webdriver_manager
+ENV WDM_LOCAL 1
+ENV WDM_CACHE_DIR /usr/local/wdm
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# install system dependencies and python dependencies using shell script
+COPY install_dependencies.sh /usr/src/app/install_dependencies.sh
+RUN chmod +x ./install_dependencies.sh
+RUN ./install_dependencies.sh
 
 COPY . .
 
