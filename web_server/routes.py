@@ -8,19 +8,11 @@ from flask import (
 )
 from sqlalchemy.orm import Query
 from sqlalchemy import select
+from celery.result import AsyncResult
 
+from main_celery.celery import celery_app
 from common.db.models import ScrapingResultFileMetaData
 from web_server.forms import ScrapingDataQueryFilter
-
-from analyzing.utility import concatenated_df
-from analyzing.analyze_the_prt import (
-    skills_by_level_of_exp,
-    top_required_skills,
-    top_optional_skills,
-    bar_compare_column_values,
-    compare_ua_support_values,
-    get_top_locations
-)
 from web_server.config import Config
 
 
@@ -63,24 +55,6 @@ def set_query_form_file_names_choices(
     return query_form
 
 
-def get_diagrams_img(file_paths: list[str]) -> dict:
-    df = concatenated_df(file_paths)
-    return {
-        "skills_by_level_of_exp_diagram": skills_by_level_of_exp(df),
-        "required_skills_diagram": top_required_skills(df),
-        "optional_skills_diagram": top_optional_skills(df),
-        "level_of_exp_diagram": bar_compare_column_values(
-            df, column="level_of_exp"
-        ),
-        "employment_type_diagram": bar_compare_column_values(
-            df, column="employment_type"
-        ),
-        "contracts_diagram": bar_compare_column_values(df, column="contracts"),
-        "us_support_diagram": compare_ua_support_values(df),
-        "locations_diagram": get_top_locations(df),
-    }
-
-
 def diagrams_query_filtering(
         queryset, query_form: ScrapingDataQueryFilter
 ) -> Query:
@@ -110,7 +84,7 @@ def diagrams_query_filtering(
 @diagrams.get("/scraping/diagrams")
 def get_diagrams():
     scraping_data_form = ScrapingDataQueryFilter(
-        request.args, prefix="scraping_"
+        request.args, prefix="scrp_"
     )
     # set choices for field 'file_names'
     scraping_data_form = set_query_form_file_names_choices(scraping_data_form)
@@ -131,16 +105,58 @@ def get_diagrams():
     scraping_files_path = g.db.scalars(queryset).all()
 
     # start analyzing data and return dict with diagrams
-    diagrams_img = (
-        get_diagrams_img(scraping_files_path)
-        if scraping_files_path
-        else {}
-    )
+    if scraping_files_path:
+        diagrams_task_id = celery_app.send_task(
+            "web_server.tasks.get_diagrams_img",
+            args=[scraping_files_path]
+        ).id
+
+        return render_template(
+            "diagrams.html",
+            scraping_data_form=scraping_data_form,
+            scraping_files_path=scraping_files_path,
+            diagrams_task_id=diagrams_task_id,
+            # **diagrams_img
+
+        )
 
     return render_template(
+            "diagrams.html",
+            scraping_data_form=scraping_data_form,
+            scraping_files_path=scraping_files_path,
+            diagram_error=(
+                "No files found. Change your filter criteria"
+            )
+        )
+
+
+@diagrams.get("/scraping/diagrams/<task_id>")
+def get_diagrams_result(diagrams_task_id: str):
+    """
+    Get diagrams from Celery, using process task 'diagrams_id' id.
+    """
+    scraping_data_form = ScrapingDataQueryFilter(
+        request.args, prefix="scrp_"
+    )
+
+    # set query form inputs with user values
+    scraping_data_form.to_date.data = session.get("scrp_to_date", None)
+    scraping_data_form.from_date.data = session.get("scrp_from_date", None)
+    scraping_data_form.files_name.data = session.get("scrp_file_names", None)
+
+    if AsyncResult(diagrams_task_id).ready():
+        result_diagrams = AsyncResult(diagrams_task_id).result
+
+        return render_template(
+            "diagrams.html",
+            scraping_data_form=scraping_data_form,
+            **result_diagrams
+        )
+    return render_template(
         "diagrams.html",
-        # diagram_form=diagram_form,
         scraping_data_form=scraping_data_form,
-        scraping_files_path=scraping_files_path,
-        **diagrams_img
+        diagrams_img_id=diagrams_task_id,
+        diagram_error=(
+            "Please wait before you can click again"
+        )
     )
