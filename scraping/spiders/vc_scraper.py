@@ -7,7 +7,7 @@ from typing import Any, Iterable
 import scrapy
 from scrapy.http.response.html import HtmlResponse
 from scrapy.selector import Selector
-from scrapy_selenium import SeleniumRequest
+from scrapy_selenium4 import SeleniumRequest
 
 import config
 from scraping.items import VacancyItem, VacancySkills
