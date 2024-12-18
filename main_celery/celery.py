@@ -24,25 +24,7 @@ celery_app.conf.task_queues = {
 }
 
 # Allow tasks to register schedules
-celery_app.conf.update(
-    timezone="UTC",
-    beat_schedule={},
-)
-
-
-# Load schedules from registered modules
-def load_schedules():
-    """
-    Registering tasks schedule
-    """
-    from scraping.tasks import start_scraping_schedule
-
-    celery_app.conf.beat_schedule.update(
-        start_scraping_schedule
-    )
-
+celery_app.conf.update(timezone="UTC")
 
 # register tasks
 celery_app.autodiscover_tasks()
-
-load_schedules()

@@ -6,10 +6,6 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-import os
-from webdriver_manager .chrome import ChromeDriverManager
-
-
 BOT_NAME = "scraping"
 
 SPIDER_MODULES = ["scraping.spiders"]
@@ -103,12 +99,10 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 # scrapy-selenium configurations
 SELENIUM_DRIVER_NAME = "chrome"
-SELENIUM_DRIVER_ARGUMENTS = ["--headless"]
-
-# using webdriver_manager to automatically
-# download correct version of ChromeDriver
-chrome_driver = ChromeDriverManager().install()
-
-folder = os.path.dirname(chrome_driver)
-chrome_driver_path = os.path.join(folder, "chromedriver.exe")
-SELENIUM_DRIVER_EXECUTABLE_PATH = chrome_driver_path
+SELENIUM_DRIVER_ARGUMENTS = [
+    "--headless=new",
+    "--no-sandbox",
+    "--window-size=1280,1696",
+    "--disable-blink-features",
+    "--disable-blink-features=AutomationControlled",
+]
