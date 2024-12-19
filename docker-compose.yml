@@ -14,29 +14,28 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-#
-#  web:
-#    build:
-#      context: .
-#      dockerfile: docker_servers/web/Dockerfile.web
-#    ports:
-#      - "8000:5000"
-#    depends_on:
-#      db:
-#        condition: service_healthy
-#    env_file:
-#      - .env
-#    volumes:
-#      - .:/usr/src/app
 
-#  nginx:
-#    image: nginx:latest
-#    ports:
-#      - "80:80"
-#    depends_on:
-#      - web
-#    volumes:
-#      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    entrypoint: ./scripts/entrypoint.sh
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
 
   redis:
     image: redis:latest
@@ -44,43 +43,40 @@ services:
       - "6379:6379"
 
   celery_worker_scraping:
-    build:
-      context: .
-      dockerfile: docker_servers/celery_scraping/Dockerfile
+    build: .
     depends_on:
       - db
       - redis
+      - web
     env_file:
       - .env
     volumes:
       - .:/usr/src/app
-    command: celery -A main_celery.celery worker --loglevel=INFO -Q scraping_queue
-#
-#  celery_worker_diagrams:
-#    build:
-#      context: .
-#      dockerfile: docker_servers/celery_diagrams/Dockerfile
-#    depends_on:
-#      - db
-#      - redis
-#    env_file:
-#      - .env
-#    volumes:
-#      - .:/usr/src/app
-#    command: celery -A main_celery.celery worker --loglevel=INFO -Q diagrams_queue
-#
-#  celery_beat:
-#    build:
-#      context: .
-#      dockerfile: docker_servers/celery_scraping/Dockerfile
-#    depends_on:
-#      - celery_worker_diagrams
-#      - celery_worker_scraping
-#    env_file:
-#      - .env
-#    volumes:
-#      - .:/usr/src/app
-#    command: celery -A main_celery.celery beat --loglevel=INFO
+    command: celery -A main_celery.celery worker -Q scraping_queue
+
+  celery_worker_diagrams:
+    build: .
+    depends_on:
+      - db
+      - redis
+      - web
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    command: celery -A main_celery.celery worker -Q diagrams_queue
+
+  celery_beat:
+    build: .
+    depends_on:
+      - db
+      - redis
+      - web
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    command: celery -A main_celery.celery beat --loglevel=INFO
 
 #  flower:
 #    image: mher/flower
