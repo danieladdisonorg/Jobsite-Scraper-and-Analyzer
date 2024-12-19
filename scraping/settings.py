@@ -56,7 +56,7 @@ SPIDER_MIDDLEWARES = {
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    "scrapy_selenium4.SeleniumMiddleware": 800,
+    "scraping.middlewares.DownloadSeleniumMiddleware": 800
 }
 
 # Enable or disable extensions
@@ -106,3 +106,5 @@ SELENIUM_DRIVER_ARGUMENTS = [
     "--disable-blink-features",
     "--disable-blink-features=AutomationControlled",
 ]
+
+SELENIUM_DRIVER_EXECUTABLE_PATH = ""
