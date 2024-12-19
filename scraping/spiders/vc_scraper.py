@@ -8,6 +8,8 @@ import scrapy
 from scrapy.http.response.html import HtmlResponse
 from scrapy.selector import Selector
 from scrapy_selenium4 import SeleniumRequest
+from selenium.webdriver.common.by import By
+from selenium.webdriver import Chrome
 
 import config
 from scraping.items import VacancyItem, VacancySkills
@@ -37,7 +39,7 @@ NEXT_PAGE = (
     "nav ul li a[data-test='anchor-nextPage']"
     "[data-disabled='false']::attr(href)"
 )
-LAST_PAGE_NUM = "nav ul li:nth-last-child(2) a::text"
+LAST_PAGE_NUM = "nav ul li:nth-last-child(2) a"
 
 
 class VacancyScraper(scrapy.Spider):
@@ -61,7 +63,15 @@ class VacancyScraper(scrapy.Spider):
         # get last pagination number at the beginning
         # because later we would not be able to get it
         if not self.last_page_num:
-            self.last_page_num = int(response.css(LAST_PAGE_NUM).get())
+
+            driver: Chrome = response.meta["driver"]
+            # get last pagination button which we will save
+            # to move forward since we can not move one by one
+            # pagination buttons
+            last_page_number = driver.find_element(By.XPATH, LAST_PAGE_NUM)
+            self.last_page_num = int(
+                last_page_number.get_attribute("innerHTML")
+            )
 
         # checking if we are not going over self.last_page_num
         if self.page_num < self.last_page_num:
