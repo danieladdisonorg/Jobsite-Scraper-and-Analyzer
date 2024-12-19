@@ -28,7 +28,7 @@ def start_scraping():
 # set up scraping_schedule schedule to run every 'SCRAPING_EVERY_NUM_DAY'
 celery_app.conf.beat_schedule.update({
     "scrapy_every_num_days": {
-        "task": "scraping.task.start_scraping",
+        "task": "scraping.tasks.start_scraping",
         "schedule": timedelta(
             days=int(os.getenv("SCRAPING_EVERY_NUM_DAY"))
         )
