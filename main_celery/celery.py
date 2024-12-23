@@ -23,8 +23,15 @@ celery_app.conf.task_queues = {
     "web_server_queue": {"binding_key": "web_server_queue"},
 }
 
-# Allow tasks to register schedules
-celery_app.conf.update(timezone="UTC")
+
+celery_app.conf.update(
+    timezone="UTC",
+    # set higher maximum interval for beat checks
+    beat_max_loop_interval=int(
+        os.getenv("MAX_BEAT_INTERVAL_SECONDS", 691200)
+    ),  # default 8 days in seconds
+    broker_connection_retry_on_startup=True
+)
 
 # register tasks
 celery_app.autodiscover_tasks()
