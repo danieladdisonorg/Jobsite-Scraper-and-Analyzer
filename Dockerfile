@@ -8,9 +8,6 @@ ENV PYTHONUNBUFFERED 1
 # set non interactive frontend
 ENV DEBIAN_FRONTEND=noninteractive
 
-# set environment variables for webdriver_manager
-ENV WDM_LOCAL 1
-ENV WDM_CACHE_DIR /usr/local/wdm
 
 ENV FLASK_APP=run.py
 ENV FLASK_ENV=production
@@ -23,6 +20,8 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     netcat-traditional \
+    sudo \
+    wget \
     gnupg \
     ca-certificates \
     curl \
@@ -33,10 +32,10 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Add Google's GPG key and Chrome repository
-RUN curl -fsSL https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg && \
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - && \
+    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
-# Install Google Chrome
+# # Install Google Chrome
 RUN apt-get update && apt-get install -y \
     google-chrome-stable && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
