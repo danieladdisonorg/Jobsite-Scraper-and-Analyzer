@@ -6,6 +6,8 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import logging
+
 BOT_NAME = "scraping"
 
 SPIDER_MODULES = ["scraping.spiders"]
@@ -24,7 +26,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 2
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
@@ -36,15 +38,15 @@ COOKIES_ENABLED = False
 # TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-# DEFAULT_REQUEST_HEADERS = {
-#     'Accept-Language': 'en-US,en;q=0.9',
-#     "Referer": "https://www.google.com/",
-#     "Accept": "text/html",
-#     "Accept-Encoding": "deflate",
-#     "Sec-Ch-Ua": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"",
-#     "Sec-Ch-Ua-Platform": "\"Windows\"",
-#     'User-Agent': "Mozilla/5.0 (Windows; Windows NT 6.0; x64) AppleWebKit/603.41 (KHTML, like Gecko) Chrome/49.0.1078.242 Safari/534.4 Edge/13.28476",
-# }
+DEFAULT_REQUEST_HEADERS = {
+    'Accept-Language': 'en-US,en;q=0.9',
+    "Referer": "https://www.google.com/",
+    "Accept": "text/html",
+    "Accept-Encoding": "deflate",
+    "Sec-Ch-Ua": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"",
+    "Sec-Ch-Ua-Platform": "\"Windows\"",
+    'User-Agent': "Mozilla/5.0 (Windows; Windows NT 6.0; x64) AppleWebKit/603.41 (KHTML, like Gecko) Chrome/49.0.1078.242 Safari/534.4 Edge/13.28476",
+}
 
 # "gzip, deflate, br",
 # Enable or disable spider middlewares
@@ -105,6 +107,14 @@ SELENIUM_DRIVER_ARGUMENTS = [
     "--window-size=1280,1696",
     "--disable-blink-features",
     "--disable-blink-features=AutomationControlled",
+    "--disable-gpu",
+    "--disable-dev-shm-usage",
 ]
 
 SELENIUM_DRIVER_EXECUTABLE_PATH = ""
+
+LOG_LEVEL = "INFO"
+
+# Optionally suppress logs from specific libraries
+logging.getLogger("selenium").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
