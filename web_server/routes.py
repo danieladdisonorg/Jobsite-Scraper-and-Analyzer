@@ -11,7 +11,7 @@ from sqlalchemy import select
 from celery.result import AsyncResult
 
 from main_celery.celery import celery_app
-from common.db.models import ScrapingResultFileMetaData
+from db.models import ScrapingResultFileMetaData
 from web_server.forms import ScrapingDataQueryFilter
 from web_server.config import Config
 
