@@ -43,17 +43,17 @@ class DownloadSeleniumMiddleware(SeleniumMiddleware):
                     'value': cookie_value
                 }
             )
+        # Only SeleniumRequest has wait_until/screenshot/execute_script
+        # attributes not Request
+        if isinstance(request, SeleniumRequest):
+            if request.wait_until:
+                WebDriverWait(self.driver, request.wait_time).until(request.wait_until)
 
-        if request.wait_until:
-            WebDriverWait(self.driver, request.wait_time).until(
-                request.wait_until
-            )
+            if request.screenshot:
+                request.meta['screenshot'] = self.driver.get_screenshot_as_png()
 
-        if request.screenshot:
-            request.meta['screenshot'] = self.driver.get_screenshot_as_png()
-
-        if request.script:
-            self.driver.execute_script(request.script)
+            if request.script:
+                self.driver.execute_script(request.script)
 
         body = str.encode(self.driver.page_source)
 
