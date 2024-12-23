@@ -52,7 +52,7 @@ services:
       - .env
     volumes:
       - .:/usr/src/app
-    command: celery -A main_celery.celery worker -Q scraping_queue
+    command: celery -A main_celery.celery worker -Q scraping_queue --loglevel=INFO
 
   celery_worker_diagrams:
     build: .
@@ -64,7 +64,7 @@ services:
       - .env
     volumes:
       - .:/usr/src/app
-    command: celery -A main_celery.celery worker -Q diagrams_queue
+    command: celery -A main_celery.celery worker -Q web_server_queue --loglevel=INFO
 
   celery_beat:
     build: .
@@ -78,12 +78,5 @@ services:
       - .:/usr/src/app
     command: celery -A main_celery.celery beat --loglevel=INFO
 
-#  flower:
-#    image: mher/flower
-#    ports:
-#      - "5555:5555"
-#    depends_on:
-#      - celery_worker
-#    command: ["--broker", "redis://redis:6379", "--port=5555"]
 volumes:
   mysql_data:
