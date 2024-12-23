@@ -51,7 +51,7 @@ class VacancyScraper(scrapy.Spider):
 
     def start_requests(self) -> Iterable[SeleniumRequest]:
         for url in self.start_urls:
-            yield SeleniumRequest(url=url, callback=self.parse)
+            yield SeleniumRequest(url=url, callback=self.parse, wait_time=10)
 
     def parse(self, response: HtmlResponse, **kwargs: Any) -> VacancyItem:
         # get vacancies
