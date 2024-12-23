@@ -11,7 +11,7 @@ from analyzing.analyze_the_prt import (
 from analyzing.utility import concatenated_df
 
 
-@shared_task(queue="diagrams_queue")
+@shared_task(queue="web_server_queue")
 def get_diagrams_img(file_paths: list[str]) -> dict:
     """Concatenating files with data to one DataFrame and
         analyzing/visualizing.
