@@ -12,8 +12,8 @@ from scrapy import Item, Spider
 
 import pandas as pd
 
-from common.db.models import ScrapingResultFileMetaData
-from common.db.connnect_db import session
+from db.models import ScrapingResultFileMetaData
+from db.connnect_db import session
 
 dotenv.load_dotenv()
 

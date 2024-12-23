@@ -1,6 +1,6 @@
 from flask import Flask, g
 
-from common.db.connnect_db import session
+from db.connnect_db import session
 from web_server.routes import diagrams
 # from global_config import GlobalConfig
 

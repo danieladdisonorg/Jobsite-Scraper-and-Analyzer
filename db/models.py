@@ -10,7 +10,7 @@ from sqlalchemy import (
 from sqlalchemy.ext.hybrid import hybrid_property
 from datetime import date
 
-from common.db.connnect_db import Base
+from db.connnect_db import Base
 
 dotenv.load_dotenv()
 
