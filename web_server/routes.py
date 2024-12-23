@@ -32,7 +32,7 @@ def get_file_names_from_cache() -> None | list:
 
 def set_file_names_in_cache(file_names: list) -> None:
     """ Set scraping data file names since we are creating scraped data file
-    every 'SCRAPING_EVERY_NUM_DAY' there is not need to request file names for
+    every 'SCRAPING_EVERY_DAYS' there is not need to request file names for
     request
     """
     session["file_names"] = file_names
