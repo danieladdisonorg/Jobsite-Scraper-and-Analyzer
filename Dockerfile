@@ -5,27 +5,43 @@ LABEL maintainer="olehoryshshuk@gmail.com"
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /usr/src/app
+# set non interactive frontend
+ENV DEBIAN_FRONTEND=noninteractive
 
-COPY requirements.txt ./
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    cmake \
-    libtool
-
-# Upgrade pip to avoid issues with old versions
-RUN pip install --upgrade pip
-
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
 
 ENV FLASK_APP=run.py
 ENV FLASK_ENV=production
 
-EXPOSE 5000
+WORKDIR /usr/src/app
 
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "run:app"]
+COPY requirements.txt /usr/src/app/requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    netcat-traditional \
+    sudo \
+    wget \
+    gnupg \
+    ca-certificates \
+    curl \
+    apt-transport-https \
+    build-essential \
+    cmake \
+    libtool && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Add Google's GPG key and Chrome repository
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - && \
+    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+
+# # Install Google Chrome
+RUN apt-get update && apt-get install -y \
+    google-chrome-stable && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+COPY . .
+
+# install system dependencies and python dependencies using shell script
+COPY scripts/entrypoint.sh /usr/src/app/scripts/entrypoint.sh
+RUN chmod +x scripts/entrypoint.sh

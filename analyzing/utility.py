@@ -27,7 +27,7 @@ def concatenated_df(file_paths: list[str]) -> pd.DataFrame:
             for file_path in file_paths
             if os.path.isfile(file_path)
         ]
-        # print(dfs, len(dfs))
+
         new_df = pd.concat(dfs, ignore_index=True)
 
         return new_df

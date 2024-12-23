@@ -26,9 +26,7 @@ services:
       - .env
     volumes:
       - .:/usr/src/app
-#    entrypoint: ["./scripts/wait-for-it.sh", "db:3306"]
-    command: >
-      sh -c "alembic --config migrations/alembic.ini upgrade head && gunicorn -b 0.0.0.0:5000 --timeout 1000 run:app"
+    entrypoint: ./scripts/entrypoint.sh
 
   nginx:
     image: nginx:latest
@@ -44,33 +42,41 @@ services:
     ports:
       - "6379:6379"
 
-  celery_worker:
+  celery_worker_scraping:
     build: .
     depends_on:
       - db
       - redis
+      - web
     env_file:
       - .env
     volumes:
       - .:/usr/src/app
-    command: celery -A scraping worker --loglevel=INFO
+    command: celery -A main_celery.celery worker -Q scraping_queue --loglevel=INFO
+
+  celery_worker_diagrams:
+    build: .
+    depends_on:
+      - db
+      - redis
+      - web
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    command: celery -A main_celery.celery worker -Q web_server_queue --loglevel=INFO
 
   celery_beat:
     build: .
     depends_on:
-      - celery_worker
+      - db
+      - redis
+      - web
     env_file:
       - .env
     volumes:
       - .:/usr/src/app
-    command: celery -A scraping beat --loglevel=INFO
+    command: celery -A main_celery.celery beat --loglevel=INFO
 
-#  flower:
-#    image: mher/flower
-#    ports:
-#      - "5555:5555"
-#    depends_on:
-#      - celery_worker
-#    command: ["--broker", "redis://redis:6379", "--port=5555"]
 volumes:
   mysql_data:

@@ -10,11 +10,13 @@ class Config:
 
     # set cache time for querying DB for scraping data file names
     # which allows users to choose files it wants to analyze
-    # and since we are scraping every number of day 'SCRAPING_EVERY_NUM_DAY'
+    # and since we are scraping every number of day 'SCRAPING_EVERY_DAYS'
     # that means we will update choices for users as soon as new
     # scraping data file is created
     FILES_NAME_CHOICES_CACHE_TIME = timedelta(
-        days=float(os.getenv("SCRAPING_EVERY_NUM_DAY"))
+        days=int((os.getenv("SCRAPING_EVERY_DAYS", 604800))),
+        # wait 10 minutes before scraping has ended
+        minutes=10
     )
     EXPLAIN_TEMPLATE_LOADING = False
 

@@ -6,7 +6,8 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # custom ignores
-first_vacancy_url.txt
+last_vacancy_url.txt
+static/scraping_results/*
 vacancies.csv
 *.feather
 

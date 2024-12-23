@@ -6,9 +6,7 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-import os
-from webdriver_manager .chrome import ChromeDriverManager
-
+import logging
 
 BOT_NAME = "scraping"
 
@@ -28,7 +26,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 2
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
@@ -40,15 +38,15 @@ COOKIES_ENABLED = False
 # TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-# DEFAULT_REQUEST_HEADERS = {
-#     'Accept-Language': 'en-US,en;q=0.9',
-#     "Referer": "https://www.google.com/",
-#     "Accept": "text/html",
-#     "Accept-Encoding": "deflate",
-#     "Sec-Ch-Ua": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"",
-#     "Sec-Ch-Ua-Platform": "\"Windows\"",
-#     'User-Agent': "Mozilla/5.0 (Windows; Windows NT 6.0; x64) AppleWebKit/603.41 (KHTML, like Gecko) Chrome/49.0.1078.242 Safari/534.4 Edge/13.28476",
-# }
+DEFAULT_REQUEST_HEADERS = {
+    'Accept-Language': 'en-US,en;q=0.9',
+    "Referer": "https://www.google.com/",
+    "Accept": "text/html",
+    "Accept-Encoding": "deflate",
+    "Sec-Ch-Ua": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"",
+    "Sec-Ch-Ua-Platform": "\"Windows\"",
+    'User-Agent': "Mozilla/5.0 (Windows; Windows NT 6.0; x64) AppleWebKit/603.41 (KHTML, like Gecko) Chrome/49.0.1078.242 Safari/534.4 Edge/13.28476",
+}
 
 # "gzip, deflate, br",
 # Enable or disable spider middlewares
@@ -60,7 +58,7 @@ SPIDER_MIDDLEWARES = {
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    "scrapy_selenium.SeleniumMiddleware": 800,
+    "scraping.middlewares.DownloadSeleniumMiddleware": 800
 }
 
 # Enable or disable extensions
@@ -103,12 +101,20 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 # scrapy-selenium configurations
 SELENIUM_DRIVER_NAME = "chrome"
-SELENIUM_DRIVER_ARGUMENTS = ["--headless"]
+SELENIUM_DRIVER_ARGUMENTS = [
+    "--headless=new",
+    "--no-sandbox",
+    "--window-size=1280,1696",
+    "--disable-blink-features",
+    "--disable-blink-features=AutomationControlled",
+    "--disable-gpu",
+    "--disable-dev-shm-usage",
+]
 
-# using webdriver_manager to automatically
-# download correct version of ChromeDriver
-chrome_driver = ChromeDriverManager().install()
+SELENIUM_DRIVER_EXECUTABLE_PATH = ""
 
-folder = os.path.dirname(chrome_driver)
-chrome_driver_path = os.path.join(folder, "chromedriver.exe")
-SELENIUM_DRIVER_EXECUTABLE_PATH = chrome_driver_path
+LOG_LEVEL = "INFO"
+
+# Optionally suppress logs from specific libraries
+logging.getLogger("selenium").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
