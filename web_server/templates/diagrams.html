@@ -1,128 +1,67 @@
+{% extends "query_filtering.html"%}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <meta name="description" content="Show result of scraping and analyzing" />
-    <meta name="author" content="startbootstrap & AppSeed" />
-
-    <title>
-        {% block title %}Diagrams{% endblock %}
-    </title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- Specific Page CSS goes HERE  -->
-    {% block stylesheets %}{% endblock stylesheets %}
-
-  </head>
-
-  <body>
-
-    <div class="container mt-5">
-      <form method="GET" action="/scraping/diagrams" class="form-inline">
-
-        {{scraping_data_form.hidden_tag()}}
-        <div class="form-group mb-2">
-          {{scraping_data_form.from_date.label(class='sr-only')}}
-          {{scraping_data_form.from_date(class='form-control', placeholder='From date')}}
-        </div>
-        <div class="form-group mx-sm-3 mb-2">
-          {{scraping_data_form.to_date.label(class='sr-only')}}
-          {{scraping_data_form.to_date(class='form-control', placeholder='To date')}}
-        </div>
-        <div class="form-group mx-sm-3 mb-2">
-          {{scraping_data_form.files_name.label(class='sr-only')}}
-          {{scraping_data_form.files_name(class='form-control', placeholder='To date')}}
-        </div>
-        {% if diagrams_task_id %}
-          <!--   If we receive diagram id then we are removing ability to filter
-               and forcing user to see results of his filters criteria.
-               -->
-          <a href="{{ url_for('diagrams.get_diagrams_result', task_id=diagrams_task_id) }}" class="btn btn-info mb-2">Check Diagrams</a>
-        {% else %}
-          <button type="submit" class="btn btn-primary mb-2">Filter</button>
-        {% endif %}
-      </form>
-      <!--check for erroe-->
-      {% if diagram_error %}
-        <div class="alert alert-danger mt-3">
-          <strong>Error!</strong> {{ diagram_error }}
-        </div>
-      {% endif %}
-
+{% block errors %}
       {% if diagrams_task_id %}
         <div class="alert alert-info mt3">
           <strong>Your diagrams are being processed. Please wait.</strong>
         </div>
       {% endif %}
+{% endblock %}
 
-      <!-- Tabs -->
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item">
-              <a class="nav-link active" id="skills-tab" data-toggle="tab" href="#skills" role="tab" aria-controls="skills" aria-selected="true">Skills by Level of Experience</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="required-tab" data-toggle="tab" href="#required" role="tab" aria-controls="required" aria-selected="false">Required Skills</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="optional-tab" data-toggle="tab" href="#optional" role="tab" aria-controls="optional" aria-selected="false">Optional Skills</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="level-tab" data-toggle="tab" href="#level" role="tab" aria-controls="level" aria-selected="false">Level of Experience</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="employment-tab" data-toggle="tab" href="#employment" role="tab" aria-controls="employment" aria-selected="false">Employment Type</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="ua-tab" data-toggle="tab" href="#ua_support" role="tab" aria-controls="ua_support" aria-selected="false">UA Support</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="contracts-tan" data-toggle="tab" href="#contracts" role="tab" aria-controls="contracts" aria-selected="false">Contracts</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="locations-tab" data-toggle="tab" href="#locations" role="tab" aria-controls="locations" aria-selected="false">Locations</a>
-          </li>
-      </ul>
+{% block content %}
+ <!-- Tabs -->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+          <a class="nav-link active" id="skills-tab" data-toggle="tab" href="#skills" role="tab" aria-controls="skills" aria-selected="true">Skills by Level of Experience</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="required-tab" data-toggle="tab" href="#required" role="tab" aria-controls="required" aria-selected="false">Required Skills</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="optional-tab" data-toggle="tab" href="#optional" role="tab" aria-controls="optional" aria-selected="false">Optional Skills</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="level-tab" data-toggle="tab" href="#level" role="tab" aria-controls="level" aria-selected="false">Level of Experience</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="employment-tab" data-toggle="tab" href="#employment" role="tab" aria-controls="employment" aria-selected="false">Employment Type</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="ua-tab" data-toggle="tab" href="#ua_support" role="tab" aria-controls="ua_support" aria-selected="false">UA Support</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="contracts-tan" data-toggle="tab" href="#contracts" role="tab" aria-controls="contracts" aria-selected="false">Contracts</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="locations-tab" data-toggle="tab" href="#locations" role="tab" aria-controls="locations" aria-selected="false">Locations</a>
+      </li>
+  </ul>
 
-      <!-- Tab content -->
-      <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="skills" role="tabpanel" aria-labelledby="skills-tab">
-              <img id="skills-img" class="img-fluid mt-3" alt="Skills by Level of Experience" src="data:image/png;base64,{{ skills_by_level_of_exp_diagram }}" style="max-width: 100%;">
-          </div>
-          <div class="tab-pane fade" id="required" role="tabpanel" aria-labelledby="required-tab">
-              <img id="required-img" class="img-fluid mt-3 mb-2" alt="Required Skills" src="data:image/png;base64,{{ required_skills_diagram }}" style="max-width: 100%;">
-          </div>
-          <div class="tab-pane fade" id="optional" role="tabpanel" aria-labelledby="optional-tab">
-              <img id="optional-img" class="img-fluid mt-3" alt="Optional Skills" src="data:image/png;base64,{{ optional_skills_diagram }}" style="max-width: 100%;">
-          </div>
-          <div class="tab-pane fade" id="level" role="tabpanel" aria-labelledby="level-tab">
-              <img id="level-img" class="img-fluid mt-3" alt="Level of Experience" src="data:image/png;base64,{{ level_of_exp_diagram }}" style="max-width: 100%;">
-          </div>
-          <div class="tab-pane fade" id="employment" role="tabpanel" aria-labelledby="employment-tab">
-              <img id="employment-img" class="img-fluid mt-3" alt="Employment Type" src="data:image/png;base64,{{ employment_type_diagram }}" style="max-width: 100%;">
-          </div>
-          <div class="tab-pane fade" id="ua_support" role="tabpanel" aria-labelledby="ua-tab">
-              <img id="ua-support-img" class="img-fluid mt-3" alt="UA Support" src="data:image/png;base64,{{ us_support_diagram }}" style="max-width: 100%;">
-          </div>
-          <div class="tab-pane fade" id="contracts" role="tabpanel" aria-labelledby="contracts-tab">
-              <img id="contracts-img" class="img-fluid mt-3" alt="Contracts" src="data:image/png;base64,{{ contracts_diagram }}" style="max-width: 100%;">
-          </div>
-          <div class="tab-pane fade" id="locations" role="tabpanel" aria-labelledby="locations-tab">
-              <img id="locations-img" class="img-fluid mt-3 " alt="Locations" src="data:image/png;base64,{{ locations_diagram }}" style="max-width: 100%;">
-          </div>
+  <!-- Tab content -->
+  <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+          <img id="skills-img" class="img-fluid mt-3" alt="Skills by Level of Experience" src="data:image/png;base64,{{ skills_by_level_of_exp_diagram }}" style="max-width: 100%;">
+      </div>
+      <div class="tab-pane fade" id="required" role="tabpanel" aria-labelledby="required-tab">
+          <img id="required-img" class="img-fluid mt-3 mb-2" alt="Required Skills" src="data:image/png;base64,{{ required_skills_diagram }}" style="max-width: 100%;">
+      </div>
+      <div class="tab-pane fade" id="optional" role="tabpanel" aria-labelledby="optional-tab">
+          <img id="optional-img" class="img-fluid mt-3" alt="Optional Skills" src="data:image/png;base64,{{ optional_skills_diagram }}" style="max-width: 100%;">
+      </div>
+      <div class="tab-pane fade" id="level" role="tabpanel" aria-labelledby="level-tab">
+          <img id="level-img" class="img-fluid mt-3" alt="Level of Experience" src="data:image/png;base64,{{ level_of_exp_diagram }}" style="max-width: 100%;">
+      </div>
+      <div class="tab-pane fade" id="employment" role="tabpanel" aria-labelledby="employment-tab">
+          <img id="employment-img" class="img-fluid mt-3" alt="Employment Type" src="data:image/png;base64,{{ employment_type_diagram }}" style="max-width: 100%;">
+      </div>
+      <div class="tab-pane fade" id="ua_support" role="tabpanel" aria-labelledby="ua-tab">
+          <img id="ua-support-img" class="img-fluid mt-3" alt="UA Support" src="data:image/png;base64,{{ us_support_diagram }}" style="max-width: 100%;">
+      </div>
+      <div class="tab-pane fade" id="contracts" role="tabpanel" aria-labelledby="contracts-tab">
+          <img id="contracts-img" class="img-fluid mt-3" alt="Contracts" src="data:image/png;base64,{{ contracts_diagram }}" style="max-width: 100%;">
+      </div>
+      <div class="tab-pane fade" id="locations" role="tabpanel" aria-labelledby="locations-tab">
+          <img id="locations-img" class="img-fluid mt-3 " alt="Locations" src="data:image/png;base64,{{ locations_diagram }}" style="max-width: 100%;">
       </div>
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% endblock %}
