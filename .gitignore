@@ -8,6 +8,7 @@
 # custom ignores
 last_vacancy_url.txt
 static/scraping_results/*
+!static/scraping_results/.gitkeep
 vacancies.csv
 *.feather
 
