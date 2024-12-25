@@ -31,16 +31,16 @@
 
         {{scraping_data_form.hidden_tag()}}
         <div class="form-group mb-2">
-          {{scraping_data_form.from_date.label(class='sr-only')}}
+          <label class="form-label mr-2">From Date</label>
           {{scraping_data_form.from_date(class='form-control', placeholder='From date')}}
         </div>
         <div class="form-group mx-sm-3 mb-2">
-          {{scraping_data_form.to_date.label(class='sr-only')}}
+          <label class="form-label mr-2">To Date</label>
           {{scraping_data_form.to_date(class='form-control', placeholder='To date')}}
         </div>
         <div class="form-group mx-sm-3 mb-2">
-          {{scraping_data_form.files_name.label(class='sr-only')}}
-          {{scraping_data_form.files_name(class='form-control', placeholder='To date')}}
+          <label class="form-label mr-2">Select files to analyze</label>
+          {{scraping_data_form.files_name(class='form-control', placeholder='Select files')}}
         </div>
         {% if diagrams_task_id %}
           <!--   If we receive diagram id then we are removing ability to filter
