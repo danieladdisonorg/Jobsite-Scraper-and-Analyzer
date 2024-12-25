@@ -21,8 +21,10 @@ DATE_TIME_FORMAT = "%a, %d %b %Y %H:%M:%S %Z"
 
 
 def get_file_names_from_cache() -> None | list:
-    """ Get scraping data file names from session """
-    if "file_names" in session and "file_names_cache_time":
+    """ Get scraping data file names from session if
+        they are not expired
+    """
+    if "file_names" in session and "file_names_cache_time" in session:
         cache_time = session["file_names_cache_time"].replace(tzinfo=None)
         if (
                 datetime.utcnow() - cache_time
@@ -44,6 +46,7 @@ def set_query_form_file_names_choices(
         query_form: ScrapingDataQueryFilter
 ) -> ScrapingDataQueryFilter:
     file_names = get_file_names_from_cache()
+
     if file_names is None:
         # get file names from DB and cache it
         file_names = g.db.scalars(
@@ -119,7 +122,10 @@ def get_diagrams():
         if session.get("scrp_to_date") else None
     )
     scraping_data_form.from_date.data = (
-        datetime.strptime(session.get("scrp_from_date"), DATE_TIME_FORMAT).date()
+        datetime.strptime(
+            session.get("scrp_from_date"),
+            DATE_TIME_FORMAT).date()
+
         if session.get("scrp_from_date") else None
     )
     scraping_data_form.files_name.data = session.get("scrp_file_names")
@@ -143,7 +149,10 @@ def get_diagrams_result(diagrams_task_id: str):
         if session.get("scrp_to_date") else None
     )
     scraping_data_form.from_date.data = (
-        datetime.strptime(session.get("scrp_from_date"), DATE_TIME_FORMAT).date()
+        datetime.strptime(
+            session.get("scrp_from_date"),
+            DATE_TIME_FORMAT).date()
+
         if session.get("scrp_from_date") else None
     )
     scraping_data_form = set_query_form_file_names_choices(scraping_data_form)

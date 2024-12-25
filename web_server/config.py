@@ -14,7 +14,7 @@ class Config:
     # that means we will update choices for users as soon as new
     # scraping data file is created
     FILES_NAME_CHOICES_CACHE_TIME = timedelta(
-        days=int((os.getenv("SCRAPING_EVERY_DAYS", 604800))),
+        days=int((os.getenv("SCRAPING_EVERY_DAYS", 7))),
         # wait 10 minutes before scraping has ended
         minutes=10
     )
