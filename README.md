@@ -3,15 +3,15 @@
 ![Django](https://img.shields.io/badge/Scrapy-2.11.2-brightgreen.svg)
 ![Selenium](https://img.shields.io/badge/Selenium-4.27.1-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.0.3-brightgreen.svg)
-![Jupyter](https://img.shields.io/badge/Jupyter-1.0.0-ab5591.svg)
+![Pandas](https://img.shields.io/badge/Pandas-2.2.2-ab5591.svg)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8.4-120108.svg)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0.31-e35f0e.svg)
 ![Redis](https://img.shields.io/badge/Redis-5.2.1-e8e7e6.svg)
 ![Mysql-connector-python](https://img.shields.io/badge/MySQL-9.0.0-fc1c03.svg)
 
 
-This project scrapes job listings from [the.protocol](https://theprotocol.it/) to analyze the most in-demand
-technologies for Python Developers. By generating statistics and visualizations, 
+This project scrapes job listings from Polish website [the.protocol](https://theprotocol.it/) to analyze the most in-demand
+technologies for Python Developers in Poland. By generating statistics and visualizations, 
 it helps users prioritize learning efforts for job interviews. Customize your 
 scraping preferences and explore the latest market trends in technology demand.
 
@@ -73,3 +73,13 @@ Scraping and Analyzing Job Site endpoints
 bk_id - is the book integer id
 - `/scraping/diagrams` - returns celery task id.
 - `/scraping/diagrams/diagrams_task_id` - receives celery task id and checks if response is ready in Celery.
+
+## Web pages:
+![Pandas diagrams showing skills base on level of experience](./static/readme_imgs/skills_by_level_of_exp_dia.png)
+![Pandas diagram showing required skills](./static/readme_imgs/required_skills_dia.png)
+![Pandas diagram showing optional skills](./static/readme_imgs/optional_skills_dia.png)
+![Pandas diagram showing level of experience bar values](./static/readme_imgs/level_of_exp_dia.png)
+![Pandas diagram showing employment type bar values](./static/readme_imgs/employment_type_dia.png)
+![Pandas diagram showing UA support pie values](./static/readme_imgs/ua_support_dia.png)
+![Pandas diagram showing contracts bar values](./static/readme_imgs/contracts_dia.png)
+![Pandas diagram showing location pie values](./static/readme_imgs/locations_dia.png)
