@@ -35,6 +35,8 @@ scraping preferences and explore the latest market trends in technology demand.
 * **Tests:** currently I am busy and it hard to find time to write tests.
 
 ## Features
+* In `config.py` file, variable `POSITION` we can specify for which position are we looking for it can be
+    `java`, `dev`, `javascript` developer etc. by default is `python`. Import is to enter it in lowercase.
 * Scraping data using `Scrapy`, `Selenium`(for handling JSON rendering), `scrapy-selenium4` (allows integrating
   Selenium with Scrapy), creating own `ItemPipelines`, `Middlewares`, `Item` classes. And working with **CSS**
   selectors and **XPATH** syntax
