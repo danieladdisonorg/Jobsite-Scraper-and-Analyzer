@@ -1,87 +1,187 @@
-## Scraping Analyzing Job Site
+# Jobsite Scraper and Analyzer
 
-![Django](https://img.shields.io/badge/Scrapy-2.11.2-brightgreen.svg)
-![Selenium](https://img.shields.io/badge/Selenium-4.27.1-blue.svg)
-![Flask](https://img.shields.io/badge/Flask-3.0.3-brightgreen.svg)
-![Pandas](https://img.shields.io/badge/Pandas-2.2.2-ab5591.svg)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8.4-120108.svg)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0.31-e35f0e.svg)
-![Redis](https://img.shields.io/badge/Redis-5.2.1-e8e7e6.svg)
-![Mysql-connector-python](https://img.shields.io/badge/MySQL-9.0.0-fc1c03.svg)
+[![Scrapy](https://img.shields.io/badge/Scrapy-2.11.2-brightgreen.svg)](https://scrapy.org/)
+[![Selenium](https://img.shields.io/badge/Selenium-4.27.1-blue.svg)](https://selenium.dev/)
+[![Flask](https://img.shields.io/badge/Flask-3.0.3-brightgreen.svg)](https://flask.palletsprojects.com/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.2.2-ab5591.svg)](https://pandas.pydata.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8.4-120108.svg)](https://matplotlib.org/)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0.31-e35f0e.svg)](https://www.sqlalchemy.org/)
+[![Redis](https://img.shields.io/badge/Redis-5.2.1-e8e7e6.svg)](https://redis.io/)
+[![MySQL](https://img.shields.io/badge/MySQL-9.0.0-fc1c03.svg)](https://www.mysql.com/)
+[![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED.svg)](https://www.docker.com/)
 
+## Overview
 
-This project scrapes job listings from Polish website [the.protocol](https://theprotocol.it/) to analyze the most in-demand
-technologies for Python Developers in Poland. By generating statistics and visualizations, 
-it helps users prioritize learning efforts for job interviews. Customize your 
-scraping preferences and explore the latest market trends in technology demand.
+A comprehensive web scraping and data analysis platform that extracts job listings from [theprotocol.it](https://theprotocol.it/) to analyze technology demand trends for developers in the Polish job market. The system provides automated data collection, intelligent analysis, and interactive visualizations to help developers understand market requirements and prioritize their learning efforts.
 
-### Key Learnings 
-* **Web Scraping:** working with Selenium, Scrapy, CSS selectors and XPATH selectors.
-* **Data Analysis:** and Visualization scraped data (working with Jupyter, matplotlib).
-* **Task Management:** handling extensive tasks using Celery with Redis.
-* **Containerization:** working and managing Docker containers. 
+## 🚀 Features
 
-### Areas for Improvement
-* **Data Storage Challenges:** scraped data is stored in .feather files within the 
-    project’s local memory (static/scraping_results). This approach limits scalability
-    and durability. Learning to work with cloud storage platforms or integrating a database
-    solution would enhance data persistence and accessibility.
-* **Optimizing Docker Containers:** The Docker images used in this project could be optimized
-  further. By minimizing the container size and refining the build process, I could improve
-  performance and resource efficiency.
-* **Improving Project Structure & Code Quality:** the project structure could benefit from a more modular approach, following best practices for
-  scalability and maintainability. Adhering more strictly to SOLID principles could help in 
-  making the codebase cleaner, easier to extend, and more testable, particularly as the project grows in complexity.
-* **Tests:** currently I am busy and it hard to find time to write tests.
+### Core Functionality
+- **Multi-Position Support**: Configurable job position targeting (Python, Java, JavaScript, etc.)
+- **Automated Scraping**: Scheduled data collection using Celery and Redis
+- **Intelligent Data Processing**: Natural language processing with NLTK and fuzzy matching
+- **Interactive Visualizations**: Comprehensive charts and graphs using Matplotlib
+- **RESTful API**: Flask-based web service for data access
+- **Containerized Deployment**: Full Docker and Docker Compose support
 
-## Features
-* In `config.py` file, variable `POSITION` we can specify for which position are we looking for it can be
-    `java`, `dev`, `javascript` developer etc. by default is `python`. Import is to enter it in lowercase.
-* Scraping data using `Scrapy`, `Selenium`(for handling JSON rendering), `scrapy-selenium4` (allows integrating
-  Selenium with Scrapy), creating own `ItemPipelines`, `Middlewares`, `Item` classes. And working with **CSS**
-  selectors and **XPATH** syntax
-* Data Base **MySQL** with one custom table `scraping_result_file_meta_data` for storing metadata about files
-  which stores scraping data. But the files with scraping data we store on computer memory.
-* Using **Celery** and **celery-beat** for running Scrapy spider every number of `SCRAPING_EVERY_DAYS`
-    days.
-* Working with `NLTK` tools and `fuzzywuzzy` and `regular expressions` to get words we need.
-* Creating `analyzing/*` directory. Analyzing/Visualizing data I scraped using **Jupyter** and **matplotlib**
-* Creating `web_server/*` directory. Web Application to interact with scraped data together with directory `analyzing`
-* Using `Celery` in `web_server/tasks.py` to handle analyzing/visualizing scraping data.
-* Creating `main_celery`. Celery configurations. Connecting to `Redis` broker messenger.
-* Using `Nginx` as proxy server.
-* Containerization with Docker/Docker-Compose.
+### Technical Capabilities
+- **Advanced Web Scraping**: Scrapy + Selenium integration for JavaScript-rendered content
+- **Robust Data Pipeline**: Custom ItemPipelines and Middlewares
+- **Database Integration**: MySQL with SQLAlchemy ORM
+- **Task Queue Management**: Celery with Redis broker
+- **Production-Ready**: Nginx reverse proxy configuration
 
+## 🛠 Technology Stack
 
-## Installation
-1. Clone git repository to your local machine:
+| Category | Technologies |
+|----------|-------------|
+| **Web Scraping** | Scrapy, Selenium, scrapy-selenium4 |
+| **Data Processing** | Pandas, NLTK, fuzzywuzzy |
+| **Visualization** | Matplotlib, Jupyter |
+| **Web Framework** | Flask, SQLAlchemy |
+| **Task Queue** | Celery, Redis |
+| **Database** | MySQL |
+| **Infrastructure** | Docker, Docker Compose, Nginx |
+
+## 📊 Analytics Dashboard
+
+The platform generates comprehensive visualizations including:
+
+- **Skills Analysis**: Required vs. optional technical skills
+- **Experience Levels**: Distribution of seniority requirements
+- **Employment Types**: Contract types and arrangements
+- **Geographic Distribution**: Location-based job distribution
+- **Market Trends**: Technology demand over time
+- **Ukraine Support**: Companies supporting Ukrainian developers
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Docker and Docker Compose installed
+- Git
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/danieladdisonorg/Jobsite-Scraper-and-Analyzer.git
+cd Jobsite-Scraper-and-Analyzer
 ```
-    https://github.com/OlehOryshchuk/scraping_analyzing_jobsite.git
+
+2. **Configure environment variables**
+```bash
+cp .env.sample .env
 ```
-2. Copy the `.env.sample` file to `.env` and configure the environment variables
+Edit `.env` file with your configuration settings.
+
+3. **Launch the application**
+```bash
+docker-compose up --build
 ```
-    cp .env.sample .env
-```
-3. Run command. Docker should be installed:
-```
-    docker-compose up --build
-```
-### Usage
-To access the API, navigate to http://localhost:8000/scraping/diagrams in your web browser.
+
+4. **Access the application**
+Navigate to `http://localhost:8000/scraping/diagrams`
+
+## 📖 API Documentation
 
 ### Endpoints
-Scraping and Analyzing Job Site endpoints
 
-bk_id - is the book integer id
-- `/scraping/diagrams` - returns celery task id.
-- `/scraping/diagrams/diagrams_task_id` - receives celery task id and checks if response is ready in Celery.
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/scraping/diagrams` | GET | Initiates data analysis and returns Celery task ID |
+| `/scraping/diagrams/<task_id>` | GET | Checks task status and retrieves results |
 
-## Web pages:
-![Pandas diagrams showing skills base on level of experience](./static/readme_imgs/skills_by_level_of_exp_dia.png)
-![Pandas diagram showing required skills](./static/readme_imgs/required_skills_dia.png)
-![Pandas diagram showing optional skills](./static/readme_imgs/optional_skills_dia.png)
-![Pandas diagram showing level of experience bar values](./static/readme_imgs/level_of_exp_dia.png)
-![Pandas diagram showing employment type bar values](./static/readme_imgs/employment_type_dia.png)
-![Pandas diagram showing UA support pie values](./static/readme_imgs/ua_support_dia.png)
-![Pandas diagram showing contracts bar values](./static/readme_imgs/contracts_dia.png)
-![Pandas diagram showing location pie values](./static/readme_imgs/locations_dia.png)
+### Configuration
+
+Modify `config.py` to customize scraping parameters:
+
+```python
+# Target job position (lowercase)
+POSITION = "python"  # Options: "java", "javascript", "dev", etc.
+
+# Scraping frequency
+SCRAPING_EVERY_DAYS = 7
+```
+
+## 🏗 Architecture
+
+```
+├── analyzing/          # Data analysis and visualization modules
+├── web_server/         # Flask web application
+├── main_celery/        # Celery configuration and tasks
+├── static/             # Static assets and scraping results
+├── config.py           # Application configuration
+├── docker-compose.yml  # Container orchestration
+└── requirements.txt    # Python dependencies
+```
+
+## 📈 Sample Visualizations
+
+<div align="center">
+
+### Skills by Experience Level
+![Skills by Experience Level](./static/readme_imgs/skills_by_level_of_exp_dia.png)
+
+### Required Technical Skills
+![Required Skills](./static/readme_imgs/required_skills_dia.png)
+
+### Optional Technical Skills
+![Optional Skills](./static/readme_imgs/optional_skills_dia.png)
+
+### Experience Level Distribution
+![Experience Levels](./static/readme_imgs/level_of_exp_dia.png)
+
+### Employment Types
+![Employment Types](./static/readme_imgs/employment_type_dia.png)
+
+### Geographic Distribution
+![Locations](./static/readme_imgs/locations_dia.png)
+
+</div>
+
+## 🔧 Development
+
+### Key Learning Outcomes
+- **Web Scraping Mastery**: Advanced techniques with Scrapy and Selenium
+- **Data Pipeline Development**: ETL processes and data transformation
+- **Asynchronous Task Processing**: Celery and Redis implementation
+- **Containerization**: Docker and microservices architecture
+- **Data Visualization**: Statistical analysis and chart generation
+
+### Future Enhancements
+
+#### High Priority
+- [ ] **Cloud Storage Integration**: Migrate from local file storage to cloud solutions (AWS S3, Google Cloud Storage)
+- [ ] **Database Optimization**: Implement proper data warehousing for scraped content
+- [ ] **Container Optimization**: Reduce Docker image sizes and improve build efficiency
+
+#### Medium Priority
+- [ ] **Code Architecture**: Refactor to follow SOLID principles and improve modularity
+- [ ] **Comprehensive Testing**: Unit, integration, and end-to-end test coverage
+- [ ] **CI/CD Pipeline**: Automated testing and deployment workflows
+- [ ] **API Documentation**: OpenAPI/Swagger integration
+
+#### Low Priority
+- [ ] **Real-time Analytics**: WebSocket integration for live data updates
+- [ ] **Machine Learning**: Predictive analytics for job market trends
+- [ ] **Multi-language Support**: Expand beyond Polish job market
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+**Daniel Addison**
+- GitHub: [@danieladdisonorg](https://github.com/danieladdisonorg)
+- Project Link: [https://github.com/danieladdisonorg/Jobsite-Scraper-and-Analyzer](https://github.com/danieladdisonorg/Jobsite-Scraper-and-Analyzer)
+
+---
+
+<div align="center">
+<strong>⭐ Star this repository if you find it helpful!</strong>
+</div>
